@@ -11,6 +11,9 @@
 		CF830341274597A6008A1063 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830340274597A6008A1063 /* ContentView.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
 		CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830345274597A8008A1063 /* Preview Assets.xcassets */; };
+		CF830350274597DD008A1063 /* about_department.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034D274597DD008A1063 /* about_department.md */; };
+		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
+		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		CF830340274597A6008A1063 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF830342274597A8008A1063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF830345274597A8008A1063 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF83034D274597DD008A1063 /* about_department.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_department.md; sourceTree = "<group>"; };
+		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
+		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
 				CF830340274597A6008A1063 /* ContentView.swift */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
+				CF83034C274597C4008A1063 /* About */,
 				CF830344274597A8008A1063 /* Preview Content */,
 			);
 			path = UpolAR;
@@ -65,6 +72,16 @@
 				CF830345274597A8008A1063 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF83034C274597C4008A1063 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CF83034D274597DD008A1063 /* about_department.md */,
+				CF83034E274597DD008A1063 /* about_faculty.md */,
+				CF83034F274597DD008A1063 /* about_university.md */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF830350274597DD008A1063 /* about_department.md in Resources */,
+				CF830352274597DD008A1063 /* about_university.md in Resources */,
+				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
 				CF830343274597A8008A1063 /* Assets.xcassets in Resources */,
 			);
