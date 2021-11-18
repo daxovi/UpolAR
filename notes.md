@@ -23,4 +23,6 @@ Texty o univerzitě, fakultě a katedře budou v MD
 ## ARKit SpriteView
 [ARSKView dokumentace Apple](https://developer.apple.com/documentation/arkit/arskview)
 
+[ARkit Spriveview prezentace apple](https://developer.apple.com/videos/play/wwdc2017/609/)
+
 Odevzdání 3 týdny před státnicemi
