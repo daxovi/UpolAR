@@ -1,10 +1,9 @@
-# Přírodovědecká fakulta
 
 Přírodovědecká fakulta Univerzity Palackého v Olomouci je výzkumně zaměřená fakulta. Poskytuje bakalářské, navazující magisterské i doktorské vzdělání v různých odvětvích matematiky a informatiky, fyziky, chemie, biologie a ekologie a věd o Zemi, včetně studijních programů zaměřených na přípravu budoucích učitelů přírodovědných oborů.
 
 Část fakultních pracovišť sídlí v moderní budově na třídě 17. listopadu a v přilehlých objektech nedaleko centra města v bezprostřední blízkosti vysokoškolských kolejí a menzy. Biologické obory a vědecko-výzkumné jednotky (Regionální centrum pokročilých technologií a materiálů a Centrum regionu Haná pro biotechnologický a zemědělský výzkum) se nacházejí v místní části Holice. Díky podpoře z evropských zdrojů a úspěchům v národních projektech a grantech se podařilo pro studenty i zaměstnance vytvořit moderní zázemí se špičkovým vybavením. Fakulta provozuje interaktivní muzeum vědy Pevnost poznání a také Botanickou zahradu.
 
-# Úspěchy v bodech
+**Úspěchy v bodech**
 Na fakultě se řeší prestižní grant Evropské výzkumné rady (ERC) Dvoudimenzionální chemie směrem ke grafenovým derivátům, první na Univerzitě Palackého.
 
 Na lednové konferenci CHIRANAL 2018 byla prof. Karlu Lemrovi předána Hanušova medaile, nejvyšší ocenění České společnosti chemické za výsledky vědecké práce v chemických oborech.
@@ -21,7 +20,7 @@ Ondřej Kováč se svým výzkumným projektem, který byl zaměřen na vývoj n
 
 Pracovníci fakulty jsou velmi úspěšní v získávání národních patentů a užitných vzorů, na svém kontě mají i americké či evropské patenty.
 
-# Historie
+**Historie**
 Již při obnovení olomoucké univerzity v roce 1946 bylo zřejmé, že výuka přírodovědných oborů musí být nezbytnou součástí Univerzity Palackého. Přírodní vědy byly zpočátku součástí studia na Pedagogické a Filozofické fakultě UP, v roce 1953 vznikla Fakulta přírodních věd jako součást Vysoké školy pedagogické. V roce 1958 se Přírodovědecká fakulta stala jednou ze čtyř fakult nejstarší moravské univerzity.
 
 *Zdroj: [prf.upol.cz](https://www.prf.upol.cz/o-fakulte/zakladni-informace/)*

@@ -2,8 +2,6 @@ Univerzita Palackého v Olomouci (Universitas Palackiana Olomucensis) byla zalo�
 
 Ve své činnosti plní také tzv. „třetí roli“ ve společnosti a vzdělává nejširší veřejnost. Založila interaktivní muzeum vědy Pevnost poznání a pořádá vzdělávací a společensko-kulturní akce v Olomouci a okolním regionu. Důraz klade na mezinárodní rozvoj a internacionalizaci. Pravidelně se umisťuje mezi třemi nejlepšími českými VŠ ve světovém kontextu. V roce 2019 jí byla udělena Evropská cena za internacionalizaci od evropské asociace pro mezinárodní vzdělávání EIAE.
 
-![Rektorát Univerzity Palackého v Olomouci](rektorat.jpeg)
-
 **Fakulty**
 Cyrilometodějská teologická fakulta
 Lékařská fakulta
