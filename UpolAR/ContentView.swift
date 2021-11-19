@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
     @State private var isPresented = false
@@ -49,7 +50,7 @@ extension ContentView {
             Color.white
                 .frame(height: 200)
                 .overlay {
-                    Text("AR Experience")
+                    Text("zde bude lákavá animace")
                 }
             Image(systemName: "viewfinder")
                 .padding(4)
