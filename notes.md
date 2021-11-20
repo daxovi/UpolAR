@@ -29,3 +29,6 @@ Odevzdání 3 týdny před státnicemi
 
 ## clanek o zobrazeni swiftui v rozsirene realite
 [medium clanek](https://betterprogramming.pub/how-to-use-a-swiftui-view-in-anarkit-scenekit-app-d6504d7b92d2)
+
+## Video v pozadi swiftui
+[medium clanek](https://betterprogramming.pub/how-to-create-a-looping-video-background-in-swiftui-3-0-b4844553880d)
