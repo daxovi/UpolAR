@@ -47,7 +47,7 @@ extension ContentView {
     // MARK: ar button
     var arButton: some View {
         ZStack(alignment: .topTrailing) {
-            Color.white
+            Color.clear
                 .frame(height: 200)
                 .overlay {
                     Text("zde bude lákavá animace")

@@ -8,48 +8,76 @@
 import SwiftUI
 import SpriteKit
 
-class GameScene2: SKScene {
-    override func didMove(to view: SKView) {
-        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let location = touch.location(in: self)
-        let box = SKSpriteNode(color: SKColor.red, size: CGSize(width: 50, height: 50))
-        box.position = location
-        box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
-        addChild(box)
-    }
-}
-
 struct ARExperience: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var scene: SKScene {
-        let scene = GameScene2()
-        scene.size = CGSize(width: 300, height: 400)
-        scene.scaleMode = .fill
-        return scene
-    }
+    @AppStorage("bestScore") var bestScore = 0
+    @StateObject private var gameScene = BreakoutGame()
     
     var body: some View {
-        VStack {
-            Text("AR Experience")
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("close")
+        ZStack {
+            SpriteView(scene: gameScene)
+            
+            VStack(alignment: .leading) {
+                Text("Level: \(gameScene.level)")
+                    .font((.system(size: 12, weight: .heavy)))
+                    .foregroundColor(.white)
+                    .padding(.leading)
+                    .padding(.top, 42)
+                
+                Text("Score: \(gameScene.score)")
+                    .font((.system(size: 24, weight: .heavy)))
+                    .foregroundColor(.white)
+                    .padding(.leading)
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("close")
+                }
+                .padding(.leading)
+                Spacer()
             }
-            SpriteView(scene: scene)
-                .frame(width: 300, height: 400)
-                .ignoresSafeArea()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+            if gameScene.isGameOver {
+                VStack {
+                    Text("Game Over")
+                        .font((.system(size: 42, weight: .heavy)))
+                        .foregroundColor(.white)
+                        .padding(.leading)
+                    
+                    if gameScene.score > bestScore {
+                        Text("New Best Score!!!")
+                            .font((.system(size:34, weight: .heavy)))
+                            .foregroundColor(.white)
+                            .padding(.leading)
+                        
+                        Text("\(gameScene.score)")
+                            .font((.system(size:34, weight: .heavy)))
+                            .foregroundColor(.white)
+                            .padding(.leading)
+                        }
+                    
+                    Text("Play Again")
+                        .font((.system(size:24, weight: .heavy, design: .rounded)))
+                        .foregroundColor(.white)
+                        .padding(.leading)
+                        .padding()
+                        .onTapGesture {
+                            if gameScene.score > bestScore {
+                                bestScore = gameScene.score
+                            }
+                            
+                            gameScene.isGameOver.toggle()
+                            gameScene.makeBall()
+                            gameScene.makeBricks()
+                            gameScene.score = 0
+                        }
+                }
+            }
         }
-        
-        
+        .ignoresSafeArea()
     }
-    
-    
 }
 
 struct ARExperience_Previews: PreviewProvider {

@@ -16,6 +16,7 @@
 		CF830350274597DD008A1063 /* about_department.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034D274597DD008A1063 /* about_department.md */; };
 		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
+		CF9A9A482748F72300FEC0F9 /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CF83034D274597DD008A1063 /* about_department.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_department.md; sourceTree = "<group>"; };
 		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
+		CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
 				CF830340274597A6008A1063 /* ContentView.swift */,
 				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
+				CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */,
 				CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
 				CF83034C274597C4008A1063 /* About */,
@@ -167,6 +170,7 @@
 				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
+				CF9A9A482748F72300FEC0F9 /* BreakoutGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
