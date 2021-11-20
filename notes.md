@@ -26,3 +26,6 @@ Texty o univerzitě, fakultě a katedře budou v MD
 [ARkit Spriveview prezentace apple](https://developer.apple.com/videos/play/wwdc2017/609/)
 
 Odevzdání 3 týdny před státnicemi
+
+## clanek o zobrazeni swiftui v rozsirene realite
+[medium clanek](https://betterprogramming.pub/how-to-use-a-swiftui-view-in-anarkit-scenekit-app-d6504d7b92d2)
