@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVKit
 
 struct ContentView: View {
     @State private var isPresented = false
@@ -50,8 +49,13 @@ extension ContentView {
             Color.clear
                 .frame(height: 200)
                 .overlay {
-                    Text("zde bude lákavá animace")
+                    Text("AR GAME POSTERS")
+                        .font(.system(size: 60, weight: .black, design: .default))
                 }
+                .background(
+                    PlayerView()
+                        .aspectRatio(1.77, contentMode: .fill)
+                )
             Image(systemName: "viewfinder")
                 .padding(4)
                 .background(
@@ -59,6 +63,7 @@ extension ContentView {
                         .opacity(0.1)
                 )
                 .padding(.vertical)
+
         }
         .onTapGesture {
             isPresented.toggle()

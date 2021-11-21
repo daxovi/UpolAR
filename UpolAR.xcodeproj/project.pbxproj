@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
 		CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */; };
+		CF271482274A565D002B8470 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF271481274A565D002B8470 /* PlayerView.swift */; };
+		CF271485274A57F0002B8470 /* motionbanner.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF271484274A57F0002B8470 /* motionbanner.mp4 */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
 		CF830341274597A6008A1063 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830340274597A6008A1063 /* ContentView.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperience.swift; sourceTree = "<group>"; };
+		CF271481274A565D002B8470 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		CF271484274A57F0002B8470 /* motionbanner.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = motionbanner.mp4; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
 		CF830340274597A6008A1063 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +69,9 @@
 			children = (
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
 				CF830340274597A6008A1063 /* ContentView.swift */,
+				CF271481274A565D002B8470 /* PlayerView.swift */,
 				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
+				CF271484274A57F0002B8470 /* motionbanner.mp4 */,
 				CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */,
 				CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
@@ -156,6 +162,7 @@
 				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
 				CF830343274597A8008A1063 /* Assets.xcassets in Resources */,
+				CF271485274A57F0002B8470 /* motionbanner.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +176,7 @@
 				CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */,
 				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
+				CF271482274A565D002B8470 /* PlayerView.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
 				CF9A9A482748F72300FEC0F9 /* BreakoutGame.swift in Sources */,
 			);
