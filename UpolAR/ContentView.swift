@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isPresented = false
-        
+    @State var numberBanner = 0
+    
+    let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+
     var body: some View {
         NavigationView {
             List {
@@ -37,6 +40,11 @@ struct ContentView: View {
         ["Univerzita Palackého", "http://www.upol.cz"],
         ["Město Olomouc", "http://www.olomouc.cz"]
     ]
+    
+    var banners = [
+        "breakoutBanner",
+        "pongBanner"
+    ]
 }
 
 // MARK: MENU DESIGN
@@ -47,15 +55,33 @@ extension ContentView {
     var arButton: some View {
         ZStack(alignment: .topTrailing) {
             Color.clear
-                .frame(height: 200)
-                .overlay {
-                    Text("AR GAME POSTERS")
-                        .font(.system(size: 60, weight: .black, design: .default))
+                .frame(height: 185)
+                .overlay(alignment: .bottomTrailing) {
+                    Button {
+                        //
+                    } label: {
+                        Text("AR poster".uppercased())
+                            .padding(10)
+                            .foregroundColor(.white)
+                            .background(Color("AccentColor"))
+                            .cornerRadius(10)
+                            .padding(.vertical)
+                    }
+
                 }
                 .background(
-                    PlayerView()
+                    Image(banners[numberBanner])
+                        .resizable()
                         .aspectRatio(1.77, contentMode: .fill)
+                        .frame(height: 200, alignment: .topLeading)
                 )
+                .onReceive(timer) { _ in
+                    if numberBanner < banners.count-1 {
+                        numberBanner += 1
+                    } else {
+                        numberBanner = 0
+                    }
+                    }
             Image(systemName: "viewfinder")
                 .padding(4)
                 .background(
