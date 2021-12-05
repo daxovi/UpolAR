@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isPresented = false
+    @State private var isPresentedARExperience = false
+    @State private var isPresentedARNavigator = false
     @State var numberBanner = 0
     
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
@@ -18,6 +19,16 @@ struct ContentView: View {
             List {
                 // ar experience button
                 arButton
+                
+                Button {
+                    isPresentedARNavigator.toggle()
+                } label: {
+                    Text("AR Navigator")
+                }
+                .fullScreenCover(isPresented: $isPresentedARNavigator) {
+                    ARNavigator()
+                }
+
                 
                 // menus
                 aboutUniversity
@@ -92,9 +103,9 @@ extension ContentView {
 
         }
         .onTapGesture {
-            isPresented.toggle()
+            isPresentedARExperience.toggle()
         }
-        .fullScreenCover(isPresented: $isPresented) {
+        .fullScreenCover(isPresented: $isPresentedARExperience) {
             ARExperience()
         }
     }

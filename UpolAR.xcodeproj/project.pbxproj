@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
 		CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */; };
+		CF805128275CFDB60022EC00 /* Navigator.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF805127275CFDB60022EC00 /* Navigator.rcproject */; };
+		CF80512A275CFDF00022EC00 /* ARNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF805129275CFDF00022EC00 /* ARNavigator.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
 		CF830341274597A6008A1063 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830340274597A6008A1063 /* ContentView.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperience.swift; sourceTree = "<group>"; };
+		CF805127275CFDB60022EC00 /* Navigator.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Navigator.rcproject; sourceTree = "<group>"; };
+		CF805129275CFDF00022EC00 /* ARNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigator.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
 		CF830340274597A6008A1063 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
 				CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */,
 				CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */,
+				CF805129275CFDF00022EC00 /* ARNavigator.swift */,
+				CF805127275CFDB60022EC00 /* Navigator.rcproject */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
 				CF83034C274597C4008A1063 /* About */,
 				CF830344274597A8008A1063 /* Preview Content */,
@@ -167,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF805128275CFDB60022EC00 /* Navigator.rcproject in Sources */,
 				CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */,
 				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
+				CF80512A275CFDF00022EC00 /* ARNavigator.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
 				CF9A9A482748F72300FEC0F9 /* BreakoutGame.swift in Sources */,
 			);
@@ -305,9 +313,11 @@
 				DEVELOPMENT_TEAM = BY8G7HDNPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,9 +344,11 @@
 				DEVELOPMENT_TEAM = BY8G7HDNPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
