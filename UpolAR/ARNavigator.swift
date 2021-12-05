@@ -15,7 +15,7 @@ struct ARNavigator : View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             ARViewContainer().edgesIgnoringSafeArea(.all)
-
+            
             Button {
                 presentationMode.wrappedValue.dismiss()
             } label: {
@@ -25,7 +25,7 @@ struct ARNavigator : View {
                     .background(Color.red)
                     .padding()
             }
-
+            
         }
     }
 }
@@ -40,8 +40,18 @@ struct ARViewContainer: UIViewRepresentable {
         let boxAnchor = try! Navigator.loadBox()
         let bytAnchor = try! Navigator.loadByt()
         
-        // bytAnchor.bottomSide?.isEnabled = false
-       
+        // zkouska occlusionmaterial na schovani boxu
+        // let material = SimpleMaterial(color: .red, isMetallic: false)
+        let material = OcclusionMaterial(receivesDynamicLighting: true)
+        
+        let boxMesh = MeshResource.generateBox(width: 0.022, height: 0.024, depth: 0.2)
+        let occlusionBox = ModelEntity(mesh: boxMesh, materials: [material])
+        occlusionBox.position.x = -0.083
+        occlusionBox.position.y = 0.01
+        occlusionBox.collision?.filter = CollisionFilter(group: .all, mask: .all)
+        bytAnchor.addChild(occlusionBox)
+        
+            
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
         arView.scene.anchors.append(bytAnchor)
