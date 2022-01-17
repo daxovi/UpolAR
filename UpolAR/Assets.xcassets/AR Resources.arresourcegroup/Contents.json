@@ -6,6 +6,12 @@
   "resources" : [
     {
       "filename" : "anchor_breakoutposter.arreferenceimage"
+    },
+    {
+      "filename" : "games.arreferenceimage"
+    },
+    {
+      "filename" : "imageanchor.arreferenceimage"
     }
   ]
 }

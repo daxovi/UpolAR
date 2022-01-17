@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
 		CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */; };
+		CF707E2C2794A3D300167DB8 /* GamesARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF707E2B2794A3D300167DB8 /* GamesARView.swift */; };
 		CF805128275CFDB60022EC00 /* Navigator.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF805127275CFDB60022EC00 /* Navigator.rcproject */; };
 		CF80512A275CFDF00022EC00 /* ARNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF805129275CFDF00022EC00 /* ARNavigator.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
@@ -18,12 +19,13 @@
 		CF830350274597DD008A1063 /* about_department.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034D274597DD008A1063 /* about_department.md */; };
 		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
-		CF9A9A482748F72300FEC0F9 /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */; };
+		CFBACF142795D2A300C2E0FC /* GameScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFBACF132795D29900C2E0FC /* GameScene.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperience.swift; sourceTree = "<group>"; };
+		CF707E2B2794A3D300167DB8 /* GamesARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesARView.swift; sourceTree = "<group>"; };
 		CF805127275CFDB60022EC00 /* Navigator.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Navigator.rcproject; sourceTree = "<group>"; };
 		CF805129275CFDF00022EC00 /* ARNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigator.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,7 +36,7 @@
 		CF83034D274597DD008A1063 /* about_department.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_department.md; sourceTree = "<group>"; };
 		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
-		CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGame.swift; sourceTree = "<group>"; };
+		CFBACF132795D29900C2E0FC /* GameScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = GameScene.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +72,10 @@
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
 				CF830340274597A6008A1063 /* ContentView.swift */,
 				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
-				CF9A9A472748F72300FEC0F9 /* BreakoutGame.swift */,
 				CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */,
+				CF707E2B2794A3D300167DB8 /* GamesARView.swift */,
 				CF805129275CFDF00022EC00 /* ARNavigator.swift */,
+				CFBACF132795D29900C2E0FC /* GameScene.rcproject */,
 				CF805127275CFDB60022EC00 /* Navigator.rcproject */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
 				CF83034C274597C4008A1063 /* About */,
@@ -175,11 +178,12 @@
 			files = (
 				CF805128275CFDB60022EC00 /* Navigator.rcproject in Sources */,
 				CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */,
+				CF707E2C2794A3D300167DB8 /* GamesARView.swift in Sources */,
 				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
+				CFBACF142795D2A300C2E0FC /* GameScene.rcproject in Sources */,
 				CF80512A275CFDF00022EC00 /* ARNavigator.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
-				CF9A9A482748F72300FEC0F9 /* BreakoutGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
