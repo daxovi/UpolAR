@@ -14,13 +14,13 @@ var collisionSubscribing:Cancellable?
 struct GamesARView: UIViewRepresentable {
     @Binding var position: Float?
     @Binding var isPressedStart: Bool
-    let force: Float = 0.08
+    let force: Float = 15
     
     // modely
     var paddleModel = ModelEntity(mesh: MeshResource.generateBox(width: 0.1, height: 0.02, depth: 0.02, cornerRadius: 0, splitFaces: false),
                                   materials: [SimpleMaterial(color: .green, roughness: 1, isMetallic: false)])
     var ballModel = ModelEntity(mesh: MeshResource.generateSphere(radius: 0.01),
-                                materials: [SimpleMaterial(color: .red, roughness: 0.3, isMetallic: false)])
+                                materials: [SimpleMaterial(color: .red, roughness: 1, isMetallic: false)])
     
     // Physics body component
     let kinematicBodyComponent = PhysicsBodyComponent(
@@ -29,10 +29,10 @@ struct GamesARView: UIViewRepresentable {
         mode: .kinematic)
     let brickBodyComponent = PhysicsBodyComponent(
         massProperties: .default,
-        material: .generate(friction: 0, restitution: 1),
+        material: .generate(friction: 0, restitution: 0),
         mode: .kinematic)
     let dynamicBodyComponent = PhysicsBodyComponent(
-        massProperties: PhysicsMassProperties(mass: 0.01),
+        massProperties: PhysicsMassProperties(mass: 2),
         material: .generate(friction: 0, restitution: 0),
         mode: .dynamic)
     
@@ -40,6 +40,7 @@ struct GamesARView: UIViewRepresentable {
     let occlusionMaterial = OcclusionMaterial()
     let transparentMaterial = SimpleMaterial(color: .blue.withAlphaComponent(0.0), roughness: 1, isMetallic: false)
     let simpleMaterial = SimpleMaterial(color: .blue, roughness: 1, isMetallic: false)
+    let unlitMaterial = UnlitMaterial(color: .blue)
     
     func makeUIView(context: Context) -> ARView {
         
@@ -97,10 +98,10 @@ struct GamesARView: UIViewRepresentable {
         }
         
         // brick
+        let brick = MeshResource.generateBox(width: 0.08, height: 0.02, depth: 0.01, cornerRadius: 0, splitFaces: false)
         for column in -1..<2 {
             for row in 0..<6 {
-                let brick = MeshResource.generateBox(width: 0.08, height: 0.02, depth: 0.01, cornerRadius: 0, splitFaces: false)
-                let brickModel = ModelEntity(mesh: brick, materials: [simpleMaterial])
+                let brickModel = ModelEntity(mesh: brick, materials: [unlitMaterial])
                 brickModel.components[PhysicsBodyComponent.self] = brickBodyComponent
                 brickModel.generateCollisionShapes(recursive: false)
                 brickModel.position = [Float(column) * 0.09, 0, -0.075 - Float(row) * Float(0.02)]
@@ -169,6 +170,7 @@ struct GamesARView: UIViewRepresentable {
             
             if event.entityA == ballModel, event.entityB.name == "brick" {
                 print("brick!")
+                ballModel.addForce([0,0,force], relativeTo: ballModel)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                     event.entityB.isEnabled = false
                 })
@@ -221,9 +223,11 @@ struct GamesARView: UIViewRepresentable {
         
         // start
         if isPressedStart {
+            ballModel.isEnabled = false
             ballModel.isEnabled = true
             ballModel.position = [0, 0, 0]
-            ballModel.addForce([force,0,force], relativeTo: ballModel)
+            ballModel.clearForcesAndTorques()
+            ballModel.addForce([force/2,0,force/2], relativeTo: ballModel)
             // uiView.scene.anchors[0].addChild(ballModel.clone(recursive: true))
             
             DispatchQueue.main.async {
