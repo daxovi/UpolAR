@@ -256,14 +256,9 @@ struct GamesARView: UIViewRepresentable {
         
         // start
         if isPressedStart {
-            // uiView.scene.anchors[0].removeChild(ballModel)
             for brick in bricks {
                 brick.isEnabled = true
             }
-            // uiView.scene.anchors[0].addChild(ballModel)
-            
-            
-            // uiView.scene.anchors[0].addChild(ballModel.clone(recursive: true))
             
             DispatchQueue.main.async {
                 ballModel.isEnabled = false
