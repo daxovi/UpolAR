@@ -7,8 +7,8 @@
             {
               "arAnchorSpecification" : {
                 "name" : "image",
-                "physicalWidth" : 0.29696968197822571,
-                "url" : "image:76c10f3cecafe680d6da9e5d96ede590\/games%20ar.jpeg"
+                "physicalWidth" : 0.29736584424972534,
+                "url" : "image:f436c8a8169a336d335b28c63e36e481\/games_ar.jpeg"
               },
               "behaviors" : [
 
@@ -24,66 +24,8 @@
                 "children" : {
                   "4A213441-135C-450E-8EF8-1A4EAB267C1D" : null,
                   "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
-                  "8CFFAB4E-8776-4C98-994A-56E0CE933EEA" : {
-                    "overrides" : {
-                      "arguments" : [
-                        [
-                          "doubleSided",
-                          {
-                            "typeName" : "Bool",
-                            "value" : true
-                          }
-                        ],
-                        [
-                          "image",
-                          {
-                            "typeName" : "String",
-                            "value" : "image:76c10f3cecafe680d6da9e5d96ede590\/games%20ar.jpeg"
-                          }
-                        ],
-                        [
-                          "maxDimension",
-                          {
-                            "typeName" : "Double",
-                            "value" : 0.59399999999999997
-                          }
-                        ]
-                      ],
-                      "factory" : {
-                        "identifier" : "com.apple.rc.af.CoreAssetFactories.PosterAssetFactory",
-                        "version" : "1.0"
-                      },
-                      "runtimeAttributes" : [
-                        [
-                          "RuntimeIdentifier",
-                          {
-                            "typeName" : "UUID",
-                            "value" : "9F2BEC66-07F0-46D9-A576-50D5CBD578CA"
-                          }
-                        ]
-                      ]
-                    },
-                    "transform" : {
-                      "matrix" : [
-                        1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                        0,
-                        0,
-                        1,
-                        0,
-                        2.2332196235656738,
-                        0.00059404480271041393,
-                        -0.81813132762908936,
-                        1
-                      ]
-                    }
-                  },
+                  "8CFFAB4E-8776-4C98-994A-56E0CE933EEA" : null,
+                  "80E383A7-372D-4AC7-84FC-C7DF5786EE21" : null,
                   "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
                   "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
                 },

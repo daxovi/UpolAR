@@ -15,13 +15,13 @@ struct ARExperience: View {
     @State var position: Float? = nil
     @State var lastPosition: Float = 0.0
     @State var isPressedStart: Bool = false
+    @State var isGameOver: Bool = true
     
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            GamesARView(position: $position, isPressedStart: $isPressedStart).ignoresSafeArea()
+        ZStack(alignment: .top) {
+            GamesARView(position: $position, isPressedStart: $isPressedStart, isGameOver: $isGameOver).ignoresSafeArea()
+            
             buttons
-            
-            
         }
         .gesture(
             DragGesture(minimumDistance: 0)
@@ -29,7 +29,6 @@ struct ARExperience: View {
                         if value.location.y > 280 {
                             position = getPosition(value: value)
             }
-                        
                     })
                     .onEnded({ _ in
             lastPosition = position ?? 0.0
@@ -39,7 +38,7 @@ struct ARExperience: View {
     
     // MARK: Functions
     func getPosition(value: DragGesture.Value) -> Float {
-        // print("DEBUG: start: \(value.startLocation.x) current: \(value.location.x)")
+        print("DEBUG: start: \(value.startLocation.x) current: \(value.location.x)")
         
         var distance = Float(value.location.x - value.startLocation.x)
         let boundaries: [Float] = [Float(UIScreen.main.bounds.width) / -4,
@@ -54,7 +53,7 @@ struct ARExperience: View {
         distance = distance + boundaries[1]
         
         let xPercentage = Float(distance / (boundaries[1]*2))
-        // print("DEBUG: xPercentage: \(xPercentage)")
+        print("DEBUG: xPercentage: \(xPercentage)")
         
         let totalPosition = (xPercentage * 0.40) - 0.20 + lastPosition
         
@@ -72,25 +71,37 @@ struct ARExperience: View {
 extension ARExperience {
     // MARK: Buttons
     var buttons: some View {
-        HStack {
-            Button {
-                collisionSubscribing = nil
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("Exit")
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.red)
-                    .padding()
+            HStack {
+                Button {
+                    collisionSubscribing = nil
+                    revealSubscribing = nil
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            Color.red
+                                .cornerRadius(10)
+                        )
+                        .padding()
+                }
+                
+                Spacer()
+                Button {
+                    isPressedStart = true
+                } label: {
+                    Text("Start")
+                        .foregroundColor(Color("AccentColor"))
+                        .padding()
+                        .padding(.horizontal)
+                        .background(
+                            Color.white
+                                .cornerRadius(10)
+                        )
+                        .padding()
+                }
             }
-            
-            
-            Button {
-                isPressedStart = true
-            } label: {
-                Text("Start")
-            }
-        }
     }
 }
 

@@ -14,8 +14,8 @@
             filePath = "UpolAR/ARExperience.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "previews"
             landmarkType = "24">
          </BreakpointContent>
@@ -33,6 +33,22 @@
             startingLineNumber = "19"
             endingLineNumber = "19"
             landmarkName = "didMove(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25CCD7A8-0200-491E-9377-D6C6B57E7724"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UpolAR/ARExperience.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getPosition(value:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
