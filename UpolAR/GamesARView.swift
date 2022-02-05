@@ -146,10 +146,12 @@ struct GamesARView: UIViewRepresentable {
                 
         collisionSubscribing = arView.scene.subscribe(to: CollisionEvents.Began.self) { event in
             ballModel.clearForcesAndTorques()
+            /*
             print("DEBUG: ballModel x pozice: \(ballModel.position.x)") // -0.13838117
             print("DEBUG: ballModel y pozice: \(ballModel.position.y)") // 0.011322738
             print("DEBUG: ballModel z pozice: \(ballModel.position.z)") // -0.1967 0.1589484
-                        
+                        */
+            
             if event.entityA == ballModel, event.entityB == leftModel {
                 print("left!")
                 ballModel.addForce([force,0,0], relativeTo: ballModel)

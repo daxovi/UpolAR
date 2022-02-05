@@ -85,6 +85,7 @@ extension ARExperience {
                                 .cornerRadius(10)
                         )
                         .padding()
+                    
                 }
                 
                 Spacer()
