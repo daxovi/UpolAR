@@ -209,7 +209,7 @@ struct GamesARView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {
-        // pohyb padle/
+        // pohyb padle
         if let entityPosition = self.position {
             paddleModel.position = [entityPosition, 0, 0.18]
         }
