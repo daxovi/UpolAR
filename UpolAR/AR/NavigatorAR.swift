@@ -1,44 +1,24 @@
 //
-//  ARNavigator.swift
+//  NavigatorAR.swift
 //  UpolAR
 //
-//  Created by Dalibor Janeček on 05.12.2021.
+//  Created by Dalibor Janeček on 04.03.2022.
 //
 
-
-import SwiftUI
+import Foundation
 import RealityKit
+import SwiftUI
 
-struct ARNavigator : View {
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        ZStack(alignment: .topLeading) {
-            ARViewContainer().edgesIgnoringSafeArea(.all)
-            
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Text("close")
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.red)
-                    .padding()
-            }
-            
-        }
-    }
-}
 
-struct ARViewContainer: UIViewRepresentable {
+struct NavigatorAR: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
         
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Navigator.loadBox()
-        let bytAnchor = try! Navigator.loadByt()
+        let boxAnchor = try! NavigatorARScene.loadBox()
+        let bytAnchor = try! NavigatorARScene.loadByt()
         
         // zkouska occlusionmaterial na schovani boxu
         // let material = SimpleMaterial(color: .red, isMetallic: false)
@@ -63,11 +43,3 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {}
     
 }
-
-#if DEBUG
-struct ARNavigator_Previews : PreviewProvider {
-    static var previews: some View {
-        ARNavigator()
-    }
-}
-#endif

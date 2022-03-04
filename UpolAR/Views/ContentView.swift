@@ -26,7 +26,7 @@ struct ContentView: View {
                     Text("AR Navigator")
                 }
                 .fullScreenCover(isPresented: $isPresentedARNavigator) {
-                    ARNavigator()
+                    NavigatorARView()
                 }
 
                 
@@ -106,7 +106,7 @@ extension ContentView {
             isPresentedARExperience.toggle()
         }
         .fullScreenCover(isPresented: $isPresentedARExperience) {
-            ARExperience()
+            GameARView()
         }
     }
     // MARK: about menu

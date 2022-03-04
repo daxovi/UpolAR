@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
-		CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */; };
-		CF2AF00727AF1A8E0028A2C3 /* breakout.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF2AF00627AF1A8E0028A2C3 /* breakout.mp4 */; };
-		CF707E2C2794A3D300167DB8 /* GamesARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF707E2B2794A3D300167DB8 /* GamesARView.swift */; };
-		CF805128275CFDB60022EC00 /* Navigator.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF805127275CFDB60022EC00 /* Navigator.rcproject */; };
-		CF80512A275CFDF00022EC00 /* ARNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF805129275CFDF00022EC00 /* ARNavigator.swift */; };
+		CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* GameARView.swift */; };
+		CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */; };
+		CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */; };
+		CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */; };
+		CF80512A275CFDF00022EC00 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF805129275CFDF00022EC00 /* NavigatorARView.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
 		CF830341274597A6008A1063 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830340274597A6008A1063 /* ContentView.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
@@ -20,17 +20,18 @@
 		CF830350274597DD008A1063 /* about_department.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034D274597DD008A1063 /* about_department.md */; };
 		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
-		CF9B38A327AEC0F80022C472 /* breakout_pressstart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9B38A227AEC0F80022C472 /* breakout_pressstart.jpg */; };
-		CFBACF142795D2A300C2E0FC /* GameScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFBACF132795D29900C2E0FC /* GameScene.rcproject */; };
+		CF9B38A327AEC0F80022C472 /* BreakoutGameAnchor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9B38A227AEC0F80022C472 /* BreakoutGameAnchor.jpg */; };
+		CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */; };
+		CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462827D26C0A00069133 /* NavigatorAR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperience.swift; sourceTree = "<group>"; };
-		CF2AF00627AF1A8E0028A2C3 /* breakout.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = breakout.mp4; sourceTree = "<group>"; };
-		CF707E2B2794A3D300167DB8 /* GamesARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesARView.swift; sourceTree = "<group>"; };
-		CF805127275CFDB60022EC00 /* Navigator.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Navigator.rcproject; sourceTree = "<group>"; };
-		CF805129275CFDF00022EC00 /* ARNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigator.swift; sourceTree = "<group>"; };
+		CF090F1E2747C5EC00F68DB9 /* GameARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameARView.swift; sourceTree = "<group>"; };
+		CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BreakoutVideoMaterial.mp4; sourceTree = "<group>"; };
+		CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGameAR.swift; sourceTree = "<group>"; };
+		CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = NavigatorARScene.rcproject; sourceTree = "<group>"; };
+		CF805129275CFDF00022EC00 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
 		CF830340274597A6008A1063 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,8 +40,9 @@
 		CF83034D274597DD008A1063 /* about_department.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_department.md; sourceTree = "<group>"; };
 		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
-		CF9B38A227AEC0F80022C472 /* breakout_pressstart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = breakout_pressstart.jpg; sourceTree = "<group>"; };
-		CFBACF132795D29900C2E0FC /* GameScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = GameScene.rcproject; sourceTree = "<group>"; };
+		CF9B38A227AEC0F80022C472 /* BreakoutGameAnchor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BreakoutGameAnchor.jpg; sourceTree = "<group>"; };
+		CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = BreakoutGameARScene.rcproject; sourceTree = "<group>"; };
+		CFE7462827D26C0A00069133 /* NavigatorAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorAR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,15 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
-				CF830340274597A6008A1063 /* ContentView.swift */,
-				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
-				CF090F1E2747C5EC00F68DB9 /* ARExperience.swift */,
-				CF707E2B2794A3D300167DB8 /* GamesARView.swift */,
-				CF805129275CFDF00022EC00 /* ARNavigator.swift */,
-				CF2AF00627AF1A8E0028A2C3 /* breakout.mp4 */,
-				CFBACF132795D29900C2E0FC /* GameScene.rcproject */,
-				CF805127275CFDB60022EC00 /* Navigator.rcproject */,
-				CF9B38A227AEC0F80022C472 /* breakout_pressstart.jpg */,
+				CFE7462727D26BD100069133 /* Views */,
+				CFE7462627D26B8300069133 /* AR */,
+				CFE7462A27D26DF300069133 /* Materials */,
+				CFE7462B27D26DFE00069133 /* Anchors */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
 				CF83034C274597C4008A1063 /* About */,
 				CF830344274597A8008A1063 /* Preview Content */,
@@ -106,6 +103,44 @@
 				CF83034F274597DD008A1063 /* about_university.md */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		CFE7462627D26B8300069133 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */,
+				CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */,
+				CFE7462827D26C0A00069133 /* NavigatorAR.swift */,
+				CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		CFE7462727D26BD100069133 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF830340274597A6008A1063 /* ContentView.swift */,
+				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
+				CF090F1E2747C5EC00F68DB9 /* GameARView.swift */,
+				CF805129275CFDF00022EC00 /* NavigatorARView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFE7462A27D26DF300069133 /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */,
+			);
+			path = Materials;
+			sourceTree = "<group>";
+		};
+		CFE7462B27D26DFE00069133 /* Anchors */ = {
+			isa = PBXGroup;
+			children = (
+				CF9B38A227AEC0F80022C472 /* BreakoutGameAnchor.jpg */,
+			);
+			path = Anchors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +171,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					CF83033A274597A6008A1063 = {
 						CreatedOnToolsVersion = 13.1;
@@ -167,9 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF9B38A327AEC0F80022C472 /* breakout_pressstart.jpg in Resources */,
+				CF9B38A327AEC0F80022C472 /* BreakoutGameAnchor.jpg in Resources */,
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
-				CF2AF00727AF1A8E0028A2C3 /* breakout.mp4 in Resources */,
+				CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,
 				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
@@ -184,13 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF805128275CFDB60022EC00 /* Navigator.rcproject in Sources */,
-				CF090F1F2747C5EC00F68DB9 /* ARExperience.swift in Sources */,
-				CF707E2C2794A3D300167DB8 /* GamesARView.swift in Sources */,
+				CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */,
+				CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */,
+				CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */,
+				CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */,
 				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
-				CFBACF142795D2A300C2E0FC /* GameScene.rcproject in Sources */,
-				CF80512A275CFDF00022EC00 /* ARNavigator.swift in Sources */,
+				CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */,
+				CF80512A275CFDF00022EC00 /* NavigatorARView.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -263,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

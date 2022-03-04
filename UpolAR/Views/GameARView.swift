@@ -8,18 +8,17 @@
 import SwiftUI
 import RealityKit
 
-struct ARExperience: View {
+struct GameARView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var color: UIColor = .red
     @State var position: Float? = nil
     @State var lastPosition: Float = 0.0
     @State var isPressedStart: Bool = false
-    @State var isGameOver: Bool = true
     
     var body: some View {
         ZStack(alignment: .top) {
-            GamesARView(position: $position, isPressedStart: $isPressedStart, isGameOver: $isGameOver).ignoresSafeArea()
+            BreakoutGameAR(position: $position, isPressedStart: $isPressedStart).ignoresSafeArea()
             
             buttons
         }
@@ -68,7 +67,7 @@ struct ARExperience: View {
     }
 }
 
-extension ARExperience {
+extension GameARView {
     // MARK: Buttons
     var buttons: some View {
             HStack {
@@ -107,6 +106,6 @@ extension ARExperience {
 
 struct ARExperience_Previews: PreviewProvider {
     static var previews: some View {
-        ARExperience()
+        GameARView()
     }
 }
