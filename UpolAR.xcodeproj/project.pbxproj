@@ -20,9 +20,12 @@
 		CF830350274597DD008A1063 /* about_department.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034D274597DD008A1063 /* about_department.md */; };
 		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
-		CF9B38A327AEC0F80022C472 /* BreakoutGameAnchor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF9B38A227AEC0F80022C472 /* BreakoutGameAnchor.jpg */; };
 		CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */; };
 		CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462827D26C0A00069133 /* NavigatorAR.swift */; };
+		CFE7462D27D26F5D00069133 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalARView.swift */; };
+		CFE7462F27D271A100069133 /* PortalAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462E27D271A100069133 /* PortalAR.swift */; };
+		CFE7463127D271D300069133 /* PortalARUmbrellas.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFE7463027D271D300069133 /* PortalARUmbrellas.rcproject */; };
+		CFE7463327D272E800069133 /* BreakoutGameARAnchor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +43,12 @@
 		CF83034D274597DD008A1063 /* about_department.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_department.md; sourceTree = "<group>"; };
 		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
-		CF9B38A227AEC0F80022C472 /* BreakoutGameAnchor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BreakoutGameAnchor.jpg; sourceTree = "<group>"; };
 		CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = BreakoutGameARScene.rcproject; sourceTree = "<group>"; };
 		CFE7462827D26C0A00069133 /* NavigatorAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorAR.swift; sourceTree = "<group>"; };
+		CFE7462C27D26F5D00069133 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
+		CFE7462E27D271A100069133 /* PortalAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalAR.swift; sourceTree = "<group>"; };
+		CFE7463027D271D300069133 /* PortalARUmbrellas.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = PortalARUmbrellas.rcproject; sourceTree = "<group>"; };
+		CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BreakoutGameARAnchor.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,8 @@
 				CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */,
 				CFE7462827D26C0A00069133 /* NavigatorAR.swift */,
 				CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */,
+				CFE7462E27D271A100069133 /* PortalAR.swift */,
+				CFE7463027D271D300069133 /* PortalARUmbrellas.rcproject */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
 				CF090F1E2747C5EC00F68DB9 /* GameARView.swift */,
 				CF805129275CFDF00022EC00 /* NavigatorARView.swift */,
+				CFE7462C27D26F5D00069133 /* PortalARView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,7 +147,7 @@
 		CFE7462B27D26DFE00069133 /* Anchors */ = {
 			isa = PBXGroup;
 			children = (
-				CF9B38A227AEC0F80022C472 /* BreakoutGameAnchor.jpg */,
+				CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */,
 			);
 			path = Anchors;
 			sourceTree = "<group>";
@@ -202,8 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF9B38A327AEC0F80022C472 /* BreakoutGameAnchor.jpg in Resources */,
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
+				CFE7463327D272E800069133 /* BreakoutGameARAnchor.jpg in Resources */,
 				CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,
 				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
@@ -220,8 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */,
+				CFE7462F27D271A100069133 /* PortalAR.swift in Sources */,
+				CFE7462D27D26F5D00069133 /* PortalARView.swift in Sources */,
 				CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */,
 				CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */,
+				CFE7463127D271D300069133 /* PortalARUmbrellas.rcproject in Sources */,
 				CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */,
 				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,

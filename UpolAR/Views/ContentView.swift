@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isPresentedARExperience = false
-    @State private var isPresentedARNavigator = false
+    @State private var isPressedGame = false
+    @State private var isPressedNavigator = false
+    @State private var isPressedPortal = false
     @State var numberBanner = 0
     
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
@@ -21,12 +22,21 @@ struct ContentView: View {
                 arButton
                 
                 Button {
-                    isPresentedARNavigator.toggle()
+                    isPressedNavigator.toggle()
                 } label: {
                     Text("AR Navigator")
                 }
-                .fullScreenCover(isPresented: $isPresentedARNavigator) {
+                .fullScreenCover(isPresented: $isPressedNavigator) {
                     NavigatorARView()
+                }
+                
+                Button {
+                    isPressedPortal.toggle()
+                } label: {
+                    Text("Portal")
+                }
+                .fullScreenCover(isPresented: $isPressedPortal) {
+                    PortalARView()
                 }
 
                 
@@ -103,9 +113,9 @@ extension ContentView {
 
         }
         .onTapGesture {
-            isPresentedARExperience.toggle()
+            isPressedGame.toggle()
         }
-        .fullScreenCover(isPresented: $isPresentedARExperience) {
+        .fullScreenCover(isPresented: $isPressedGame) {
             GameARView()
         }
     }

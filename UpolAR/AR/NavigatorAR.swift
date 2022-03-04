@@ -30,7 +30,6 @@ struct NavigatorAR: UIViewRepresentable {
         occlusionBox.position.y = 0.01
         occlusionBox.collision?.filter = CollisionFilter(group: .all, mask: .all)
         bytAnchor.addChild(occlusionBox)
-        
             
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
