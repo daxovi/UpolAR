@@ -27,6 +27,7 @@ struct PortalARView: View {
                         .padding()
                 }
                 Spacer()
+             
             }
         }
     }
