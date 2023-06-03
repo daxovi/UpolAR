@@ -307,7 +307,7 @@ struct BreakoutGameAR: UIViewRepresentable {
             removeText(uiView: uiView)
             
             DispatchQueue.main.async {
-                ballModel.isEnabled = false
+                // ballModel.isEnabled = false
                 isPressedStart = false
                 gameState = .play
                 score = 0

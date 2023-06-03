@@ -10,21 +10,25 @@
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
 		CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* GameARView.swift */; };
 		CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */; };
+		CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352912A2B592500FFB1DB /* LocationManager.swift */; };
+		CF6352942A2B597E00FFB1DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352932A2B597E00FFB1DB /* ContentView.swift */; };
+		CF6352992A2B5A6A00FFB1DB /* ARCompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352982A2B5A6A00FFB1DB /* ARCompassView.swift */; };
+		CF63529C2A2B5BAC00FFB1DB /* upol-arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */; };
 		CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */; };
 		CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */; };
 		CF80512A275CFDF00022EC00 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF805129275CFDF00022EC00 /* NavigatorARView.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
-		CF830341274597A6008A1063 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF830340274597A6008A1063 /* ContentView.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
 		CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830345274597A8008A1063 /* Preview Assets.xcassets */; };
 		CF830350274597DD008A1063 /* about_department.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034D274597DD008A1063 /* about_department.md */; };
 		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
+		CF843A652A2BC76400085922 /* ARViewUIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */; };
 		CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFA888A72812B94F00FB5BC6 /* room.usdz */; };
 		CFAF6F2A27D29F8C00FD1590 /* PortalAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF6F2927D29F8C00FD1590 /* PortalAR.swift */; };
-		CFAF6F2E27D2A04D00FD1590 /* tower_bridge.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFAF6F2D27D2A04D00FD1590 /* tower_bridge.mp4 */; };
 		CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF6F2F27D2A61800FD1590 /* christmas.jpg */; };
 		CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */; };
+		CFE6222C2A2B972A004C6133 /* ARCompassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6222B2A2B972A004C6133 /* ARCompassViewModel.swift */; };
 		CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462827D26C0A00069133 /* NavigatorAR.swift */; };
 		CFE7462D27D26F5D00069133 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalARView.swift */; };
 		CFE7463327D272E800069133 /* BreakoutGameARAnchor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */; };
@@ -36,22 +40,26 @@
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CF090F1E2747C5EC00F68DB9 /* GameARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameARView.swift; sourceTree = "<group>"; };
 		CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BreakoutVideoMaterial.mp4; sourceTree = "<group>"; };
+		CF6352912A2B592500FFB1DB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CF6352932A2B597E00FFB1DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF6352982A2B5A6A00FFB1DB /* ARCompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCompassView.swift; sourceTree = "<group>"; };
+		CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "upol-arrow.usdz"; sourceTree = "<group>"; };
 		CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGameAR.swift; sourceTree = "<group>"; };
 		CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = NavigatorARScene.rcproject; sourceTree = "<group>"; };
 		CF805129275CFDF00022EC00 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
-		CF830340274597A6008A1063 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF830342274597A8008A1063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF830345274597A8008A1063 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF83034D274597DD008A1063 /* about_department.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_department.md; sourceTree = "<group>"; };
 		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
+		CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewUIViewRepresentable.swift; sourceTree = "<group>"; };
 		CFA888A72812B94F00FB5BC6 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
 		CFAF6F2927D29F8C00FD1590 /* PortalAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalAR.swift; sourceTree = "<group>"; };
-		CFAF6F2D27D2A04D00FD1590 /* tower_bridge.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tower_bridge.mp4; sourceTree = "<group>"; };
 		CFAF6F2F27D2A61800FD1590 /* christmas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christmas.jpg; sourceTree = "<group>"; };
 		CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = BreakoutGameARScene.rcproject; sourceTree = "<group>"; };
+		CFE6222B2A2B972A004C6133 /* ARCompassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCompassViewModel.swift; sourceTree = "<group>"; };
 		CFE7462827D26C0A00069133 /* NavigatorAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorAR.swift; sourceTree = "<group>"; };
 		CFE7462C27D26F5D00069133 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
 		CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BreakoutGameARAnchor.jpg; sourceTree = "<group>"; };
@@ -70,6 +78,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF6352902A2B58EA00FFB1DB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF6352912A2B592500FFB1DB /* LocationManager.swift */,
+				CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF6352952A2B59FA00FFB1DB /* ARCompass */ = {
+			isa = PBXGroup;
+			children = (
+				CF6352982A2B5A6A00FFB1DB /* ARCompassView.swift */,
+				CFE6222B2A2B972A004C6133 /* ARCompassViewModel.swift */,
+			);
+			path = ARCompass;
+			sourceTree = "<group>";
+		};
+		CF63529A2A2B5B9F00FFB1DB /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */,
+			);
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
 		CF830332274597A6008A1063 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +123,11 @@
 		CF83033D274597A6008A1063 /* UpolAR */ = {
 			isa = PBXGroup;
 			children = (
+				CF63529A2A2B5B9F00FFB1DB /* 3DModels */,
+				CF6352952A2B59FA00FFB1DB /* ARCompass */,
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
+				CF6352932A2B597E00FFB1DB /* ContentView.swift */,
+				CF6352902A2B58EA00FFB1DB /* Services */,
 				CFE7462727D26BD100069133 /* Views */,
 				CFE7462627D26B8300069133 /* AR */,
 				CFE7462A27D26DF300069133 /* Materials */,
@@ -137,7 +175,6 @@
 		CFE7462727D26BD100069133 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CF830340274597A6008A1063 /* ContentView.swift */,
 				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
 				CF090F1E2747C5EC00F68DB9 /* GameARView.swift */,
 				CF805129275CFDF00022EC00 /* NavigatorARView.swift */,
@@ -149,7 +186,6 @@
 		CFE7462A27D26DF300069133 /* Materials */ = {
 			isa = PBXGroup;
 			children = (
-				CFAF6F2D27D2A04D00FD1590 /* tower_bridge.mp4 */,
 				CFAF6F2F27D2A61800FD1590 /* christmas.jpg */,
 				CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */,
 			);
@@ -226,6 +262,7 @@
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
 				CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */,
 				CFE7463327D272E800069133 /* BreakoutGameARAnchor.jpg in Resources */,
+				CF63529C2A2B5BAC00FFB1DB /* upol-arrow.usdz in Resources */,
 				CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,
 				CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */,
@@ -234,7 +271,6 @@
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
 				CF830343274597A8008A1063 /* Assets.xcassets in Resources */,
 				CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */,
-				CFAF6F2E27D2A04D00FD1590 /* tower_bridge.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +284,16 @@
 				CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */,
 				CFE7462D27D26F5D00069133 /* PortalARView.swift in Sources */,
 				CFAF6F2A27D29F8C00FD1590 /* PortalAR.swift in Sources */,
+				CFE6222C2A2B972A004C6133 /* ARCompassViewModel.swift in Sources */,
 				CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */,
 				CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */,
 				CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */,
-				CF830341274597A6008A1063 /* ContentView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
+				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
 				CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */,
+				CF6352992A2B5A6A00FFB1DB /* ARCompassView.swift in Sources */,
+				CF6352942A2B597E00FFB1DB /* ContentView.swift in Sources */,
+				CF843A652A2BC76400085922 /* ARViewUIViewRepresentable.swift in Sources */,
 				CF80512A275CFDF00022EC00 /* NavigatorARView.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
 			);
@@ -392,12 +432,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Pro správné použití aplikace je potřeba povolit polohové služby.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,12 +465,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Pro správné použití aplikace je potřeba povolit polohové služby.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
