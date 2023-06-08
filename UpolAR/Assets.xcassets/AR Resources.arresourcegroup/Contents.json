@@ -8,10 +8,25 @@
       "filename" : "anchor_breakoutposter.arreferenceimage"
     },
     {
+      "filename" : "arrow.arreferenceimage"
+    },
+    {
+      "filename" : "buillding.arreferenceimage"
+    },
+    {
+      "filename" : "cup.arreferenceimage"
+    },
+    {
+      "filename" : "elevator.arreferenceimage"
+    },
+    {
       "filename" : "games.arreferenceimage"
     },
     {
       "filename" : "imageanchor.arreferenceimage"
+    },
+    {
+      "filename" : "room.arreferenceimage"
     }
   ]
 }

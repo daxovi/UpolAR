@@ -10,11 +10,12 @@ import SwiftUI
 struct ARCompassView: View {
     
     @ObservedObject private var viewModel = ARCompassViewModel()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     
     var body: some View {
         ZStack {
             ARViewUIViewRepresentable(showModel: $viewModel.showModel, update: viewModel.update)
-                .ignoresSafeArea()
             VStack {
                 Spacer()
                 if !viewModel.showModel {
@@ -48,8 +49,18 @@ struct ARCompassView: View {
             }
             .padding()
         }
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: backButton)
         
     }
+    
+    var backButton : some View { Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+            }) {
+                BackButtonView()
+            }
+        }
 }
 struct ARCompassView_Previews: PreviewProvider {
     static var previews: some View {

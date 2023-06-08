@@ -44,12 +44,16 @@ class LocationManager: NSObject, ObservableObject {
     func requestLocation() {
         manager.requestWhenInUseAuthorization()
     }
+    
+    func getLocationStatus() -> CLAuthorizationStatus {
+        return manager.authorizationStatus
+    }
 }
 
 //
 extension LocationManager: CLLocationManagerDelegate {
     
-    // MARK: CHange Authorization
+    // MARK: Change Authorization
     // funkce zjišťuje stav povolení polohových služeb
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {

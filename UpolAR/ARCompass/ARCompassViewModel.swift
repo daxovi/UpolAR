@@ -4,12 +4,14 @@
 //
 //  Created by Dalibor Janeček on 03.06.2023.
 //
+
 import SwiftUI
 import RealityKit
 
 class ARCompassViewModel: ObservableObject {
     
     let locationManager = LocationManager.shared
+    let model = ARCompassModel()
     
     @Published var showModel = false
     
@@ -42,13 +44,8 @@ class ARCompassViewModel: ObservableObject {
     }
     
     func addModel(uiView: ARView) {
-        let modelURL = Bundle.main.url(forResource: "upol-arrow", withExtension: "usdz")!
-        let model = try! Entity.load(contentsOf: modelURL)
-        model.name = "point"
-        let anchor = AnchorEntity(plane: .horizontal)
-        model.transform = Transform(scale: .init(repeating: 0.05))
-        anchor.addChild(model)
-        uiView.scene.addAnchor(anchor)
+        let arrowModel = model.getModel()
+        uiView.scene.addAnchor(arrowModel)
     }
     
     func removeAll(uiView: ARView) {
