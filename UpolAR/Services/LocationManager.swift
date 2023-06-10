@@ -17,17 +17,19 @@ class LocationManager: NSObject, ObservableObject {
     // poloha požadované destinace
     let destination = CLLocationCoordinate2D(latitude: 49.592477, longitude: 17.263371)
     
+    let maximumDistance = 500
+    
     // souřadnice uživatele
     @Published var userLocation: CLLocation?
-    
-    // směrování na sever
-    @Published var userHeading: Float?
     
     // směrování k místu
     @Published var headingToDestination: Float?
     
     // vzdálenost od místa
     @Published var distanceToDestination: Float?
+    
+    // určí jestli je uživatel blíž místa z destination než je vzdálenost maximumDistance
+    @Published var isUserInPlace = false
     
     static let shared = LocationManager()
     
@@ -52,7 +54,7 @@ class LocationManager: NSObject, ObservableObject {
 
 //
 extension LocationManager: CLLocationManagerDelegate {
-    
+        /*
     // MARK: Change Authorization
     // funkce zjišťuje stav povolení polohových služeb
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -71,6 +73,7 @@ extension LocationManager: CLLocationManagerDelegate {
             break
         }
     }
+         */
     
     // MARK: Update Location
     // funkce, která se spustí vždy když se změní poloha uživatele
@@ -79,13 +82,13 @@ extension LocationManager: CLLocationManagerDelegate {
         self.userLocation = location
         let distance = location.distance(from: .init(latitude: destination.latitude, longitude: destination.longitude))
         self.distanceToDestination = Float(distance)
+        self.isUserInPlace = Int(distance) < maximumDistance
     }
     
     // MARK: Update Heading
     // funkce, která se spustí vždy když se změní směrování uživatele
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         let heading = newHeading.trueHeading
-        self.userHeading = Float(heading)
         
         guard let a = userLocation?.coordinate else { return }
         let b = destination

@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
-		CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1E2747C5EC00F68DB9 /* GameARView.swift */; };
-		CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */; };
-		CF31DC632A30D2FC0070DB34 /* ARNavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC622A30D2FC0070DB34 /* ARNavigatorView.swift */; };
-		CF31DC652A30D3AE0070DB34 /* ARNavigatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC642A30D3AE0070DB34 /* ARNavigatorViewModel.swift */; };
+		CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC622A30D2FC0070DB34 /* NavigatorView.swift */; };
 		CF31DC702A310E890070DB34 /* RemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC6F2A310E890070DB34 /* RemoteView.swift */; };
 		CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC712A310ECE0070DB34 /* MenuView.swift */; };
 		CF31DC762A3113A20070DB34 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC752A3113A20070DB34 /* BackButtonView.swift */; };
@@ -19,11 +16,8 @@
 		CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */; };
 		CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352912A2B592500FFB1DB /* LocationManager.swift */; };
 		CF6352942A2B597E00FFB1DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352932A2B597E00FFB1DB /* ContentView.swift */; };
-		CF6352992A2B5A6A00FFB1DB /* ARCompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352982A2B5A6A00FFB1DB /* ARCompassView.swift */; };
+		CF6352992A2B5A6A00FFB1DB /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352982A2B5A6A00FFB1DB /* CompassView.swift */; };
 		CF63529C2A2B5BAC00FFB1DB /* upol-arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */; };
-		CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */; };
-		CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */; };
-		CF80512A275CFDF00022EC00 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF805129275CFDF00022EC00 /* NavigatorARView.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
 		CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830345274597A8008A1063 /* Preview Assets.xcassets */; };
@@ -32,26 +26,21 @@
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
 		CF843A652A2BC76400085922 /* ARViewUIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */; };
 		CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFA888A72812B94F00FB5BC6 /* room.usdz */; };
-		CFAF6F2A27D29F8C00FD1590 /* PortalAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF6F2927D29F8C00FD1590 /* PortalAR.swift */; };
 		CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF6F2F27D2A61800FD1590 /* christmas.jpg */; };
-		CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */; };
-		CFD2D9A42A2C8CA800764228 /* ARCompassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A32A2C8CA800764228 /* ARCompassModel.swift */; };
 		CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* LocationSheetView.swift */; };
 		CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */; };
-		CFE6222C2A2B972A004C6133 /* ARCompassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6222B2A2B972A004C6133 /* ARCompassViewModel.swift */; };
-		CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462827D26C0A00069133 /* NavigatorAR.swift */; };
-		CFE7462D27D26F5D00069133 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalARView.swift */; };
-		CFE7463327D272E800069133 /* BreakoutGameARAnchor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */; };
+		CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6222B2A2B972A004C6133 /* CompassARView.swift */; };
+		CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalView.swift */; };
+		CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291A32A34814800268A49 /* NoLocationView.swift */; };
+		CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */; };
+		CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AE2A34ACD000268A49 /* PortalARView.swift */; };
 		CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340127D5406A009D6FCC /* room_mask.usdz */; };
 		CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340627D54C07009D6FCC /* room_logo.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		CF090F1E2747C5EC00F68DB9 /* GameARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameARView.swift; sourceTree = "<group>"; };
-		CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BreakoutVideoMaterial.mp4; sourceTree = "<group>"; };
-		CF31DC622A30D2FC0070DB34 /* ARNavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigatorView.swift; sourceTree = "<group>"; };
-		CF31DC642A30D3AE0070DB34 /* ARNavigatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNavigatorViewModel.swift; sourceTree = "<group>"; };
+		CF31DC622A30D2FC0070DB34 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
 		CF31DC6F2A310E890070DB34 /* RemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteView.swift; sourceTree = "<group>"; };
 		CF31DC712A310ECE0070DB34 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CF31DC752A3113A20070DB34 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
@@ -59,11 +48,8 @@
 		CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
 		CF6352912A2B592500FFB1DB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CF6352932A2B597E00FFB1DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CF6352982A2B5A6A00FFB1DB /* ARCompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCompassView.swift; sourceTree = "<group>"; };
+		CF6352982A2B5A6A00FFB1DB /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "upol-arrow.usdz"; sourceTree = "<group>"; };
-		CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGameAR.swift; sourceTree = "<group>"; };
-		CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = NavigatorARScene.rcproject; sourceTree = "<group>"; };
-		CF805129275CFDF00022EC00 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
 		CF830342274597A8008A1063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,16 +59,14 @@
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
 		CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewUIViewRepresentable.swift; sourceTree = "<group>"; };
 		CFA888A72812B94F00FB5BC6 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
-		CFAF6F2927D29F8C00FD1590 /* PortalAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalAR.swift; sourceTree = "<group>"; };
 		CFAF6F2F27D2A61800FD1590 /* christmas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christmas.jpg; sourceTree = "<group>"; };
-		CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = BreakoutGameARScene.rcproject; sourceTree = "<group>"; };
-		CFD2D9A32A2C8CA800764228 /* ARCompassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCompassModel.swift; sourceTree = "<group>"; };
 		CFD2D9A52A2C904300764228 /* LocationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSheetView.swift; sourceTree = "<group>"; };
 		CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		CFE6222B2A2B972A004C6133 /* ARCompassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCompassViewModel.swift; sourceTree = "<group>"; };
-		CFE7462827D26C0A00069133 /* NavigatorAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorAR.swift; sourceTree = "<group>"; };
-		CFE7462C27D26F5D00069133 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
-		CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BreakoutGameARAnchor.jpg; sourceTree = "<group>"; };
+		CFE6222B2A2B972A004C6133 /* CompassARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassARView.swift; sourceTree = "<group>"; };
+		CFE7462C27D26F5D00069133 /* PortalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalView.swift; sourceTree = "<group>"; };
+		CFF291A32A34814800268A49 /* NoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLocationView.swift; sourceTree = "<group>"; };
+		CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
+		CFF291AE2A34ACD000268A49 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
 		CFF4340127D5406A009D6FCC /* room_mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_mask.usdz; sourceTree = "<group>"; };
 		CFF4340627D54C07009D6FCC /* room_logo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_logo.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,21 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF31DC612A30D2CC0070DB34 /* ARNavigator */ = {
+		CF31DC612A30D2CC0070DB34 /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
-				CF31DC622A30D2FC0070DB34 /* ARNavigatorView.swift */,
-				CF31DC642A30D3AE0070DB34 /* ARNavigatorViewModel.swift */,
+				CF31DC622A30D2FC0070DB34 /* NavigatorView.swift */,
+				CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */,
 			);
-			path = ARNavigator;
+			path = Navigator;
 			sourceTree = "<group>";
 		};
-		CF31DC792A311E620070DB34 /* ARPortal */ = {
+		CF31DC792A311E620070DB34 /* Portal */ = {
 			isa = PBXGroup;
 			children = (
-				CFE7462C27D26F5D00069133 /* PortalARView.swift */,
+				CFF291A62A3490FB00268A49 /* 3DModels */,
+				CFF291A52A34906400268A49 /* Materials */,
+				CFF291AE2A34ACD000268A49 /* PortalARView.swift */,
+				CFE7462C27D26F5D00069133 /* PortalView.swift */,
 			);
-			path = ARPortal;
+			path = Portal;
 			sourceTree = "<group>";
 		};
 		CF6352902A2B58EA00FFB1DB /* Services */ = {
@@ -124,22 +111,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CF6352952A2B59FA00FFB1DB /* ARCompass */ = {
+		CF6352952A2B59FA00FFB1DB /* Compass */ = {
 			isa = PBXGroup;
 			children = (
-				CF6352982A2B5A6A00FFB1DB /* ARCompassView.swift */,
-				CFE6222B2A2B972A004C6133 /* ARCompassViewModel.swift */,
-				CFD2D9A32A2C8CA800764228 /* ARCompassModel.swift */,
+				CFF291A72A34914200268A49 /* 3DModels */,
+				CF6352982A2B5A6A00FFB1DB /* CompassView.swift */,
+				CFE6222B2A2B972A004C6133 /* CompassARView.swift */,
 			);
-			path = ARCompass;
-			sourceTree = "<group>";
-		};
-		CF63529A2A2B5B9F00FFB1DB /* 3DModels */ = {
-			isa = PBXGroup;
-			children = (
-				CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */,
-			);
-			path = 3DModels;
+			path = Compass;
 			sourceTree = "<group>";
 		};
 		CF830332274597A6008A1063 = {
@@ -161,24 +140,13 @@
 		CF83033D274597A6008A1063 /* UpolAR */ = {
 			isa = PBXGroup;
 			children = (
-				CF31DC792A311E620070DB34 /* ARPortal */,
-				CF63529A2A2B5B9F00FFB1DB /* 3DModels */,
-				CF31DC612A30D2CC0070DB34 /* ARNavigator */,
-				CF6352952A2B59FA00FFB1DB /* ARCompass */,
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
-				CF31DC6F2A310E890070DB34 /* RemoteView.swift */,
-				CF31DC772A3114E30070DB34 /* CloseView.swift */,
-				CF31DC712A310ECE0070DB34 /* MenuView.swift */,
-				CF6352932A2B597E00FFB1DB /* ContentView.swift */,
-				CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */,
-				CF31DC752A3113A20070DB34 /* BackButtonView.swift */,
-				CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */,
-				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
+				CF31DC792A311E620070DB34 /* Portal */,
+				CF31DC612A30D2CC0070DB34 /* Navigator */,
+				CF6352952A2B59FA00FFB1DB /* Compass */,
+				CFF291B02A34ADEA00268A49 /* Home */,
+				CFF291B12A34AE1200268A49 /* SubViews */,
 				CF6352902A2B58EA00FFB1DB /* Services */,
-				CFE7462727D26BD100069133 /* Views */,
-				CFE7462627D26B8300069133 /* AR */,
-				CFE7462A27D26DF300069133 /* Materials */,
-				CFE7462B27D26DFE00069133 /* Anchors */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
 				CF83034C274597C4008A1063 /* About */,
 				CF830344274597A8008A1063 /* Preview Content */,
@@ -197,6 +165,7 @@
 		CF83034C274597C4008A1063 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
 				CF83034D274597DD008A1063 /* about_department.md */,
 				CF83034E274597DD008A1063 /* about_faculty.md */,
 				CF83034F274597DD008A1063 /* about_university.md */,
@@ -204,46 +173,53 @@
 			path = About;
 			sourceTree = "<group>";
 		};
-		CFE7462627D26B8300069133 /* AR */ = {
-			isa = PBXGroup;
-			children = (
-				CF707E2B2794A3D300167DB8 /* BreakoutGameAR.swift */,
-				CFBACF132795D29900C2E0FC /* BreakoutGameARScene.rcproject */,
-				CFE7462827D26C0A00069133 /* NavigatorAR.swift */,
-				CF805127275CFDB60022EC00 /* NavigatorARScene.rcproject */,
-				CFAF6F2927D29F8C00FD1590 /* PortalAR.swift */,
-				CFF4340127D5406A009D6FCC /* room_mask.usdz */,
-				CFA888A72812B94F00FB5BC6 /* room.usdz */,
-				CFF4340627D54C07009D6FCC /* room_logo.usdz */,
-			);
-			path = AR;
-			sourceTree = "<group>";
-		};
-		CFE7462727D26BD100069133 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CF090F1C27479A4100F68DB9 /* AboutView.swift */,
-				CF090F1E2747C5EC00F68DB9 /* GameARView.swift */,
-				CF805129275CFDF00022EC00 /* NavigatorARView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CFE7462A27D26DF300069133 /* Materials */ = {
+		CFF291A52A34906400268A49 /* Materials */ = {
 			isa = PBXGroup;
 			children = (
 				CFAF6F2F27D2A61800FD1590 /* christmas.jpg */,
-				CF2AF00627AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 */,
 			);
 			path = Materials;
 			sourceTree = "<group>";
 		};
-		CFE7462B27D26DFE00069133 /* Anchors */ = {
+		CFF291A62A3490FB00268A49 /* 3DModels */ = {
 			isa = PBXGroup;
 			children = (
-				CFE7463227D272E800069133 /* BreakoutGameARAnchor.jpg */,
+				CFF4340127D5406A009D6FCC /* room_mask.usdz */,
+				CFA888A72812B94F00FB5BC6 /* room.usdz */,
+				CFF4340627D54C07009D6FCC /* room_logo.usdz */,
 			);
-			path = Anchors;
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
+		CFF291A72A34914200268A49 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF63529B2A2B5BAC00FFB1DB /* upol-arrow.usdz */,
+			);
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
+		CFF291B02A34ADEA00268A49 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF31DC6F2A310E890070DB34 /* RemoteView.swift */,
+				CF31DC772A3114E30070DB34 /* CloseView.swift */,
+				CFF291A32A34814800268A49 /* NoLocationView.swift */,
+				CF31DC712A310ECE0070DB34 /* MenuView.swift */,
+				CF6352932A2B597E00FFB1DB /* ContentView.swift */,
+				CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CFF291B12A34AE1200268A49 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				CF31DC752A3113A20070DB34 /* BackButtonView.swift */,
+				CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */,
+				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +283,7 @@
 			files = (
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
 				CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */,
-				CFE7463327D272E800069133 /* BreakoutGameARAnchor.jpg in Resources */,
 				CF63529C2A2B5BAC00FFB1DB /* upol-arrow.usdz in Resources */,
-				CF2AF00727AF1A8E0028A2C3 /* BreakoutVideoMaterial.mp4 in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,
 				CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */,
 				CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */,
@@ -327,30 +301,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF805128275CFDB60022EC00 /* NavigatorARScene.rcproject in Sources */,
-				CFE7462D27D26F5D00069133 /* PortalARView.swift in Sources */,
-				CF31DC632A30D2FC0070DB34 /* ARNavigatorView.swift in Sources */,
+				CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */,
+				CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */,
+				CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
-				CFAF6F2A27D29F8C00FD1590 /* PortalAR.swift in Sources */,
-				CFE6222C2A2B972A004C6133 /* ARCompassViewModel.swift in Sources */,
-				CF090F1F2747C5EC00F68DB9 /* GameARView.swift in Sources */,
-				CFE7462927D26C0A00069133 /* NavigatorAR.swift in Sources */,
+				CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */,
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
-				CF707E2C2794A3D300167DB8 /* BreakoutGameAR.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
 				CF31DC782A3114E30070DB34 /* CloseView.swift in Sources */,
-				CFD2D9A42A2C8CA800764228 /* ARCompassModel.swift in Sources */,
-				CF31DC652A30D3AE0070DB34 /* ARNavigatorViewModel.swift in Sources */,
-				CFBACF142795D2A300C2E0FC /* BreakoutGameARScene.rcproject in Sources */,
 				CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */,
 				CF31DC762A3113A20070DB34 /* BackButtonView.swift in Sources */,
-				CF6352992A2B5A6A00FFB1DB /* ARCompassView.swift in Sources */,
+				CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */,
+				CF6352992A2B5A6A00FFB1DB /* CompassView.swift in Sources */,
+				CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */,
 				CF31DC702A310E890070DB34 /* RemoteView.swift in Sources */,
 				CF6352942A2B597E00FFB1DB /* ContentView.swift in Sources */,
 				CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */,
 				CF843A652A2BC76400085922 /* ARViewUIViewRepresentable.swift in Sources */,
-				CF80512A275CFDF00022EC00 /* NavigatorARView.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

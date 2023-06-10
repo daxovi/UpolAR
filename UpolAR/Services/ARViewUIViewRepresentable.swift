@@ -16,14 +16,16 @@ struct ARViewUIViewRepresentable: UIViewRepresentable {
     
     @Binding var showModel: Bool
     
-    var update: (_ uiView: ARView) -> Void
+    var build: (_ arView: ARView) -> ()
+    var update: (_ arView: ARView) -> ()
 
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
+        build(arView)
         return arView
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {
-        update(uiView)
+    func updateUIView(_ arView: ARView, context: Context) {
+        update(arView)
     }
 }
