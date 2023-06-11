@@ -34,6 +34,7 @@
 		CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291A32A34814800268A49 /* NoLocationView.swift */; };
 		CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */; };
 		CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AE2A34ACD000268A49 /* PortalARView.swift */; };
+		CFF291B32A3621F300268A49 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291B22A3621F300268A49 /* sunset.jpg */; };
 		CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340127D5406A009D6FCC /* room_mask.usdz */; };
 		CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340627D54C07009D6FCC /* room_logo.usdz */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		CFF291A32A34814800268A49 /* NoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLocationView.swift; sourceTree = "<group>"; };
 		CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
 		CFF291AE2A34ACD000268A49 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
+		CFF291B22A3621F300268A49 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
 		CFF4340127D5406A009D6FCC /* room_mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_mask.usdz; sourceTree = "<group>"; };
 		CFF4340627D54C07009D6FCC /* room_logo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_logo.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 		CFF291A52A34906400268A49 /* Materials */ = {
 			isa = PBXGroup;
 			children = (
+				CFF291B22A3621F300268A49 /* sunset.jpg */,
 				CFAF6F2F27D2A61800FD1590 /* christmas.jpg */,
 			);
 			path = Materials;
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
+				CFF291B32A3621F300268A49 /* sunset.jpg in Resources */,
 				CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */,
 				CF63529C2A2B5BAC00FFB1DB /* upol-arrow.usdz in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,

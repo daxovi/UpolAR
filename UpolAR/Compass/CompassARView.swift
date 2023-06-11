@@ -7,58 +7,85 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 import Combine
 
-private var cancellables: Set<AnyCancellable> = []
+var cancellables: [AnyCancellable] = []
 
 struct CompassARView: UIViewRepresentable {
     typealias UIViewType = ARView
     
     @Binding var showModel: Bool
+    // @Binding var isVisible: Bool
     
     let locationManager = LocationManager.shared
     
     // MARK: make
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
+                
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = .horizontal
+        config.environmentTexturing = .automatic
+        config.frameSemantics.insert(.personSegmentationWithDepth)
+        
+        arView.session.run(config)
+
         return arView
     }
     
     // MARK: update
     func updateUIView(_ uiView: ARView, context: Context) {
         addRemoveModel(uiView: uiView)
-        rotateModel(uiView: uiView)
+        
+        if let model = uiView.scene.anchors.first?.findEntity(named: "point") {
+            if model.isAnchored {
+                print("DEBUG: model is anchored")
+
+            }
+        }
     }
     
     func rotateModel(uiView: ARView) {
-        if uiView.scene.anchors.first != nil,
-           let model = uiView.scene.anchors.first!.findEntity(named: "point"),
+        if let model = uiView.scene.anchors.first?.findEntity(named: "point"),
            let rotation = self.locationManager.headingToDestination
         {
-            model.scale = .init(repeating: 0.0)
-            
             var transform = Transform(pitch: 0, yaw: ((rotation+180) * .pi / 180), roll: 0)
             transform.scale = .init(repeating: 0.05)
             
             model.move(to: transform, relativeTo: model.parent, duration: 1)
+
             for animation in model.availableAnimations {
                 model.playAnimation(animation.repeat())
             }
-            print("DEBUG: model placed")
+            print("DEBUG: model rotated")
         }
     }
     
     func addModel(uiView: ARView) {
-        let modelURL = Bundle.main.url(forResource: "upol-arrow", withExtension: "usdz")!
-        let model = try! Entity.load(contentsOf: modelURL)
-        model.name = "point"
+        var cancellable: AnyCancellable? = nil
         
-        let anchor = AnchorEntity()
-        // let anchor = AnchorEntity(plane: .horizontal)
-        
-        model.transform = Transform(scale: .init(repeating: 0.05))
-        anchor.addChild(model)
-        uiView.scene.addAnchor(anchor)
+          cancellable = ModelEntity.loadModelAsync(named: "upol-arrow.usdz")
+            .sink(receiveCompletion: { error in
+              print("Unexpected error: \(error)")
+              cancellable?.cancel()
+            }, receiveValue: { model in
+                model.name = "point"
+                                
+                // let anchor = AnchorEntity()
+                let bounds = SIMD2(repeating: Float(0.5))
+                let anchor = AnchorEntity(plane: .horizontal, minimumBounds: bounds)
+                anchor.name = "anchor"
+                
+                model.transform = Transform(scale: .init(repeating: 0.00))
+                anchor.addChild(model)
+                uiView.scene.addAnchor(anchor)
+                print("DEBUG: model placed")
+                
+                rotateModel(uiView: uiView)
+                
+                cancellable?.cancel()
+            })
     }
     
     func removeAll(uiView: ARView) {
@@ -73,4 +100,3 @@ struct CompassARView: UIViewRepresentable {
         }
     }
 }
-
