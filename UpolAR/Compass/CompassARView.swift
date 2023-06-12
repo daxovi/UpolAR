@@ -23,14 +23,14 @@ struct CompassARView: UIViewRepresentable {
     // MARK: make
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
-                
+        
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
         config.environmentTexturing = .automatic
         config.frameSemantics.insert(.personSegmentationWithDepth)
         
         arView.session.run(config)
-
+        
         return arView
     }
     
@@ -41,7 +41,7 @@ struct CompassARView: UIViewRepresentable {
         if let model = uiView.scene.anchors.first?.findEntity(named: "point") {
             if model.isAnchored {
                 print("DEBUG: model is anchored")
-
+                
             }
         }
     }
@@ -54,7 +54,7 @@ struct CompassARView: UIViewRepresentable {
             transform.scale = .init(repeating: 0.05)
             
             model.move(to: transform, relativeTo: model.parent, duration: 1)
-
+            
             for animation in model.availableAnimations {
                 model.playAnimation(animation.repeat())
             }
@@ -65,13 +65,13 @@ struct CompassARView: UIViewRepresentable {
     func addModel(uiView: ARView) {
         var cancellable: AnyCancellable? = nil
         
-          cancellable = ModelEntity.loadModelAsync(named: "upol-arrow.usdz")
+        cancellable = ModelEntity.loadModelAsync(named: "upol-arrow.usdz")
             .sink(receiveCompletion: { error in
-              print("Unexpected error: \(error)")
-              cancellable?.cancel()
+                print("Unexpected error: \(error)")
+                cancellable?.cancel()
             }, receiveValue: { model in
                 model.name = "point"
-                                
+                
                 // let anchor = AnchorEntity()
                 let bounds = SIMD2(repeating: Float(0.5))
                 let anchor = AnchorEntity(plane: .horizontal, minimumBounds: bounds)
