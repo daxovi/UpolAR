@@ -14,20 +14,20 @@ var cancellables: [AnyCancellable] = []
 
 struct CompassARView: UIViewRepresentable {
     typealias UIViewType = ARView
-    
-    @Binding var showModel: Bool
-    // @Binding var isVisible: Bool
-    
+        
     let locationManager = LocationManager.shared
     
     // MARK: make
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
+        arView.addCoaching(plane: .horizontalPlane)
         
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
         config.environmentTexturing = .automatic
         config.frameSemantics.insert(.personSegmentationWithDepth)
+        
+        addModel(uiView: arView)
         
         arView.session.run(config)
         
@@ -36,6 +36,8 @@ struct CompassARView: UIViewRepresentable {
     
     // MARK: update
     func updateUIView(_ uiView: ARView, context: Context) {
+        
+        /*
         addRemoveModel(uiView: uiView)
         
         if let model = uiView.scene.anchors.first?.findEntity(named: "point") {
@@ -44,6 +46,8 @@ struct CompassARView: UIViewRepresentable {
                 
             }
         }
+        */
+        
     }
     
     func rotateModel(uiView: ARView) {
@@ -73,8 +77,8 @@ struct CompassARView: UIViewRepresentable {
                 model.name = "point"
                 
                 // let anchor = AnchorEntity()
-                let bounds = SIMD2(repeating: Float(0.5))
-                let anchor = AnchorEntity(plane: .horizontal, minimumBounds: bounds)
+                let bounds = SIMD2(repeating: Float(1))
+                let anchor = AnchorEntity(plane: .horizontal, classification: .floor, minimumBounds: bounds)
                 anchor.name = "anchor"
                 
                 model.transform = Transform(scale: .init(repeating: 0.00))
@@ -88,9 +92,11 @@ struct CompassARView: UIViewRepresentable {
             })
     }
     
+    /*
     func removeAll(uiView: ARView) {
         uiView.scene.anchors.removeAll()
     }
+    
     
     func addRemoveModel(uiView: ARView) {
         if showModel {
@@ -99,4 +105,6 @@ struct CompassARView: UIViewRepresentable {
             removeAll(uiView: uiView)
         }
     }
+     */
 }
+

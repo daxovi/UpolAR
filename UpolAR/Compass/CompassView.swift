@@ -9,47 +9,14 @@ import SwiftUI
 
 struct CompassView: View {
     
-    @State var showModel = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         ZStack {
-            CompassARView(showModel: $showModel)
+            CompassARView()
                 .ignoresSafeArea()
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: backButton)
-            VStack {
-                Spacer()
-                    if !showModel {
-                        Button {
-                            withAnimation {
-                                showModel = true
-                            }
-                            
-                        } label: {
-                            Text("Show model")
-                                .padding()
-                                .frame(width: 200)
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                                .foregroundColor(.white)
-                        }
-                    } else {
-                        Button {
-                            withAnimation {
-                                showModel = false
-                            }
-                        } label: {
-                            Text("Remove model")
-                                .padding()
-                                .frame(width: 200)
-                                .background(Color.red)
-                                .cornerRadius(10)
-                                .foregroundColor(.white)
-                        }
-                    }
-            }
-            .padding()
         }
         
     }

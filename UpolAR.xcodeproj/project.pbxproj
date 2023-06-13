@@ -35,6 +35,7 @@
 		CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */; };
 		CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AE2A34ACD000268A49 /* PortalARView.swift */; };
 		CFF291B32A3621F300268A49 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291B22A3621F300268A49 /* sunset.jpg */; };
+		CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291B62A38EE0C00268A49 /* ARView.swift */; };
 		CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340127D5406A009D6FCC /* room_mask.usdz */; };
 		CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340627D54C07009D6FCC /* room_logo.usdz */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
 		CFF291AE2A34ACD000268A49 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
 		CFF291B22A3621F300268A49 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
+		CFF291B62A38EE0C00268A49 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		CFF4340127D5406A009D6FCC /* room_mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_mask.usdz; sourceTree = "<group>"; };
 		CFF4340627D54C07009D6FCC /* room_logo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_logo.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			children = (
 				CF6352912A2B592500FFB1DB /* LocationManager.swift */,
 				CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */,
+				CFF291B62A38EE0C00268A49 /* ARView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 			};
 			buildConfigurationList = CF830336274597A6008A1063 /* Build configuration list for PBXProject "UpolAR" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = cs;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -310,6 +313,7 @@
 				CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
 				CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */,
+				CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */,
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
@@ -465,6 +469,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -498,6 +503,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
