@@ -12,8 +12,10 @@ import Combine
 
 struct PortalARView: UIViewRepresentable {
     typealias UIViewType = ARView
-    
+        
     @Binding var roomNr: Int
+    
+    var textures: [TextureResource] = []
     
     // MARK: make
     func makeUIView(context: Context) -> ARView {
@@ -39,7 +41,9 @@ struct PortalARView: UIViewRepresentable {
     
     // MARK: update
     func updateUIView(_ arView: ARView, context: Context) {
-        if roomNr == 1 {
+        if roomNr == 0 {
+            
+            
             
             let imageName = "christmas"
             
@@ -49,9 +53,13 @@ struct PortalARView: UIViewRepresentable {
             anchor.name = "roomAnchor"
             
             loadRoom(anchor: anchor, textureFileName: imageName)
-            arView.scene.addAnchor(anchor)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                arView.scene.addAnchor(anchor)
+            }
+            
         }
-        if roomNr == 2 {
+        if roomNr == 1 {
             
             let imageName = "sunset"
             
@@ -59,20 +67,23 @@ struct PortalARView: UIViewRepresentable {
             
             let anchor = AnchorEntity()
             anchor.name = "roomAnchor"
-            
             loadRoom(anchor: anchor, textureFileName: imageName)
             
-            arView.scene.addAnchor(anchor)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+                arView.scene.addAnchor(anchor)
+            }
+                
         }
     }
     
     func removeRoom(arView: ARView) {
-        for anchor in arView.scene.anchors {
-            if anchor.name == "roomAnchor" {
-                anchor.removeFromParent()
-            }
-        }
         rotateModel(arView: arView)
+            for anchor in arView.scene.anchors {
+                if anchor.name == "roomAnchor" {
+                    anchor.removeFromParent()
+                }
+        }
+        
         print("DEBUG: všechny anchors jsou vymazané")
     }
     
@@ -80,8 +91,12 @@ struct PortalARView: UIViewRepresentable {
         if let anchor = arView.scene.findEntity(named: "logoModel") {
             print("DEBUG: anchor s názvem logoModel existuje")
             // todop opravit rotaci nebo vyměnit za animaci v USDZ
-            let transform = Transform(pitch: 0, yaw: (.pi * 1.9), roll: 0)
-            anchor.move(to: transform, relativeTo: anchor.self, duration: 1)
+            let transform = Transform(pitch: 0, yaw: (.pi), roll: 0)
+            anchor.move(to: transform, relativeTo: anchor.self, duration: 0.5, timingFunction: .easeIn)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.58) {
+                let transform = Transform(pitch: 0, yaw: (.pi), roll: 0)
+                anchor.move(to: transform, relativeTo: anchor.self, duration: 0.5, timingFunction: .easeOut)
+            }
         } else {
             print("DEBUG: anchor s názvem logoAnchor se nepodařilo najít")
         }
@@ -126,11 +141,35 @@ struct PortalARView: UIViewRepresentable {
             })
     }
     
+    /*
+    
+    func loadTexture(arView: ARView, textureFileName: String) {
+        if let model = arView.scene.findEntity(named: "roomModel") as? ModelEntity {
+            if let url = Bundle.main.url(forResource: textureFileName, withExtension: ".jpg") {
+                print("DEBUG: texturu \(textureFileName) se podařilo nalézt")
+                var textureRequest: AnyCancellable? = nil
+                print("DEBUG: texturu \(textureFileName) se podařilo nalézt")
+                textureRequest = TextureResource.loadAsync(contentsOf: url)
+                    .sink(receiveCompletion: { error in
+                        print("Unexpected error: \(error)")
+                        textureRequest?.cancel()
+                    }, receiveValue: { (texture) in
+                        print("DEBUG: textura \(textureFileName) je nahraná.")
+                        var material = UnlitMaterial()
+                        material.color.texture = .init(texture)
+                        model.model?.materials = [material]
+                    })
+            }
+        }
+    }
+     
+     */
+    
     func loadRoom(anchor: AnchorEntity, textureFileName: String) {
         if let url = Bundle.main.url(forResource: textureFileName, withExtension: ".jpg") {
-            print("DEBUG: texturu \(textureFileName) se podařilo nahrát")
+            print("DEBUG: texturu \(textureFileName) se podařilo nalézt")
             var textureRequest: AnyCancellable? = nil
-            print("DEBUG: texturu \(textureFileName) se podařilo nahrát")
+            print("DEBUG: texturu \(textureFileName) se podařilo nalézt")
             textureRequest = TextureResource.loadAsync(contentsOf: url)
                 .sink(receiveCompletion: { error in
                     print("Unexpected error: \(error)")
@@ -148,8 +187,8 @@ struct PortalARView: UIViewRepresentable {
                         }, receiveValue: { model in
                             model.model?.materials = [material]
                             model.position = [0, 0, -2.5]
-                            model.name = "room"
-                            
+                            model.name = "roomModel"
+                                                        
                             anchor.addChild(model)
                             
                             

@@ -10,7 +10,7 @@ import SwiftUI
 struct PortalView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var roomNr = 1
+    @State var roomNr = 0
 
     var body: some View {
         ZStack {
@@ -18,7 +18,7 @@ struct PortalView: View {
                     .ignoresSafeArea()
                     
             Button(action: {
-                roomNr = 2
+                roomNr = (roomNr + 1) % 2
                 print("DEBUG: changed room nr")
             }, label: {
                 Text("2 \(roomNr)")
