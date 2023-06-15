@@ -10,23 +10,23 @@ import SwiftUI
 struct PortalView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var roomNr = 0
+   // @State var roomNr = 0
+    
+    @StateObject var viewModel = PortalViewModel()
 
     var body: some View {
         ZStack {
-            PortalARView(roomNr: $roomNr)
+            PortalARView(roomFileName: $viewModel.roomFileName, fileExtension: viewModel.fileExtension)
                     .ignoresSafeArea()
-                    
-            Button(action: {
-                roomNr = (roomNr + 1) % 2
-                print("DEBUG: changed room nr")
-            }, label: {
-                Text("2 \(roomNr)")
-                    .padding()
-                    .background(Color.blue)
-                    .padding()
-            })
-            
+                    .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
+                                        .onEnded({ value in
+                                            if value.translation.width < 0 {
+                                                viewModel.nextRoom()
+                                            }
+                                            if value.translation.width > 0 {
+                                                viewModel.prevRoom()
+                                            }
+                                        }))
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
