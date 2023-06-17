@@ -13,35 +13,48 @@ struct ContentView: View {
     @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
-        ZStack {
-            // Zjistí jestli má aplikace přístup k poloze
-            if locationManager.distanceToDestination != nil
-            {
+        NavigationView {
+            ZStack {
+                Color("BlueColor").ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Image("Lines")
+                        Spacer()
+                    }
+                    Spacer()
+                    
+                }
+                .ignoresSafeArea()
+            
+                // Zjistí jestli má aplikace přístup k poloze
+                if locationManager.distanceToDestination != nil
+                {
+                    
+                    // Zjistí jestli je uživatel v okruhu od místa definovaném v LocationManager
+                    if locationManager.isUserInPlace {
+                        
+                        // View pro zobrazení v místě
+                        CloseView()
+                        
+                    } else {
+                        
+                        // View pro zobrazení ve větší vzdálenosti
+                        RemoteView(distance: $locationManager.distanceToDestination)
+                    }
+                }
                 
-                // Zjistí jestli je uživatel v okruhu od místa definovaném v LocationManager
-                if locationManager.isUserInPlace {
+                else {
                     
-                    // View pro zobrazení v místě
-                    CloseView()
-                    
-                } else {
-                    
-                    // View pro zobrazení ve větší vzdálenosti
-                    RemoteView(distance: $locationManager.distanceToDestination)
+                    // View pokud aplikace nemá data o poloze
+                    NoLocationView()
                 }
             }
-            
-            else {
-                
-                // View pokud aplikace nemá data o poloze
-                NoLocationView()
-            }
         }
-        
         // Pokud aplikace nemá data o poloze zobrazí se sheet s požadavkem na udělení práv k používání polohy
         .sheet(isPresented: $viewModel.isLocationSheetShown) {
             LocationSheetView(isLocationSheetShown: $viewModel.isLocationSheetShown)
         }
+        .statusBar(hidden: true)
     }
 }
 

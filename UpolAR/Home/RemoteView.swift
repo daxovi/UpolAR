@@ -13,17 +13,90 @@ struct RemoteView: View {
     @Binding var distance: Float?
     
     var body: some View {
-        NavigationView {
             ScrollView {
+                
+                LogoView()
                 
                 header
                 
                 Group {
                     NavigationLink { CompassView()
-                    } label: { MenuButtonView(title: "Kompas", iconName: "arkit") }
+                    } label: {
+                        Image("BannerCompass")
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 135)
+                            .cornerRadius(15)
+                            .padding(.bottom)
+                            .overlay(
+                                VStack {
+                                    HStack {
+                                        Text("Kompas").fontWeight(.bold)
+                                        Spacer()
+                                        Image(systemName: "arkit")
+                                    }
+                                    .font(.title2)
+                                    
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    
+                                    Spacer()
+                                }
+                            )
+                    }
                     
                     NavigationLink { PortalView()
-                    } label: { MenuButtonView(title: "Portal AR", iconName: "arkit") }
+                    } label: {
+                        Image("BannerPortal")
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 135)
+                            .cornerRadius(15)
+                            .padding(.bottom)
+                            .overlay(
+                                VStack {
+                                    HStack {
+                                        Text("Portal").fontWeight(.bold)
+                                        Spacer()
+                                        Image(systemName: "arkit")
+                                    }
+                                    .font(.title2)
+                                    
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    
+                                    Spacer()
+                                }
+                            )
+                    }
+                    
+                    NavigationLink { LensView()
+                    } label: {
+                        Image("BannerLens")
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 135)
+                            .cornerRadius(15)
+                            .padding(.bottom)
+                            .overlay(
+                                VStack {
+                                    HStack {
+                                        Text("Lens").fontWeight(.bold)
+                                        Spacer()
+                                        Image(systemName: "arkit")
+                                    }
+                                    .font(.title2)
+                                    
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    
+                                    Spacer()
+                                }
+                            )
+                    }
                     
                     NavigationLink { NavigatorView()
                     } label: { MenuButtonView(title: "test", iconName: "arkit") }
@@ -31,11 +104,9 @@ struct RemoteView: View {
                     MenuView()
                 }
                 .padding(.horizontal, 20)
-                
             }
             .ignoresSafeArea()
-            .background(Color("Background"))
-        }
+           // .background(Color("Background"))
     }
     
     var header: some View {
@@ -46,13 +117,10 @@ struct RemoteView: View {
                 far
             }
         }
-        .padding(.top, 200)
-        .padding(.vertical)
+       // .padding(.top, 100)
+    //    .padding(.vertical)
         .padding(.horizontal, 20)
-        .frame(width: UIScreen.main.bounds.width)
-        .background {
-            Color("BlueColor")
-        }
+     //   .frame(width: UIScreen.main.bounds.width)
         .padding(.bottom)
     }
     

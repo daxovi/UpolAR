@@ -13,6 +13,7 @@ struct MenuView: View {
                 aboutUniversity
                 webLinks
             }
+            .foregroundColor(.white)
             .padding(.bottom)
     }
     

@@ -14,6 +14,7 @@ struct HelpButtonView: View {
             action()
         } label: {
             Text("Nápověda")
+                .padding(.top)
         }
     }
 }

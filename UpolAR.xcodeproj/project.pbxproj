@@ -40,6 +40,10 @@
 		CFF291BF2A3B9E1800268A49 /* oldcity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291BE2A3B9E1800268A49 /* oldcity.jpg */; };
 		CFF291C12A3B9EF500268A49 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291C02A3B9EF500268A49 /* beach.jpg */; };
 		CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */; };
+		CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291FE2A3DFA3C00268A49 /* LensARView.swift */; };
+		CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFF291C42A3DF95C00268A49 /* Lens.rcproject */; };
+		CFF292022A3DFB3600268A49 /* LensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF292012A3DFB3600268A49 /* LensView.swift */; };
+		CFF292042A3E042400268A49 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF292032A3E042400268A49 /* LogoView.swift */; };
 		CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340127D5406A009D6FCC /* room_mask.usdz */; };
 		CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340627D54C07009D6FCC /* room_logo.usdz */; };
 /* End PBXBuildFile section */
@@ -79,6 +83,10 @@
 		CFF291BE2A3B9E1800268A49 /* oldcity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oldcity.jpg; sourceTree = "<group>"; };
 		CFF291C02A3B9EF500268A49 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 		CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButtonView.swift; sourceTree = "<group>"; };
+		CFF291C42A3DF95C00268A49 /* Lens.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Lens.rcproject; sourceTree = "<group>"; };
+		CFF291FE2A3DFA3C00268A49 /* LensARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensARView.swift; sourceTree = "<group>"; };
+		CFF292012A3DFB3600268A49 /* LensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensView.swift; sourceTree = "<group>"; };
+		CFF292032A3E042400268A49 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		CFF4340127D5406A009D6FCC /* room_mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_mask.usdz; sourceTree = "<group>"; };
 		CFF4340627D54C07009D6FCC /* room_logo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_logo.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +162,7 @@
 		CF83033D274597A6008A1063 /* UpolAR */ = {
 			isa = PBXGroup;
 			children = (
+				CFF291FD2A3DFA2400268A49 /* Lens */,
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
 				CF31DC792A311E620070DB34 /* Portal */,
 				CF31DC612A30D2CC0070DB34 /* Navigator */,
@@ -236,8 +245,19 @@
 				CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */,
 				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
 				CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */,
+				CFF292032A3E042400268A49 /* LogoView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		CFF291FD2A3DFA2400268A49 /* Lens */ = {
+			isa = PBXGroup;
+			children = (
+				CFF291C42A3DF95C00268A49 /* Lens.rcproject */,
+				CFF291FE2A3DFA3C00268A49 /* LensARView.swift */,
+				CFF292012A3DFB3600268A49 /* LensView.swift */,
+			);
+			path = Lens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +344,7 @@
 			files = (
 				CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */,
 				CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */,
+				CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */,
 				CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */,
 				CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
@@ -332,6 +353,9 @@
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */,
+				CFF292042A3E042400268A49 /* LogoView.swift in Sources */,
+				CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */,
+				CFF292022A3DFB3600268A49 /* LensView.swift in Sources */,
 				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
 				CF31DC782A3114E30070DB34 /* CloseView.swift in Sources */,
 				CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */,

@@ -19,6 +19,7 @@ struct MenuButtonView: View {
             Spacer()
             if let iconName {
                 Image(systemName: iconName)
+                    .foregroundColor(Color("AccentColor"))
             }
         }
             .padding()

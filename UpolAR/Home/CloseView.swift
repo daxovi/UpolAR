@@ -9,8 +9,10 @@ import SwiftUI
 
 struct CloseView: View {
     var body: some View {
-        NavigationView {
             ScrollView {
+                
+                LogoView()
+                
                 VStack (alignment: .leading) {
                     Text("Vítejte")
                         .fontWeight(.bold)
@@ -19,13 +21,7 @@ struct CloseView: View {
                 }
                 .font(.largeTitle)
                 .foregroundColor(.white)
-                .padding(.top, 200)
-                .padding(.vertical)
                 .padding(.horizontal, 20)
-                .frame(width: UIScreen.main.bounds.width)
-                .background {
-                    Color("BlueColor")
-                }
                 .padding(.bottom)
                 
                 Group {
@@ -43,8 +39,6 @@ struct CloseView: View {
                 .padding(.horizontal, 20)
                 }
             .ignoresSafeArea()
-            .background(Color("Background"))
-        }
     }
 }
 
