@@ -29,16 +29,20 @@ struct PortalView: View {
                                         }))
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
         
+        // navigační lišta NavigationView
+        .navigationBarItems(
+            leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() }),
+            trailing: HelpButtonView(action: { viewModel.showAlert() }))
+        
+        // zobrazení alert okna s informacemi k ovládání
+        .alert(isPresented: $viewModel.showingAlert) {
+                                Alert(title: Text("Portál"),
+                                      message: Text("Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈"),
+                                      dismissButton: .default(Text("OK")))
+                            }
+        .onAppear(perform: viewModel.showAlert)
     }
-    
-    var backButton : some View { Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            }) {
-                BackButtonView()
-            }
-        }
 }
 
 struct ARPortalView_Previews: PreviewProvider {

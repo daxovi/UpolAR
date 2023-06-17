@@ -11,19 +11,11 @@ struct NavigatorView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-
-    var backButton : some View { Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            }) {
-                BackButtonView()
-            }
-        }
-    
     var body: some View {
         NavigatorARView()
             .ignoresSafeArea()
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: backButton)
+            .navigationBarItems(leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() }))
 
     }
 }

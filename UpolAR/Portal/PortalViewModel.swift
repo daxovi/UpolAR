@@ -15,14 +15,20 @@ class PortalViewModel: ObservableObject {
     let fileExtension: String
     
     @Published var roomFileName: String
+    @Published var showingAlert: Bool
     
     init() {
+        self.showingAlert = false
         self.roomNr = 0
         self.images = ["christmas", "sunset", "oldcity", "beach"]
         self.fileExtension = "jpg"
         
         self.roomFileName = self.images[self.roomNr]
         print("DEBUG: viewmodel init. roomNr: \(roomNr)")
+    }
+    
+    func showAlert() {
+        self.showingAlert = true
     }
     
     func nextRoom() {

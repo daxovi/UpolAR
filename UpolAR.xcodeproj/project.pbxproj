@@ -39,6 +39,7 @@
 		CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291BC2A3B8ECA00268A49 /* PortalViewModel.swift */; };
 		CFF291BF2A3B9E1800268A49 /* oldcity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291BE2A3B9E1800268A49 /* oldcity.jpg */; };
 		CFF291C12A3B9EF500268A49 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291C02A3B9EF500268A49 /* beach.jpg */; };
+		CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */; };
 		CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340127D5406A009D6FCC /* room_mask.usdz */; };
 		CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFF4340627D54C07009D6FCC /* room_logo.usdz */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		CFF291BC2A3B8ECA00268A49 /* PortalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalViewModel.swift; sourceTree = "<group>"; };
 		CFF291BE2A3B9E1800268A49 /* oldcity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oldcity.jpg; sourceTree = "<group>"; };
 		CFF291C02A3B9EF500268A49 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
+		CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButtonView.swift; sourceTree = "<group>"; };
 		CFF4340127D5406A009D6FCC /* room_mask.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_mask.usdz; sourceTree = "<group>"; };
 		CFF4340627D54C07009D6FCC /* room_logo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_logo.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +159,7 @@
 				CF31DC612A30D2CC0070DB34 /* Navigator */,
 				CF6352952A2B59FA00FFB1DB /* Compass */,
 				CFF291B02A34ADEA00268A49 /* Home */,
-				CFF291B12A34AE1200268A49 /* SubViews */,
+				CFF291B12A34AE1200268A49 /* Subviews */,
 				CF6352902A2B58EA00FFB1DB /* Services */,
 				CF830342274597A8008A1063 /* Assets.xcassets */,
 				CF83034C274597C4008A1063 /* About */,
@@ -227,14 +229,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		CFF291B12A34AE1200268A49 /* SubViews */ = {
+		CFF291B12A34AE1200268A49 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
 				CF31DC752A3113A20070DB34 /* BackButtonView.swift */,
 				CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */,
 				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
+				CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */,
 			);
-			path = SubViews;
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +325,7 @@
 				CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */,
 				CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */,
 				CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */,
+				CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
 				CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */,
 				CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */,

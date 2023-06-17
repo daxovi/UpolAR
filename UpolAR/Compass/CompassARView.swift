@@ -10,8 +10,6 @@ import RealityKit
 import ARKit
 import Combine
 
-var cancellables: [AnyCancellable] = []
-
 struct CompassARView: UIViewRepresentable {
     typealias UIViewType = ARView
         
@@ -36,17 +34,6 @@ struct CompassARView: UIViewRepresentable {
     
     // MARK: update
     func updateUIView(_ uiView: ARView, context: Context) {
-        
-        /*
-        addRemoveModel(uiView: uiView)
-        
-        if let model = uiView.scene.anchors.first?.findEntity(named: "point") {
-            if model.isAnchored {
-                print("DEBUG: model is anchored")
-                
-            }
-        }
-        */
         
     }
     
@@ -91,20 +78,5 @@ struct CompassARView: UIViewRepresentable {
                 cancellable?.cancel()
             })
     }
-    
-    /*
-    func removeAll(uiView: ARView) {
-        uiView.scene.anchors.removeAll()
-    }
-    
-    
-    func addRemoveModel(uiView: ARView) {
-        if showModel {
-            addModel(uiView: uiView)
-        } else {
-            removeAll(uiView: uiView)
-        }
-    }
-     */
 }
 

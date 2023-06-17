@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct BackButtonView: View {
+    var action: () -> ()
     var body: some View {
-        HStack {
-        Image(systemName: "xmark.circle.fill")
-            .aspectRatio(contentMode: .fit)
-            .foregroundColor(.red)
-            .font(.title)
+        Button(action: {
+            action()
+        }) {
+            HStack {
+                Image(systemName: "xmark.circle.fill")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.red)
+                    .font(.title)
+            }
         }
+        
     }
 }
 
 struct BackButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        BackButtonView()
+        BackButtonView(action: {print("DEBUG: button test")})
     }
 }

@@ -16,17 +16,12 @@ struct CompassView: View {
             CompassARView()
                 .ignoresSafeArea()
                 .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: backButton)
+                .navigationBarItems(
+                    leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() })
+                )
         }
         
     }
-    
-    var backButton : some View { Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            }) {
-                BackButtonView()
-            }
-        }
 }
 
 
