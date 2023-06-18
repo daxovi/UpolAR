@@ -15,7 +15,7 @@ struct MenuButtonView: View {
     var body: some View {
         HStack {
             Text(title)
-                .foregroundColor(.black)
+                .foregroundColor(Color("MenuTextColor"))
             Spacer()
             if let iconName {
                 Image(systemName: iconName)

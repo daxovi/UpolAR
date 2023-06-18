@@ -10,15 +10,17 @@ import RealityKit
 import ARKit
 import Combine
 
+
 struct CompassARView: UIViewRepresentable {
     typealias UIViewType = ARView
         
-    let locationManager = LocationManager.shared
-    
     // MARK: make
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         arView.addCoaching(plane: .horizontalPlane)
+        
+        context.coordinator.view = arView
+        arView.session.delegate = context.coordinator
         
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
@@ -37,19 +39,49 @@ struct CompassARView: UIViewRepresentable {
         
     }
     
-    func rotateModel(uiView: ARView) {
-        if let model = uiView.scene.anchors.first?.findEntity(named: "point"),
-           let rotation = self.locationManager.headingToDestination
+    func rotateModel(model: Entity) {
+        let locationManager = LocationManager.shared
+
+        if let rotation = locationManager.headingToDestination
         {
-            var transform = Transform(pitch: 0, yaw: ((rotation+180) * .pi / 180), roll: 0)
-            transform.scale = .init(repeating: 0.05)
-            
-            model.move(to: transform, relativeTo: model.parent, duration: 1)
-            
-            for animation in model.availableAnimations {
-                model.playAnimation(animation.repeat())
+            if model.isAnchored {
+                var transform = Transform(pitch: 0, yaw: ((rotation+180) * .pi / 180), roll: 0)
+                transform.scale = .init(repeating: 0.05)
+                
+                model.move(to: transform, relativeTo: model.parent, duration: 0.5)
+                
+                for animation in model.availableAnimations {
+                    model.playAnimation(animation.repeat())
+                }
+                print("DEBUG: model rotated: \(rotation)")
+            } else {
+                print("DEBUG: model not rotated")
             }
-            print("DEBUG: model rotated")
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(parent: self)
+    }
+    
+    // MARK: coordinator
+    class Coordinator: NSObject, ARSessionDelegate {
+        weak var view: ARView?
+        var parent: CompassARView
+        
+        init(view: ARView? = nil, parent: CompassARView) {
+            self.view = view
+            self.parent = parent
+        }
+        
+        func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+            if let model = view?.scene.findEntity(named: "point") {
+                if model.isAnchored {
+                    print("DEBUG: point found")
+                    parent.rotateModel(model: model)
+                    //    model.name = "rotated point"
+                }
+            }
         }
     }
     
@@ -63,7 +95,6 @@ struct CompassARView: UIViewRepresentable {
             }, receiveValue: { model in
                 model.name = "point"
                 
-                // let anchor = AnchorEntity()
                 let bounds = SIMD2(repeating: Float(1))
                 let anchor = AnchorEntity(plane: .horizontal, classification: .floor, minimumBounds: bounds)
                 anchor.name = "anchor"
@@ -73,10 +104,7 @@ struct CompassARView: UIViewRepresentable {
                 uiView.scene.addAnchor(anchor)
                 print("DEBUG: model placed")
                 
-                rotateModel(uiView: uiView)
-                
                 cancellable?.cancel()
             })
     }
 }
-

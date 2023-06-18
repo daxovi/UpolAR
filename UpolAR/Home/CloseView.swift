@@ -31,9 +31,6 @@ struct CloseView: View {
                     NavigationLink { PortalView()
                     } label: { MenuButtonView(title: "Portal AR", iconName: "arkit") }
                     
-                    NavigationLink { NavigatorView()
-                    } label: { MenuButtonView(title: "test", iconName: "arkit") }
-                    
                     MenuView()
                 }
                 .padding(.horizontal, 20)

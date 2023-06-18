@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF090F1C27479A4100F68DB9 /* AboutView.swift */; };
-		CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC622A30D2FC0070DB34 /* NavigatorView.swift */; };
+		CF0B9BDB2A3F3D2A00B2D1CC /* BannerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BDA2A3F3D2A00B2D1CC /* BannerButtonView.swift */; };
+		CF0B9BDF2A3F457100B2D1CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0B9BDE2A3F457100B2D1CC /* LaunchScreen.storyboard */; };
 		CF31DC702A310E890070DB34 /* RemoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC6F2A310E890070DB34 /* RemoteView.swift */; };
 		CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC712A310ECE0070DB34 /* MenuView.swift */; };
 		CF31DC762A3113A20070DB34 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC752A3113A20070DB34 /* BackButtonView.swift */; };
@@ -32,7 +33,6 @@
 		CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6222B2A2B972A004C6133 /* CompassARView.swift */; };
 		CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalView.swift */; };
 		CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291A32A34814800268A49 /* NoLocationView.swift */; };
-		CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */; };
 		CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AE2A34ACD000268A49 /* PortalARView.swift */; };
 		CFF291B32A3621F300268A49 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291B22A3621F300268A49 /* sunset.jpg */; };
 		CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291B62A38EE0C00268A49 /* ARView.swift */; };
@@ -50,7 +50,9 @@
 
 /* Begin PBXFileReference section */
 		CF090F1C27479A4100F68DB9 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		CF31DC622A30D2FC0070DB34 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
+		CF0B9BDA2A3F3D2A00B2D1CC /* BannerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerButtonView.swift; sourceTree = "<group>"; };
+		CF0B9BDD2A3F436D00B2D1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CF0B9BDE2A3F457100B2D1CC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF31DC6F2A310E890070DB34 /* RemoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteView.swift; sourceTree = "<group>"; };
 		CF31DC712A310ECE0070DB34 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CF31DC752A3113A20070DB34 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 		CFE6222B2A2B972A004C6133 /* CompassARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassARView.swift; sourceTree = "<group>"; };
 		CFE7462C27D26F5D00069133 /* PortalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalView.swift; sourceTree = "<group>"; };
 		CFF291A32A34814800268A49 /* NoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLocationView.swift; sourceTree = "<group>"; };
-		CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorARView.swift; sourceTree = "<group>"; };
 		CFF291AE2A34ACD000268A49 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
 		CFF291B22A3621F300268A49 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
 		CFF291B62A38EE0C00268A49 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
@@ -102,20 +103,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF31DC612A30D2CC0070DB34 /* Navigator */ = {
-			isa = PBXGroup;
-			children = (
-				CF31DC622A30D2FC0070DB34 /* NavigatorView.swift */,
-				CFF291AC2A34AABF00268A49 /* NavigatorARView.swift */,
-			);
-			path = Navigator;
-			sourceTree = "<group>";
-		};
 		CF31DC792A311E620070DB34 /* Portal */ = {
 			isa = PBXGroup;
 			children = (
 				CFF291A62A3490FB00268A49 /* 3DModels */,
-				CFF291A52A34906400268A49 /* Materials */,
+				CFF291A52A34906400268A49 /* Textures */,
 				CFF291AE2A34ACD000268A49 /* PortalARView.swift */,
 				CFE7462C27D26F5D00069133 /* PortalView.swift */,
 				CFF291BC2A3B8ECA00268A49 /* PortalViewModel.swift */,
@@ -146,6 +138,7 @@
 		CF830332274597A6008A1063 = {
 			isa = PBXGroup;
 			children = (
+				CF0B9BDE2A3F457100B2D1CC /* LaunchScreen.storyboard */,
 				CF83033D274597A6008A1063 /* UpolAR */,
 				CF83033C274597A6008A1063 /* Products */,
 			);
@@ -162,10 +155,10 @@
 		CF83033D274597A6008A1063 /* UpolAR */ = {
 			isa = PBXGroup;
 			children = (
+				CF0B9BDD2A3F436D00B2D1CC /* Info.plist */,
 				CFF291FD2A3DFA2400268A49 /* Lens */,
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
 				CF31DC792A311E620070DB34 /* Portal */,
-				CF31DC612A30D2CC0070DB34 /* Navigator */,
 				CF6352952A2B59FA00FFB1DB /* Compass */,
 				CFF291B02A34ADEA00268A49 /* Home */,
 				CFF291B12A34AE1200268A49 /* Subviews */,
@@ -196,7 +189,7 @@
 			path = About;
 			sourceTree = "<group>";
 		};
-		CFF291A52A34906400268A49 /* Materials */ = {
+		CFF291A52A34906400268A49 /* Textures */ = {
 			isa = PBXGroup;
 			children = (
 				CFF291C02A3B9EF500268A49 /* beach.jpg */,
@@ -204,7 +197,7 @@
 				CFF291B22A3621F300268A49 /* sunset.jpg */,
 				CFAF6F2F27D2A61800FD1590 /* christmas.jpg */,
 			);
-			path = Materials;
+			path = Textures;
 			sourceTree = "<group>";
 		};
 		CFF291A62A3490FB00268A49 /* 3DModels */ = {
@@ -246,6 +239,7 @@
 				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
 				CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */,
 				CFF292032A3E042400268A49 /* LogoView.swift */,
+				CF0B9BDA2A3F3D2A00B2D1CC /* BannerButtonView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -330,6 +324,7 @@
 				CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */,
 				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
+				CF0B9BDF2A3F457100B2D1CC /* LaunchScreen.storyboard in Resources */,
 				CF830343274597A8008A1063 /* Assets.xcassets in Resources */,
 				CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */,
 			);
@@ -343,9 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */,
-				CFF291AD2A34AABF00268A49 /* NavigatorARView.swift in Sources */,
 				CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */,
-				CF31DC632A30D2FC0070DB34 /* NavigatorView.swift in Sources */,
 				CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
 				CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */,
@@ -355,6 +348,7 @@
 				CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */,
 				CFF292042A3E042400268A49 /* LogoView.swift in Sources */,
 				CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */,
+				CF0B9BDB2A3F3D2A00B2D1CC /* BannerButtonView.swift in Sources */,
 				CFF292022A3DFB3600268A49 /* LensView.swift in Sources */,
 				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
 				CF31DC782A3114E30070DB34 /* CloseView.swift in Sources */,
@@ -503,6 +497,7 @@
 				DEVELOPMENT_TEAM = BY8G7HDNPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UpolAR/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Pro správné použití aplikace je potřeba povolit polohové služby.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -520,6 +515,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.djdesign.UpolAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -537,6 +535,7 @@
 				DEVELOPMENT_TEAM = BY8G7HDNPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UpolAR/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Pro správné použití aplikace je potřeba povolit polohové služby.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -554,6 +553,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.djdesign.UpolAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
