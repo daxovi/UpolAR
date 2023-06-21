@@ -35,6 +35,11 @@ struct RemoteView: View {
                         BannerButtonView(imageName: "BannerLens", text: "Lens")
                     }
                     
+                    NavigationLink { TetrisView()
+                    } label: {
+                        MenuButtonView(title: "Tetris", iconName: "chevron.right")
+                    }
+                    
                     MenuView()
                 }
                 .padding(.horizontal, 20)

@@ -96,7 +96,8 @@ struct CompassARView: UIViewRepresentable {
                 model.name = "point"
                 
                 let bounds = SIMD2(repeating: Float(1))
-                let anchor = AnchorEntity(plane: .horizontal, classification: .floor, minimumBounds: bounds)
+                // let anchor = AnchorEntity(plane: .horizontal, classification: .floor, minimumBounds: bounds)
+                let anchor = AnchorEntity()
                 anchor.name = "anchor"
                 
                 model.transform = Transform(scale: .init(repeating: 0.00))

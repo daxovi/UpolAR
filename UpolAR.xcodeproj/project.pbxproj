@@ -26,6 +26,9 @@
 		CF830351274597DD008A1063 /* about_faculty.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034E274597DD008A1063 /* about_faculty.md */; };
 		CF830352274597DD008A1063 /* about_university.md in Resources */ = {isa = PBXBuildFile; fileRef = CF83034F274597DD008A1063 /* about_university.md */; };
 		CF843A652A2BC76400085922 /* ARViewUIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */; };
+		CF86AB362A40D436005B1BCA /* TetrisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86AB352A40D436005B1BCA /* TetrisView.swift */; };
+		CF86AB382A40D448005B1BCA /* TetrisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */; };
+		CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91CE8F2A436B1C0020C662 /* BrickModel.swift */; };
 		CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFA888A72812B94F00FB5BC6 /* room.usdz */; };
 		CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF6F2F27D2A61800FD1590 /* christmas.jpg */; };
 		CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* LocationSheetView.swift */; };
@@ -70,6 +73,9 @@
 		CF83034E274597DD008A1063 /* about_faculty.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_faculty.md; sourceTree = "<group>"; };
 		CF83034F274597DD008A1063 /* about_university.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = about_university.md; sourceTree = "<group>"; };
 		CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewUIViewRepresentable.swift; sourceTree = "<group>"; };
+		CF86AB352A40D436005B1BCA /* TetrisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisView.swift; sourceTree = "<group>"; };
+		CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisViewModel.swift; sourceTree = "<group>"; };
+		CF91CE8F2A436B1C0020C662 /* BrickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickModel.swift; sourceTree = "<group>"; };
 		CFA888A72812B94F00FB5BC6 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
 		CFAF6F2F27D2A61800FD1590 /* christmas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christmas.jpg; sourceTree = "<group>"; };
 		CFD2D9A52A2C904300764228 /* LocationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSheetView.swift; sourceTree = "<group>"; };
@@ -138,7 +144,6 @@
 		CF830332274597A6008A1063 = {
 			isa = PBXGroup;
 			children = (
-				CF0B9BDE2A3F457100B2D1CC /* LaunchScreen.storyboard */,
 				CF83033D274597A6008A1063 /* UpolAR */,
 				CF83033C274597A6008A1063 /* Products */,
 			);
@@ -155,9 +160,11 @@
 		CF83033D274597A6008A1063 /* UpolAR */ = {
 			isa = PBXGroup;
 			children = (
+				CF86AB342A40D428005B1BCA /* Tetris */,
+				CF0B9BDE2A3F457100B2D1CC /* LaunchScreen.storyboard */,
 				CF0B9BDD2A3F436D00B2D1CC /* Info.plist */,
-				CFF291FD2A3DFA2400268A49 /* Lens */,
 				CF83033E274597A6008A1063 /* UpolARApp.swift */,
+				CFF291FD2A3DFA2400268A49 /* Lens */,
 				CF31DC792A311E620070DB34 /* Portal */,
 				CF6352952A2B59FA00FFB1DB /* Compass */,
 				CFF291B02A34ADEA00268A49 /* Home */,
@@ -187,6 +194,16 @@
 				CF83034F274597DD008A1063 /* about_university.md */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		CF86AB342A40D428005B1BCA /* Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				CF86AB352A40D436005B1BCA /* TetrisView.swift */,
+				CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */,
+				CF91CE8F2A436B1C0020C662 /* BrickModel.swift */,
+			);
+			path = Tetris;
 			sourceTree = "<group>";
 		};
 		CFF291A52A34906400268A49 /* Textures */ = {
@@ -340,6 +357,7 @@
 				CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */,
 				CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */,
 				CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */,
+				CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
 				CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */,
 				CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */,
@@ -354,6 +372,7 @@
 				CF31DC782A3114E30070DB34 /* CloseView.swift in Sources */,
 				CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */,
 				CF31DC762A3113A20070DB34 /* BackButtonView.swift in Sources */,
+				CF86AB362A40D436005B1BCA /* TetrisView.swift in Sources */,
 				CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */,
 				CF6352992A2B5A6A00FFB1DB /* CompassView.swift in Sources */,
 				CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */,
@@ -362,6 +381,7 @@
 				CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */,
 				CF843A652A2BC76400085922 /* ARViewUIViewRepresentable.swift in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
+				CF86AB382A40D448005B1BCA /* TetrisViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
