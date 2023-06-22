@@ -31,6 +31,7 @@
 		CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91CE8F2A436B1C0020C662 /* BrickModel.swift */; };
 		CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFA888A72812B94F00FB5BC6 /* room.usdz */; };
 		CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF6F2F27D2A61800FD1590 /* christmas.jpg */; };
+		CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC130D02A44A29500EAF734 /* TetrisARView.swift */; };
 		CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* LocationSheetView.swift */; };
 		CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */; };
 		CFE6222C2A2B972A004C6133 /* CompassARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6222B2A2B972A004C6133 /* CompassARView.swift */; };
@@ -78,6 +79,7 @@
 		CF91CE8F2A436B1C0020C662 /* BrickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickModel.swift; sourceTree = "<group>"; };
 		CFA888A72812B94F00FB5BC6 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
 		CFAF6F2F27D2A61800FD1590 /* christmas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christmas.jpg; sourceTree = "<group>"; };
+		CFC130D02A44A29500EAF734 /* TetrisARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisARView.swift; sourceTree = "<group>"; };
 		CFD2D9A52A2C904300764228 /* LocationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSheetView.swift; sourceTree = "<group>"; };
 		CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CFE6222B2A2B972A004C6133 /* CompassARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassARView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				CF86AB352A40D436005B1BCA /* TetrisView.swift */,
 				CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */,
 				CF91CE8F2A436B1C0020C662 /* BrickModel.swift */,
+				CFC130D02A44A29500EAF734 /* TetrisARView.swift */,
 			);
 			path = Tetris;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */,
+				CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */,
 				CFF292042A3E042400268A49 /* LogoView.swift in Sources */,
 				CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */,
 				CF0B9BDB2A3F3D2A00B2D1CC /* BannerButtonView.swift in Sources */,

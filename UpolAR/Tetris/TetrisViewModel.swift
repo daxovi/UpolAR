@@ -11,12 +11,15 @@ class TetrisViewModel: ObservableObject {
     
     @Published var player = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
     @Published var board: [[Int]]
+    @Published var showingAlert: Bool
+    
     var nextBoard: [[Int]]
     var position: [Int]
     let startPosition: [Int]
     var brick: BrickModel?
     
     init(rows: Int, columns: Int) {
+        showingAlert = false
         board = [[Int]](repeating: [Int](repeating: 0, count: columns), count: rows)
         nextBoard = [[Int]](repeating: [Int](repeating: 0, count: columns), count: rows)
         position = [0, columns/2 - 1]
@@ -26,10 +29,33 @@ class TetrisViewModel: ObservableObject {
     }
     
     func step() {
+        eraseFullRow()
+        
         if self.brick != nil {
             fall()
         } else {
             addBrick()
+        }
+    }
+    
+    func eraseFullRow() {
+        for (rowIndex, row) in board.enumerated() {
+            
+            var fullRow = true
+            
+            for (columnIndex, value) in row.enumerated() {
+                if value == 2 {
+                    fullRow = fullRow && true
+                } else {
+                    fullRow = false
+                }
+            }
+            
+            if fullRow {
+                board.remove(at: rowIndex)
+                let newRow = [Int](repeating: 0, count: row.count)
+                board.insert(newRow, at: 0)
+            }
         }
     }
     
@@ -141,6 +167,7 @@ class TetrisViewModel: ObservableObject {
     }
     
     func horizontalMove(horizontalMove: Move) {
+        print("DEBUG: horizontal move")
         if isMoveValid(horizontalMove: horizontalMove) {
             self.position[1] = self.position[1] + horizontalMove.rawValue
             addBrick()
@@ -259,6 +286,10 @@ class TetrisViewModel: ObservableObject {
     
     func stop() {
         self.player.upstream.connect().cancel()
+    }
+    
+    func showAlert() {
+        self.showingAlert = true
     }
     
     enum Move: Int {

@@ -9,35 +9,48 @@ import SwiftUI
 
 struct TetrisView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var viewModel = TetrisViewModel(rows: 10, columns: 6)
     
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(viewModel.board, id: \.self) { row in
-                HStack(spacing: 0) {
-                            ForEach(row, id: \.self) { value in
-                                Text("\(value)")
-                                    .frame(width: 30, height: 30)
-                                    .border(Color.black)
+        ZStack {
+            TetrisARView(board: $viewModel.board)
+                    .ignoresSafeArea()
+                    .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
+                                        .onEnded({ value in
+                                            if value.translation.width < -50 {
+                                                viewModel.horizontalMove(horizontalMove: .left)
+                                            }
+                                            if value.translation.width > 50 {
+                                                viewModel.horizontalMove(horizontalMove: .right)
+                                            }
+                                            if value.translation.height < -50 {
+                                                viewModel.rotate()
+                                            }
+                                        }))
+        }
+        .navigationBarBackButtonHidden(true)
+        
+        // navigační lišta NavigationView
+        .navigationBarItems(
+            leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() }),
+            trailing: HelpButtonView(action: { viewModel.showAlert() }))
+        
+        // zobrazení alert okna s informacemi k ovládání
+        .alert(isPresented: $viewModel.showingAlert) {
+                                Alert(title: Text("Portál"),
+                                      message: Text("Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈"),
+                                      dismissButton: .default(Text("OK")))
                             }
-                        }
-                    }
-            Spacer()
-            Button("rotate", action: {viewModel.rotate()})
-            HStack {
-                Button("left", action: {viewModel.horizontalMove(horizontalMove: .left)})
-                Spacer()
-                Button("restart", action: viewModel.restart)
-                Spacer()
-                Button("right", action: {viewModel.horizontalMove(horizontalMove: .right)})
-            }
-            .padding()
-                }
+        .onAppear(perform: viewModel.showAlert)
+        
         .onReceive(viewModel.player) { _ in
-                            print("tick")
             viewModel.step()
                         }
-                    
+        
+        .onDisappear {
+            viewModel.restart()
+        }
     }
 }
 
