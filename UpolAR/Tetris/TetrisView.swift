@@ -10,11 +10,11 @@ import SwiftUI
 struct TetrisView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @StateObject var viewModel = TetrisViewModel(rows: 10, columns: 6)
+    @StateObject var viewModel = TetrisViewModel(rows: 20, columns: 15)
     
     var body: some View {
         ZStack {
-            TetrisARView(board: $viewModel.board)
+            TetrisARView(board: $viewModel.board, score: $viewModel.score, finalScore: $viewModel.finalScore, gameState: $viewModel.gameState)
                     .ignoresSafeArea()
                     .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
                                         .onEnded({ value in
@@ -27,7 +27,11 @@ struct TetrisView: View {
                                             if value.translation.height < -50 {
                                                 viewModel.rotate()
                                             }
+                                            if value.translation.height > 50 {
+                                                viewModel.renderGame()
+                                            }
                                         }))
+          Button("start", action: {viewModel.start()})
         }
         .navigationBarBackButtonHidden(true)
         
@@ -38,16 +42,16 @@ struct TetrisView: View {
         
         // zobrazení alert okna s informacemi k ovládání
         .alert(isPresented: $viewModel.showingAlert) {
-                                Alert(title: Text("Portál"),
+                                Alert(title: Text("Tetris"),
                                       message: Text("Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈"),
                                       dismissButton: .default(Text("OK")))
                             }
         .onAppear(perform: viewModel.showAlert)
         
         .onReceive(viewModel.player) { _ in
-            viewModel.step()
+            viewModel.renderGame()
                         }
-        
+
         .onDisappear {
             viewModel.restart()
         }
