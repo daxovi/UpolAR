@@ -27,5 +27,31 @@ extension ARView: ARCoachingOverlayViewDelegate {
         //Ready to add objects
     }
     
+// https://www.youtube.com/watch?v=mPJiRtNzIHw
+    
+    func enableTapGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+        self.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func handleTap(recognizer: UITapGestureRecognizer) {
+        let tapLocation = recognizer.location(in: self)
+        
+        guard let rayResult = self.ray(through: tapLocation) else { return }
+        
+        let results = self.scene.raycast(origin: rayResult.origin, direction: rayResult.direction)
+        
+        if let firstResult = results.first {
+            
+        } else {
+            let results = self.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .any)
+            
+            if let firstResult = results.first {
+                let position = simd_make_float3(firstResult.worldTransform.columns.3)
+                
+            }
+        }
+    }
+    
 }
 

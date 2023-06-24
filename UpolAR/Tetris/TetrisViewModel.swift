@@ -16,6 +16,8 @@ class TetrisViewModel: ObservableObject {
     @Published var finalScore: Int
     @Published var gameState: GameState
     
+    static let shared = TetrisViewModel(rows: 20, columns: 15)
+    
     private var nextBoard: [[Int]]
     private var position: [Int]
     private let startPosition: [Int]
@@ -301,7 +303,6 @@ class TetrisViewModel: ObservableObject {
             brick?.rotate()
             addBrick()
         }
-
     }
     
     func restart() {
@@ -311,6 +312,7 @@ class TetrisViewModel: ObservableObject {
         self.brick = nil
         self.score = 0
         self.gameState = .ready
+        self.player.upstream.connect().cancel()
     }
     
     func start() {

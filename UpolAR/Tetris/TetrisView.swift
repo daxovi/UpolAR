@@ -10,7 +10,7 @@ import SwiftUI
 struct TetrisView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @StateObject var viewModel = TetrisViewModel(rows: 20, columns: 15)
+    @StateObject var viewModel = TetrisViewModel.shared
     
     var body: some View {
         ZStack {
@@ -31,7 +31,6 @@ struct TetrisView: View {
                                                 viewModel.renderGame()
                                             }
                                         }))
-          Button("start", action: {viewModel.start()})
         }
         .navigationBarBackButtonHidden(true)
         

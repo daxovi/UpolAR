@@ -22,8 +22,13 @@ struct TetrisARView: UIViewRepresentable {
     // spouští první ARView s konfigurací a modely
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
+        
         arView.addCoaching(plane: .tracking)
         
+        context.coordinator.view = arView
+        
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
+                
         let anchor = AnchorEntity(.image(group: "AR Resources", name: "anchor_tetris"))
         anchor.name = "boardAnchor"
         anchor.position = [-0.24 + sizeOfBlock / 2, 0, -0.189 + sizeOfBlock / 2]
@@ -46,6 +51,7 @@ struct TetrisARView: UIViewRepresentable {
         let startButton = ModelEntity(mesh: .generateBox(width: 0.161, height: 0.005, depth: 0.038, cornerRadius: 0.05), materials: [SimpleMaterial(color: .green, isMetallic: false)])
         startButton.name = "startButton"
         startButton.position = [0.3725, 0, 0.332]
+        startButton.generateCollisionShapes(recursive: true)
         
         let startText = ModelEntity(mesh: .generateText("START", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .center, lineBreakMode: .byCharWrapping), materials: [SimpleMaterial(color: .black, isMetallic: false)])
         startText.transform = Transform(pitch: -(.pi/2), yaw: 0, roll: 0)
@@ -98,11 +104,30 @@ struct TetrisARView: UIViewRepresentable {
             text.position = textPosition
             anchor.addChild(text)
         }
-        
-        
-        
+                
         // přidá kotvu do scény
         arView.scene.addAnchor(anchor)
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
+}
+
+class Coordinator: NSObject {
+    weak var view: ARView?
+    
+    @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
+        guard let view = self.view else { return }
+        
+        let tapLocation = recognizer.location(in: view)
+        
+        if let entity = view.entity(at: tapLocation) as? ModelEntity {
+            if entity.name == "startButton" {
+                TetrisViewModel.shared.start()
+            }
+        }
     }
 }
 
