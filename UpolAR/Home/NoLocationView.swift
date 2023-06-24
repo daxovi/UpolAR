@@ -9,7 +9,41 @@ import SwiftUI
 
 struct NoLocationView: View {
     var body: some View {
-        Text("nemám data na určování vzdálenosti. Přejděte do nastavení a povolte polohové služby.")
+        ScrollView {
+            
+            LogoView(showCompass: false)
+            HStack {
+                VStack (alignment: .leading) {
+                    Text("Vítejte")
+                        .fontWeight(.bold)
+                    
+                    Text("na Přírodovědecké fakultě UPOL, katedře Informatiky")
+                }
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .padding(.horizontal, 20)
+                .padding(.bottom)
+                
+            }
+                
+                
+                Group {
+                    
+                    NavigationLink { PortalView()
+                    } label: {
+                        BannerButtonView(imageName: "BannerPortal", text: "Portal")
+                    }
+                    
+                    NavigationLink { LensView()
+                    } label: {
+                        BannerButtonView(imageName: "BannerLens", text: "Lens")
+                    }
+                    
+                    MenuView()
+                }
+                .padding(.horizontal, 20)
+                }
+            .ignoresSafeArea()
     }
 }
 

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CloseView: View {
     var body: some View {
-            ScrollView {
-                
-                LogoView()
-                
+        ScrollView {
+            
+            LogoView(showCompass: false)
+            HStack {
                 VStack (alignment: .leading) {
                     Text("Vítejte")
                         .fontWeight(.bold)
@@ -23,13 +23,34 @@ struct CloseView: View {
                 .foregroundColor(.white)
                 .padding(.horizontal, 20)
                 .padding(.bottom)
+            }
+                
                 
                 Group {
-                    NavigationLink { CompassView()
-                    } label: { MenuButtonView(title: "Kompas", iconName: "arkit") }
+                    NavigationLink { NavigatorView()
+                    } label: {
+                        BannerButtonView(imageName: "BannerNavigator", text: "Navigátor")
+                    }
+                    
+                    NavigationLink { ComputerView()
+                    } label: {
+                        BannerButtonView(imageName: "BannerNavigator", text: "Computer")
+                    }
+                    
+                    NavigationLink { TetrisView()
+                    } label: {
+                        BannerButtonView(imageName: "BannerPortal", text: "Tetris")
+                    }
                     
                     NavigationLink { PortalView()
-                    } label: { MenuButtonView(title: "Portal AR", iconName: "arkit") }
+                    } label: {
+                        BannerButtonView(imageName: "BannerPortal", text: "Portal")
+                    }
+                    
+                    NavigationLink { LensView()
+                    } label: {
+                        BannerButtonView(imageName: "BannerLens", text: "Lens")
+                    }
                     
                     MenuView()
                 }
@@ -41,6 +62,19 @@ struct CloseView: View {
 
 struct CloseView_Previews: PreviewProvider {
     static var previews: some View {
-        CloseView()
+        NavigationView {
+            ZStack {
+                Color("BlueColor").ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Image("Lines")
+                        Spacer()
+                    }
+                    Spacer()
+                }
+                .ignoresSafeArea()
+                CloseView()
+            }
+        }
     }
 }

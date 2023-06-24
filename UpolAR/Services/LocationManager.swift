@@ -17,13 +17,13 @@ class LocationManager: NSObject, ObservableObject {
     // poloha požadované destinace
     let destination = CLLocationCoordinate2D(latitude: 49.592477, longitude: 17.263371)
     
-    let maximumDistance = 500
+    let maximumDistance = 1000
     
     // souřadnice uživatele
     @Published var userLocation: CLLocation?
     
     // směrování k místu
-    @Published var headingToDestination: Float?
+    @Published var headingToDestination: Double?
     
     // vzdálenost od místa
     @Published var distanceToDestination: Float?
@@ -101,8 +101,8 @@ extension LocationManager: CLLocationManagerDelegate {
         let bearingInDegrees = bearing.toDegrees
         
         let myHeading = Double(heading)
-        let bearingFromMe =  myHeading - bearingInDegrees
-        self.headingToDestination = Float(bearingFromMe)
+        let bearingFromMe = bearingInDegrees - myHeading
+        self.headingToDestination = bearingFromMe
     }
 }
 

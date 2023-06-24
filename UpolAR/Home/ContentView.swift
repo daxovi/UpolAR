@@ -30,7 +30,7 @@ struct ContentView: View {
                 if locationManager.distanceToDestination != nil
                 {
                     
-                    // Zjistí jestli je uživatel v okruhu od místa definovaném v LocationManager
+                    // Zjistí jestli je uživatel ve vzdálenosti od místa definovaném v LocationManager
                     if locationManager.isUserInPlace {
                         
                         // View pro zobrazení v místě

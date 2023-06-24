@@ -102,7 +102,7 @@ class TetrisViewModel: ObservableObject {
     }
     
     private func getRandomBrick() -> BrickModel {
-        let bricks: [BrickType] = [.corner, .el, .square, .line]
+        let bricks: [BrickType] = [.corner, .el, .square, .line, .jee, .tshirt, .zet]
         
         let randomIndex = Int.random(in: 0..<bricks.count)
         let randomBrick = bricks[randomIndex]

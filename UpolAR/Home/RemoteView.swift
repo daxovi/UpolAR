@@ -15,15 +15,11 @@ struct RemoteView: View {
     var body: some View {
             ScrollView {
                 
-                LogoView()
+                LogoView(showCompass: true)
                 
                 header
                 
                 Group {
-                    NavigationLink { CompassView()
-                    } label: {
-                        BannerButtonView(imageName: "BannerCompass", text: "Kompas")
-                    }
                     
                     NavigationLink { PortalView()
                     } label: {
@@ -35,11 +31,6 @@ struct RemoteView: View {
                         BannerButtonView(imageName: "BannerLens", text: "Lens")
                     }
                     
-                    NavigationLink { TetrisView()
-                    } label: {
-                        MenuButtonView(title: "Tetris", iconName: "chevron.right")
-                    }
-                    
                     MenuView()
                 }
                 .padding(.horizontal, 20)
@@ -48,15 +39,17 @@ struct RemoteView: View {
     }
     
     var header: some View {
-        VStack (alignment: .leading) {
-            if ((distance ?? 0.0) < 1000) {
-                close
-            } else {
-                far
+        HStack {
+            VStack (alignment: .leading) {
+                if ((distance ?? 0.0) < 600) {
+                    close
+                } else {
+                    far
+                }
             }
+            .padding(.horizontal, 20)
+            .padding(.bottom)
         }
-        .padding(.horizontal, 20)
-        .padding(.bottom)
     }
     
     // Část View, která se zobrazí pokud je uživael blízko
@@ -84,7 +77,21 @@ struct RemoteView: View {
 
 struct RemoteView_Previews: PreviewProvider {
     static var previews: some View {
-        RemoteView(distance: .constant(111))
+        NavigationView {
+            ZStack {
+                Color("BlueColor").ignoresSafeArea()
+                VStack {
+                    HStack {
+                        Image("Lines")
+                        Spacer()
+                    }
+                    Spacer()
+                }
+                .ignoresSafeArea()
+                RemoteView(distance: .constant(111))
+            }
+        }
+        
     }
 }
 

@@ -38,6 +38,22 @@ class BrickModel {
                 [1],
                 [1]
             ]
+        case .tshirt:
+            self.mesh = [
+                [0, 1, 0],
+                [1, 1, 1]
+            ]
+        case .zet:
+            self.mesh = [
+                [1, 1, 0],
+                [0, 1, 1]
+            ]
+        case .jee:
+            self.mesh = [
+                [1, 0],
+                [1, 0],
+                [1, 1]
+            ]
         }
     }
     
@@ -60,5 +76,5 @@ class BrickModel {
 }
 
 enum BrickType {
-    case square, el, corner, line
+    case square, el, corner, line, tshirt, zet, jee
 }
