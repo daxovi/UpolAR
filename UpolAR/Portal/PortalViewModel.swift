@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class PortalViewModel: ObservableObject {
+class PortalViewModel: ViewModel {
     
     private var roomNr: Int
     private let images: [String]
@@ -15,20 +15,14 @@ class PortalViewModel: ObservableObject {
     let fileExtension: String
     
     @Published var roomFileName: String
-    @Published var showingAlert: Bool
     
-    init() {
-        self.showingAlert = false
+    override init() {
         self.roomNr = 0
         self.images = ["christmas", "sunset", "oldcity", "beach"]
         self.fileExtension = "jpg"
         
         self.roomFileName = self.images[self.roomNr]
-        print("DEBUG: viewmodel init. roomNr: \(roomNr)")
-    }
-    
-    func showAlert() {
-        self.showingAlert = true
+        super.init()
     }
     
     func nextRoom() {

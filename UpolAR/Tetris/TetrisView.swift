@@ -42,7 +42,7 @@ struct TetrisView: View {
         // zobrazení alert okna s informacemi k ovládání
         .alert(isPresented: $viewModel.showingAlert) {
                                 Alert(title: Text("Tetris"),
-                                      message: Text("Když najdete obrazovku s nápisem tetris, můžete hrát. Hra se ovládá svajpování doprava nebo doleva a nahoru pro otáčení kostky."),
+                                      message: Text("Jestli jste narazili 💻 s rozehraným tetrisem, můžete ho dohrát 🕹️"),
                                       dismissButton: .default(Text("OK")))
                             }
         .onAppear(perform: viewModel.showAlert)

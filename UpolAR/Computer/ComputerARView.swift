@@ -26,7 +26,7 @@ struct ComputerARView: UIViewRepresentable {
         let arView = ARView(frame: .zero)
         
         for computer in computers {
-            arView.scene.addAnchor(loadScreen(computerModel: computer))
+            arView.scene.addAnchor(computer.getModel())
         }
         
         arView.session.delegate = context.coordinator
@@ -34,35 +34,6 @@ struct ComputerARView: UIViewRepresentable {
         context.coordinator.computers = computers
         
         return arView
-    }
-    
-    func loadScreen(computerModel: ComputerModel) -> AnchorEntity {
-        let anchor = AnchorEntity(.image(group: "AR Resources", name: computerModel.anchorName))
-        anchor.name = "\(computerModel.anchorName)Anchor"
-        
-        let box = MeshResource.generateBox(width: computerModel.screenWidth, height: 0.001, depth: computerModel.screenHeight)
-        let videoBox = ModelEntity(mesh: box)
-        if let videoMaterial = loadVideoMaterial(video: computerModel.videoName) {
-            videoBox.model?.materials = [videoMaterial]
-        }
-        
-        videoBox.name = "\(computerModel.videoName)Screen"
-        
-        anchor.addChild(videoBox)
-        return anchor
-    }
-    
-    func loadVideoMaterial(video: String) -> VideoMaterial? {
-        guard let pathToVideo = Bundle.main.path(forResource: video, ofType: "mp4") else { return nil }
-        
-        let videoURL = URL(fileURLWithPath: pathToVideo)
-        let avPlayer = AVPlayer(url: videoURL)
-        // 16:9 video
-        let material = VideoMaterial(avPlayer: avPlayer)
-        
-        avPlayer.volume = 0.0
-        
-        return material
     }
     
     // MARK: update
@@ -74,6 +45,7 @@ struct ComputerARView: UIViewRepresentable {
         Coordinator()
     }
     
+    // MARK: coordinator
     class Coordinator: NSObject, ARSessionDelegate {
         weak var arView: ARView?
         var computers: [ComputerModel]?

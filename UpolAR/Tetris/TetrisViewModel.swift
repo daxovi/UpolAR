@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-class TetrisViewModel: ObservableObject {
+class TetrisViewModel: ViewModel {
     
     @Published var player = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
     @Published var board: [[Int]]
-    @Published var showingAlert: Bool
     @Published var score: Int
     @Published var finalScore: Int
     @Published var gameState: GameState
@@ -26,7 +25,6 @@ class TetrisViewModel: ObservableObject {
     init(rows: Int, columns: Int) {
         self.score = 0
         self.finalScore = 0
-        self.showingAlert = false
         self.board = [[Int]](repeating: [Int](repeating: 0, count: columns), count: rows)
         self.nextBoard = [[Int]](repeating: [Int](repeating: 0, count: columns), count: rows)
         self.position = [0, columns/2 - 1]
@@ -318,10 +316,6 @@ class TetrisViewModel: ObservableObject {
     func start() {
         self.gameState = .play
         self.player = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
-    }
-    
-    func showAlert() {
-        self.showingAlert = true
     }
     
     enum Move: Int {

@@ -41,7 +41,7 @@ struct RemoteView: View {
     var header: some View {
         HStack {
             VStack (alignment: .leading) {
-                if ((distance ?? 0.0) < 600) {
+                if ((distance ?? 0.0) < 2000) {
                     close
                 } else {
                     far

@@ -9,14 +9,23 @@ import SwiftUI
 
 struct ComputerView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         ComputerARView()
             .ignoresSafeArea()
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
-                leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() })
-            )
+                leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() }),
+                trailing: HelpButtonView(action: { viewModel.showAlert() }))
+            
+            // zobrazení alert okna s informacemi k ovládání
+            .alert(isPresented: $viewModel.showingAlert) {
+                                    Alert(title: Text("Computer"),
+                                          message: Text("Najděte na katedře staré počítače a oživte jejich obrazovky."),
+                                          dismissButton: .default(Text("OK")))
+                                }
+            .onAppear(perform: viewModel.showAlert)
     }
 }
 

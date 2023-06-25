@@ -22,6 +22,7 @@
 		CF6BCB652A484A8F0052118A /* digital.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6BCB612A484A8F0052118A /* digital.mp4 */; };
 		CF6BCB662A484A8F0052118A /* satelite.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6BCB622A484A8F0052118A /* satelite.mp4 */; };
 		CF6BCB682A484F2E0052118A /* ComputerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BCB672A484F2E0052118A /* ComputerModel.swift */; };
+		CF6BCB6C2A48ABDE0052118A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BCB6B2A48ABDE0052118A /* ViewModel.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
 		CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830345274597A8008A1063 /* Preview Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		CF6BCB612A484A8F0052118A /* digital.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = digital.mp4; sourceTree = "<group>"; };
 		CF6BCB622A484A8F0052118A /* satelite.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = satelite.mp4; sourceTree = "<group>"; };
 		CF6BCB672A484F2E0052118A /* ComputerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerModel.swift; sourceTree = "<group>"; };
+		CF6BCB6B2A48ABDE0052118A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
 		CF830342274597A8008A1063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				CF6352912A2B592500FFB1DB /* LocationManager.swift */,
 				CF843A642A2BC76400085922 /* ARViewUIViewRepresentable.swift */,
 				CFF291B62A38EE0C00268A49 /* ARView.swift */,
+				CF6BCB6B2A48ABDE0052118A /* ViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */,
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
+				CF6BCB6C2A48ABDE0052118A /* ViewModel.swift in Sources */,
 				CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */,
 				CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */,
 				CFF292042A3E042400268A49 /* LogoView.swift in Sources */,
