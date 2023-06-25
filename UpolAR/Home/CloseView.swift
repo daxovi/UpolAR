@@ -34,12 +34,12 @@ struct CloseView: View {
                     
                     NavigationLink { ComputerView()
                     } label: {
-                        BannerButtonView(imageName: "BannerNavigator", text: "Computer")
+                        BannerButtonView(imageName: "BannerComputer", text: "Computer")
                     }
                     
                     NavigationLink { TetrisView()
                     } label: {
-                        BannerButtonView(imageName: "BannerPortal", text: "Tetris")
+                        BannerButtonView(imageName: "BannerTetris", text: "Tetris")
                     }
                     
                     NavigationLink { PortalView()

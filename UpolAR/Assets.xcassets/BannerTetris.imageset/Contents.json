@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "dummy_960x540_ffffff_128e7e_placeholder.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

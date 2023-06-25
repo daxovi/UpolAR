@@ -17,7 +17,7 @@ class LocationManager: NSObject, ObservableObject {
     // poloha požadované destinace
     let destination = CLLocationCoordinate2D(latitude: 49.592477, longitude: 17.263371)
     
-    let maximumDistance = 800
+    let maximumDistance = 300
     
     // souřadnice uživatele
     @Published var userLocation: CLLocation?

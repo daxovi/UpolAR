@@ -82,7 +82,7 @@ class TetrisViewModel: ViewModel {
             
             var fullRow = true
             
-            for (columnIndex, value) in row.enumerated() {
+            for (_, value) in row.enumerated() {
                 if value == 2 {
                     fullRow = fullRow && true
                 } else {
