@@ -11,15 +11,12 @@ struct ComputerView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        ZStack {
-            ComputerARView()
-                .ignoresSafeArea()
-                .navigationBarBackButtonHidden(true)
-                .navigationBarItems(
-                    leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() })
-                )
-        }
-        
+        ComputerARView()
+            .ignoresSafeArea()
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(
+                leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() })
+            )
     }
 }
 

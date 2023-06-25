@@ -5,37 +5,22 @@
   },
   "resources" : [
     {
-      "filename" : "anchor_breakoutposter.arreferenceimage"
-    },
-    {
       "filename" : "anchor_tetris.arreferenceimage"
     },
     {
-      "filename" : "arrow.arreferenceimage"
+      "filename" : "digital.arreferenceimage"
     },
     {
-      "filename" : "buillding.arreferenceimage"
-    },
-    {
-      "filename" : "cup.arreferenceimage"
-    },
-    {
-      "filename" : "elevator.arreferenceimage"
-    },
-    {
-      "filename" : "games.arreferenceimage"
+      "filename" : "ibook.arreferenceimage"
     },
     {
       "filename" : "imageanchor.arreferenceimage"
     },
     {
-      "filename" : "o1.arreferenceimage"
+      "filename" : "satelite.arreferenceimage"
     },
     {
-      "filename" : "photo_anchor.arreferenceimage"
-    },
-    {
-      "filename" : "room.arreferenceimage"
+      "filename" : "systemos.arreferenceimage"
     }
   ]
 }

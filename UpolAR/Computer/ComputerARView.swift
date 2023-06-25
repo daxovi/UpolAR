@@ -13,39 +13,56 @@ import AVFoundation
 struct ComputerARView: UIViewRepresentable {
     typealias UIViewType = ARView
     
+    let computers: [ComputerModel] = [
+        ComputerModel(screenWidth: 0.1, screenHeight: 0.0667, anchorName: "systemos", videoName: "systemos"),
+        ComputerModel(screenWidth: 0.1, screenHeight: 0.075031, anchorName: "satelite", videoName: "satelite"),
+        ComputerModel(screenWidth: 0.1, screenHeight: 0.075, anchorName: "ibook", videoName: "ibook"),
+        ComputerModel(screenWidth: 0.1, screenHeight: 0.075031, anchorName: "digital", videoName: "digital")
+    ]
+    
     // MARK: make
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
         
-        let anchor = AnchorEntity(.image(group: "AR Resources", name: "photo_anchor"))
-        anchor.name = "photo_anchor"
-        
-        let box = ModelEntity(mesh: .generateBox(size: simd_make_float3(0.595, 0.001, 0.325)))
-        box.name = "videoBox"
-        
-        loadVideoMaterial(video: "compas", model: box)
+        for computer in computers {
+            arView.scene.addAnchor(loadScreen(computerModel: computer))
+        }
         
         arView.session.delegate = context.coordinator
         context.coordinator.arView = arView
-        
-        anchor.addChild(box)
-        arView.scene.anchors.append(anchor)
+        context.coordinator.computers = computers
         
         return arView
     }
     
-    func loadVideoMaterial(video: String, model: ModelEntity) {
-        guard let pathToVideo = Bundle.main.path(forResource: video, ofType: "mp4") else { return }
+    func loadScreen(computerModel: ComputerModel) -> AnchorEntity {
+        let anchor = AnchorEntity(.image(group: "AR Resources", name: computerModel.anchorName))
+        anchor.name = "\(computerModel.anchorName)Anchor"
+        
+        let box = MeshResource.generateBox(width: computerModel.screenWidth, height: 0.001, depth: computerModel.screenHeight)
+        let videoBox = ModelEntity(mesh: box)
+        if let videoMaterial = loadVideoMaterial(video: computerModel.videoName) {
+            videoBox.model?.materials = [videoMaterial]
+        }
+        
+        videoBox.name = "\(computerModel.videoName)Screen"
+        
+        anchor.addChild(videoBox)
+        return anchor
+    }
+    
+    func loadVideoMaterial(video: String) -> VideoMaterial? {
+        guard let pathToVideo = Bundle.main.path(forResource: video, ofType: "mp4") else { return nil }
         
         let videoURL = URL(fileURLWithPath: pathToVideo)
         let avPlayer = AVPlayer(url: videoURL)
         // 16:9 video
         let material = VideoMaterial(avPlayer: avPlayer)
-        model.model?.materials = [material]
         
-        avPlayer.volume = 0.05
-        // avPlayer.play()
+        avPlayer.volume = 0.0
+        
+        return material
     }
     
     // MARK: update
@@ -59,27 +76,27 @@ struct ComputerARView: UIViewRepresentable {
     
     class Coordinator: NSObject, ARSessionDelegate {
         weak var arView: ARView?
-                
+        var computers: [ComputerModel]?
+        var isARViewActive: Bool?
+        
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             guard let arView = arView else { return }
             
-            if let anchor = arView.scene.findEntity(named: "photo_anchor") as? AnchorEntity {
-                if anchor.isAnchored {
-                    print("DEBUG: photo is anchored")
-                    
-                    guard let model = arView.scene.findEntity(named: "videoBox") as? ModelEntity else { return }
-                            
-                    if let videoMaterial = model.model?.materials.first as? VideoMaterial {
-                        videoMaterial.avPlayer?.seek(to: .zero)
-                        videoMaterial.avPlayer?.play()
-                        print("DEBUG: play")
+            if let computers = computers {
+                for computer in computers {
+                    if let anchor = arView.scene.findEntity(named: "\(computer.anchorName)Anchor") as? AnchorEntity,
+                       let model = arView.scene.findEntity(named: "\(computer.videoName)Screen") as? ModelEntity,
+                       let videoMaterial = model.model?.materials.first as? VideoMaterial {
+                        if anchor.isAnchored {
+                            print("DEBUG: \(computer.anchorName)Anchor is anchored")
+                            videoMaterial.avPlayer?.play()
+                        } else {
+                            videoMaterial.avPlayer?.pause()
+                            print("DEBUG: pause \(computer.videoName)Screen")
+                        }
                     }
                 }
             }
-            
-            
         }
     }
 }
-
-

@@ -13,7 +13,7 @@ struct ContentView: View {
     @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color("BlueColor").ignoresSafeArea()
                 VStack {

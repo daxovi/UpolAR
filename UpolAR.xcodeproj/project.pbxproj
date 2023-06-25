@@ -17,6 +17,11 @@
 		CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */; };
 		CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352912A2B592500FFB1DB /* LocationManager.swift */; };
 		CF6352942A2B597E00FFB1DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6352932A2B597E00FFB1DB /* ContentView.swift */; };
+		CF6BCB632A484A8F0052118A /* ibook.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6BCB5F2A484A8E0052118A /* ibook.mp4 */; };
+		CF6BCB642A484A8F0052118A /* systemos.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6BCB602A484A8F0052118A /* systemos.mp4 */; };
+		CF6BCB652A484A8F0052118A /* digital.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6BCB612A484A8F0052118A /* digital.mp4 */; };
+		CF6BCB662A484A8F0052118A /* satelite.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6BCB622A484A8F0052118A /* satelite.mp4 */; };
+		CF6BCB682A484F2E0052118A /* ComputerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BCB672A484F2E0052118A /* ComputerModel.swift */; };
 		CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83033E274597A6008A1063 /* UpolARApp.swift */; };
 		CF830343274597A8008A1063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830342274597A8008A1063 /* Assets.xcassets */; };
 		CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF830345274597A8008A1063 /* Preview Assets.xcassets */; };
@@ -32,7 +37,6 @@
 		CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC130D02A44A29500EAF734 /* TetrisARView.swift */; };
 		CFCC04592A474FBD00EB5A4C /* ComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC04582A474FBD00EB5A4C /* ComputerView.swift */; };
 		CFCC045B2A474FC900EB5A4C /* ComputerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */; };
-		CFCC045E2A47537500EB5A4C /* compas.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFCC045D2A47537500EB5A4C /* compas.mp4 */; };
 		CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* LocationSheetView.swift */; };
 		CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */; };
 		CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalView.swift */; };
@@ -68,6 +72,11 @@
 		CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
 		CF6352912A2B592500FFB1DB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CF6352932A2B597E00FFB1DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF6BCB5F2A484A8E0052118A /* ibook.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ibook.mp4; sourceTree = "<group>"; };
+		CF6BCB602A484A8F0052118A /* systemos.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = systemos.mp4; sourceTree = "<group>"; };
+		CF6BCB612A484A8F0052118A /* digital.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = digital.mp4; sourceTree = "<group>"; };
+		CF6BCB622A484A8F0052118A /* satelite.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = satelite.mp4; sourceTree = "<group>"; };
+		CF6BCB672A484F2E0052118A /* ComputerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerModel.swift; sourceTree = "<group>"; };
 		CF83033B274597A6008A1063 /* UpolAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpolAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF83033E274597A6008A1063 /* UpolARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpolARApp.swift; sourceTree = "<group>"; };
 		CF830342274597A8008A1063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +93,6 @@
 		CFC130D02A44A29500EAF734 /* TetrisARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisARView.swift; sourceTree = "<group>"; };
 		CFCC04582A474FBD00EB5A4C /* ComputerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerView.swift; sourceTree = "<group>"; };
 		CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerARView.swift; sourceTree = "<group>"; };
-		CFCC045D2A47537500EB5A4C /* compas.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = compas.mp4; sourceTree = "<group>"; };
 		CFD2D9A52A2C904300764228 /* LocationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSheetView.swift; sourceTree = "<group>"; };
 		CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CFE7462C27D26F5D00069133 /* PortalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalView.swift; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 			children = (
 				CFCC045C2A47536800EB5A4C /* Video */,
 				CFCC04582A474FBD00EB5A4C /* ComputerView.swift */,
+				CF6BCB672A484F2E0052118A /* ComputerModel.swift */,
 				CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */,
 			);
 			path = Computer;
@@ -221,7 +230,10 @@
 		CFCC045C2A47536800EB5A4C /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				CFCC045D2A47537500EB5A4C /* compas.mp4 */,
+				CF6BCB612A484A8F0052118A /* digital.mp4 */,
+				CF6BCB5F2A484A8E0052118A /* ibook.mp4 */,
+				CF6BCB622A484A8F0052118A /* satelite.mp4 */,
+				CF6BCB602A484A8F0052118A /* systemos.mp4 */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -355,18 +367,21 @@
 			files = (
 				CFF291C12A3B9EF500268A49 /* beach.jpg in Resources */,
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
+				CF6BCB642A484A8F0052118A /* systemos.mp4 in Resources */,
 				CFF291B32A3621F300268A49 /* sunset.jpg in Resources */,
 				CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */,
-				CFCC045E2A47537500EB5A4C /* compas.mp4 in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,
 				CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */,
 				CFF291BF2A3B9E1800268A49 /* oldcity.jpg in Resources */,
+				CF6BCB652A484A8F0052118A /* digital.mp4 in Resources */,
 				CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */,
 				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
 				CF0B9BDF2A3F457100B2D1CC /* LaunchScreen.storyboard in Resources */,
 				CF830343274597A8008A1063 /* Assets.xcassets in Resources */,
+				CF6BCB632A484A8F0052118A /* ibook.mp4 in Resources */,
 				CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */,
+				CF6BCB662A484A8F0052118A /* satelite.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +396,7 @@
 				CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */,
 				CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */,
 				CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */,
+				CF6BCB682A484F2E0052118A /* ComputerModel.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
 				CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */,
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
