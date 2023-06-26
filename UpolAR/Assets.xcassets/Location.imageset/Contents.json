@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Location.png",
+      "filename" : "iPhone 14 Pro Max - 1.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Location@2x.png",
+      "filename" : "iPhone 14 Pro Max - 1@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Location@3x.png",
+      "filename" : "iPhone 14 Pro Max - 1@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

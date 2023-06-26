@@ -40,6 +40,7 @@
 		CFCC045B2A474FC900EB5A4C /* ComputerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */; };
 		CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* LocationSheetView.swift */; };
 		CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */; };
+		CFE39DD72A49F07500AE71D3 /* LogoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE39DD62A49F07500AE71D3 /* LogoViewModel.swift */; };
 		CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalView.swift */; };
 		CFE8E2712A4716C400CA5532 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE8E2702A4716C400CA5532 /* CompassView.swift */; };
 		CFE8E28D2A474DD800CA5532 /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE8E28C2A474DD800CA5532 /* NavigatorView.swift */; };
@@ -97,6 +98,7 @@
 		CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerARView.swift; sourceTree = "<group>"; };
 		CFD2D9A52A2C904300764228 /* LocationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSheetView.swift; sourceTree = "<group>"; };
 		CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CFE39DD62A49F07500AE71D3 /* LogoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewModel.swift; sourceTree = "<group>"; };
 		CFE7462C27D26F5D00069133 /* PortalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalView.swift; sourceTree = "<group>"; };
 		CFE8E2702A4716C400CA5532 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		CFE8E28C2A474DD800CA5532 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
 				CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */,
 				CFF292032A3E042400268A49 /* LogoView.swift */,
+				CFE39DD62A49F07500AE71D3 /* LogoViewModel.swift */,
 				CF0B9BDA2A3F3D2A00B2D1CC /* BannerButtonView.swift */,
 				CFE8E2702A4716C400CA5532 /* CompassView.swift */,
 			);
@@ -406,6 +409,7 @@
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CF6BCB6C2A48ABDE0052118A /* ViewModel.swift in Sources */,
 				CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */,
+				CFE39DD72A49F07500AE71D3 /* LogoViewModel.swift in Sources */,
 				CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */,
 				CFF292042A3E042400268A49 /* LogoView.swift in Sources */,
 				CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */,

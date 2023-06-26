@@ -10,6 +10,7 @@ import SwiftUI
 struct LogoView: View {
     
     var showCompass: Bool
+    @StateObject var viewModel = LogoViewModel()
     
     var body: some View {
         HStack {
@@ -20,6 +21,9 @@ struct LogoView: View {
             Spacer()
             Image("LogoUPOL")
                 .padding(30)
+                .onTapGesture {
+                    viewModel.tap()
+                }
         }
     }
 }
