@@ -38,7 +38,7 @@
 		CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC130D02A44A29500EAF734 /* TetrisARView.swift */; };
 		CFCC04592A474FBD00EB5A4C /* ComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC04582A474FBD00EB5A4C /* ComputerView.swift */; };
 		CFCC045B2A474FC900EB5A4C /* ComputerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */; };
-		CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* LocationSheetView.swift */; };
+		CFD2D9A62A2C904300764228 /* BoardingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A52A2C904300764228 /* BoardingSheetView.swift */; };
 		CFD2D9A82A2C92DC00764228 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */; };
 		CFE39DD72A49F07500AE71D3 /* LogoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE39DD62A49F07500AE71D3 /* LogoViewModel.swift */; };
 		CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE7462C27D26F5D00069133 /* PortalView.swift */; };
@@ -96,7 +96,7 @@
 		CFC130D02A44A29500EAF734 /* TetrisARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisARView.swift; sourceTree = "<group>"; };
 		CFCC04582A474FBD00EB5A4C /* ComputerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerView.swift; sourceTree = "<group>"; };
 		CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerARView.swift; sourceTree = "<group>"; };
-		CFD2D9A52A2C904300764228 /* LocationSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSheetView.swift; sourceTree = "<group>"; };
+		CFD2D9A52A2C904300764228 /* BoardingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingSheetView.swift; sourceTree = "<group>"; };
 		CFD2D9A72A2C92DC00764228 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CFE39DD62A49F07500AE71D3 /* LogoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewModel.swift; sourceTree = "<group>"; };
 		CFE7462C27D26F5D00069133 /* PortalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalView.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 			children = (
 				CF31DC752A3113A20070DB34 /* BackButtonView.swift */,
 				CF31DC7A2A32614D0070DB34 /* MenuButtonView.swift */,
-				CFD2D9A52A2C904300764228 /* LocationSheetView.swift */,
+				CFD2D9A52A2C904300764228 /* BoardingSheetView.swift */,
 				CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */,
 				CFF292032A3E042400268A49 /* LogoView.swift */,
 				CFE39DD62A49F07500AE71D3 /* LogoViewModel.swift */,
@@ -417,7 +417,7 @@
 				CFF292022A3DFB3600268A49 /* LensView.swift in Sources */,
 				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
 				CF31DC782A3114E30070DB34 /* CloseView.swift in Sources */,
-				CFD2D9A62A2C904300764228 /* LocationSheetView.swift in Sources */,
+				CFD2D9A62A2C904300764228 /* BoardingSheetView.swift in Sources */,
 				CFE8E28F2A474DFC00CA5532 /* NavigatorARView.swift in Sources */,
 				CF31DC762A3113A20070DB34 /* BackButtonView.swift in Sources */,
 				CF86AB362A40D436005B1BCA /* TetrisView.swift in Sources */,

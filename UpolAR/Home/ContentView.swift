@@ -52,7 +52,7 @@ struct ContentView: View {
         }
         // Pokud aplikace nemá data o poloze zobrazí se sheet s požadavkem na udělení práv k používání polohy
         .sheet(isPresented: $viewModel.isLocationSheetShown) {
-            LocationSheetView(isLocationSheetShown: $viewModel.isLocationSheetShown)
+            BoardingSheetView(isLocationSheetShown: $viewModel.isLocationSheetShown)
         }
         .statusBar(hidden: true)
     }
