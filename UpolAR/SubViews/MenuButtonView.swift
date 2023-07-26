@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct MenuButtonView: View {
-    
     var title: String
     var iconName: String?
-    
     var body: some View {
         HStack {
             Text(title)
@@ -22,10 +20,10 @@ struct MenuButtonView: View {
                     .foregroundColor(Color("AccentColor"))
             }
         }
-            .padding()
-            .background(
-                Color("MenuButtonColor")
-            )
+        .padding()
+        .background(
+            Color("MenuButtonColor")
+        )
     }
 }
 

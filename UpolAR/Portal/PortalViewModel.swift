@@ -25,10 +25,14 @@ class PortalViewModel: ViewModel {
         super.init()
     }
     
+    func gestureRecognizer(value: DragGesture.Value) {
+        if value.translation.width < 0 { nextRoom() }
+        if value.translation.width > 0 { prevRoom() }
+    }
+    
     func nextRoom() {
         self.roomNr = (self.roomNr + 1) % images.count
         self.roomFileName = images[roomNr]
-        print("DEBUG: viewmodel init. roomNr: \(roomNr)")
     }
     
     func prevRoom() {

@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct BannerButtonView: View {
-    
     var imageName: String
     var text: String
     var iconName: String = "arkit"
-    
     var body: some View {
         Image(imageName)
             .resizable()
@@ -29,10 +27,8 @@ struct BannerButtonView: View {
                         Image(systemName: iconName)
                     }
                     .font(.title2)
-                    
                     .foregroundColor(.white)
                     .padding()
-                    
                     Spacer()
                 }
             )

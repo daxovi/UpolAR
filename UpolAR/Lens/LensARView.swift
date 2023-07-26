@@ -14,24 +14,15 @@ struct LensARView: UIViewRepresentable {
     
     // MARK: make
     func makeUIView(context: Context) -> ARView {
-        
         let arView = ARView(frame: .zero)
         let config = ARFaceTrackingConfiguration()
         arView.session.run(config)
-        
-        let logoAnchor = try! Lens.loadLogo()
-        arView.scene.addAnchor(logoAnchor)
-        
-        let ahojAnchor = try! Lens.loadAhoj()
-        arView.scene.addAnchor(ahojAnchor)
-        
+        let glassAnchor = try! Lens.loadGlass()
+        arView.scene.addAnchor(glassAnchor)
         return arView
-        
     }
     
     // MARK: update
-    func updateUIView(_ uiView: ARView, context: Context) {
-
-    }
+    func updateUIView(_ uiView: ARView, context: Context) {    }
 }
 

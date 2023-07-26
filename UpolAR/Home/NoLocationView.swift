@@ -10,7 +10,6 @@ import SwiftUI
 struct NoLocationView: View {
     var body: some View {
         ScrollView {
-            
             LogoView(showCompass: false)
             HStack {
                 VStack (alignment: .leading) {
@@ -23,27 +22,17 @@ struct NoLocationView: View {
                 .foregroundColor(.white)
                 .padding(.horizontal, 20)
                 .padding(.bottom)
-                
             }
-                
-                
-                Group {
-                    
-                    NavigationLink { PortalView()
-                    } label: {
-                        BannerButtonView(imageName: "BannerPortal", text: "Portal")
-                    }
-                    
-                    NavigationLink { LensView()
-                    } label: {
-                        BannerButtonView(imageName: "BannerLens", text: "Lens")
-                    }
-                    
-                    MenuView()
-                }
-                .padding(.horizontal, 20)
-                }
-            .ignoresSafeArea()
+            Group {
+                NavigationLink { PortalView()
+                } label: { BannerButtonView(imageName: "BannerPortal", text: "Portal") }
+                NavigationLink { LensView()
+                } label: { BannerButtonView(imageName: "BannerLens", text: "Lens") }
+                MenuView()
+            }
+            .padding(.horizontal, 20)
+        }
+        .ignoresSafeArea()
     }
 }
 

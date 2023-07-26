@@ -9,12 +9,12 @@ import SwiftUI
 
 struct MenuView: View {
     var body: some View {
-            Group {
-                aboutUniversity
-                webLinks
-            }
-            .foregroundColor(.white)
-            .padding(.bottom)
+        Group {
+            aboutUniversity
+            webLinks
+        }
+        .foregroundColor(.white)
+        .padding(.bottom)
     }
     
     // MARK: about menu
@@ -25,7 +25,6 @@ struct MenuView: View {
                 Spacer()
             }
             .padding(.top)
-            
             VStack(spacing: 1) {
                 ForEach(menuAbout, id: \.self) { item in
                     NavigationLink {
@@ -45,14 +44,12 @@ struct MenuView: View {
     
     // MARK: links menu
     var webLinks: some View {
-        
         VStack {
             HStack {
                 Text("Internetové odkazy UPOL")
                 Spacer()
             }
             .padding(.top)
-            
             VStack(spacing: 1) {
                 ForEach(linksMenu, id: \.self) { link in
                     Link(destination: URL(string: link[1])!) {

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LensView: View {
-    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -20,7 +19,6 @@ struct LensView: View {
                     leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() })
                 )
         }
-        
     }
 }
 

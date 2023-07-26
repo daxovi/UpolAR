@@ -25,7 +25,6 @@ class ContentViewModel: ObservableObject {
         switch locationManager.getLocationStatus() {
         // Pokud sou polohové služby povolené
         case .authorizedAlways, .authorizedWhenInUse:
-            print("DEBUG: location is enabled")
             self.isLocationSheetShown = false
             locationManager.$distanceToDestination.sink { value in
                 self.distanceToDestination = value
@@ -37,7 +36,6 @@ class ContentViewModel: ObservableObject {
             .store(in: &cancellables)
         // Pokud nejsou polohové služby povolené
         case .notDetermined, .restricted, .denied:
-            print("DEBUG: location is not enabled")
             self.isLocationSheetShown = true
         @unknown default:
             self.isLocationSheetShown = true

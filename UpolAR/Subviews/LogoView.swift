@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct LogoView: View {
-    
     var showCompass: Bool
     @StateObject var viewModel = LogoViewModel()
-    
     var body: some View {
         HStack {
             if showCompass {

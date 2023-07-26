@@ -8,50 +8,31 @@
 import SwiftUI
 
 struct TetrisView: View {
-    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var viewModel = TetrisViewModel.shared
     
     var body: some View {
         ZStack {
             TetrisARView(board: $viewModel.board, score: $viewModel.score, finalScore: $viewModel.finalScore, gameState: $viewModel.gameState)
-                    .ignoresSafeArea()
-                    .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
-                                        .onEnded({ value in
-                                            // TODO předat celé do viewModel
-                                            if value.translation.width < -50 {
-                                                viewModel.horizontalMove(horizontalMove: .left)
-                                            }
-                                            if value.translation.width > 50 {
-                                                viewModel.horizontalMove(horizontalMove: .right)
-                                            }
-                                            if value.translation.height < -50 {
-                                                viewModel.rotate()
-                                            }
-                                            if value.translation.height > 50 {
-                                                viewModel.renderGame()
-                                            }
-                                        }))
+                .ignoresSafeArea()
+                .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
+                    .onEnded({ value in viewModel.gestureRecognizer(value: value) }))
         }
         .navigationBarBackButtonHidden(true)
-        
         // navigační lišta NavigationView
         .navigationBarItems(
             leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() }),
             trailing: HelpButtonView(action: { viewModel.showAlert() }))
-        
         // zobrazení alert okna s informacemi k ovládání
         .alert(isPresented: $viewModel.showingAlert) {
-                                Alert(title: Text("Tetris"),
-                                      message: Text("Jestli jste narazili 💻 s rozehraným tetrisem, můžete ho dohrát 🕹️"),
-                                      dismissButton: .default(Text("OK")))
-                            }
+            Alert(title: Text("Tetris"),
+                  message: Text("Jestli jste narazili 💻 s rozehraným tetrisem, můžete ho dohrát 🕹️. Kostky ovládáte swajpováním po displeji doprava, doleva a nahoru pro otáčení."),
+                  dismissButton: .default(Text("OK")))
+        }
         .onAppear(perform: viewModel.showAlert)
-        
         .onReceive(viewModel.player) { _ in
             viewModel.renderGame()
-                        }
-
+        }
         .onDisappear {
             viewModel.restart()
         }

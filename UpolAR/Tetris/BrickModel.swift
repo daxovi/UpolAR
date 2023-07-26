@@ -58,16 +58,11 @@ class BrickModel {
     }
     
     func rotate(clockwise: Bool = true) {
-        print(mesh)
-        
         let rows = mesh.count
         let columns = mesh[0].count
-        
         var newMesh = Array(repeating: Array(repeating: 0, count: rows), count: columns)
-        
         for column in 0..<columns {
             for row in 0..<rows {
-                
                 newMesh[column][row] = clockwise ? mesh[rows - row - 1][column] : mesh[row][columns - column - 1]
             }
         }

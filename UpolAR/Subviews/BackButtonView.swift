@@ -2,7 +2,7 @@
 //  BackButtonView.swift
 //  UpolAR
 //
-//  Created by Dalibor Janeček on 07.06.2023.
+//  Created by Dalibor Janeček on 26.07.2023.
 //
 
 import SwiftUI
@@ -21,7 +21,6 @@ struct BackButtonView: View {
                     .padding(.top)
             }
         }
-        
     }
 }
 
@@ -30,3 +29,4 @@ struct BackButtonView_Previews: PreviewProvider {
         BackButtonView(action: {print("DEBUG: button test")})
     }
 }
+

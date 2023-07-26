@@ -8,40 +8,27 @@
 import SwiftUI
 
 struct PortalView: View {
-    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-   // @State var roomNr = 0
-    
     @StateObject var viewModel = PortalViewModel()
-
+    
     var body: some View {
         ZStack {
             PortalARView(roomFileName: $viewModel.roomFileName, fileExtension: viewModel.fileExtension)
-                    .ignoresSafeArea()
-                    .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
-                                        .onEnded({ value in
-                                            // TODO předat hodnotu do viewmodel
-                                            if value.translation.width < 0 {
-                                                viewModel.nextRoom()
-                                            }
-                                            if value.translation.width > 0 {
-                                                viewModel.prevRoom()
-                                            }
-                                        }))
+                .ignoresSafeArea()
+                .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
+                    .onEnded({ value in viewModel.gestureRecognizer(value: value) }))
         }
         .navigationBarBackButtonHidden(true)
-        
         // navigační lišta NavigationView
         .navigationBarItems(
             leading: BackButtonView(action: { self.presentationMode.wrappedValue.dismiss() }),
             trailing: HelpButtonView(action: { viewModel.showAlert() }))
-        
         // zobrazení alert okna s informacemi k ovládání
         .alert(isPresented: $viewModel.showingAlert) {
-                                Alert(title: Text("Portál"),
-                                      message: Text("Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈"),
-                                      dismissButton: .default(Text("OK")))
-                            }
+            Alert(title: Text("Portál"),
+                  message: Text("Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈"),
+                  dismissButton: .default(Text("OK")))
+        }
         .onAppear(perform: viewModel.showAlert)
     }
 }

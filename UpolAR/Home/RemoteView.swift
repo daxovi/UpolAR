@@ -6,36 +6,26 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct RemoteView: View {
-    
     @Binding var distance: Float?
     
     var body: some View {
-            ScrollView {
-                
-                LogoView(showCompass: true)
-                
-                header
-                
-                Group {
-                    
-                    NavigationLink { PortalView()
-                    } label: {
-                        BannerButtonView(imageName: "BannerPortal", text: "Portal")
-                    }
-                    
-                    NavigationLink { LensView()
-                    } label: {
-                        BannerButtonView(imageName: "BannerLens", text: "Lens")
-                    }
-                    
-                    MenuView()
+        ScrollView {
+            LogoView(showCompass: true)
+            header
+            Group {
+                NavigationLink { PortalView()
+                } label: { BannerButtonView(imageName: "BannerPortal", text: "Portal") }
+                NavigationLink { LensView()
+                } label: {
+                    BannerButtonView(imageName: "BannerLens", text: "Lens")
                 }
-                .padding(.horizontal, 20)
+                MenuView()
             }
-            .ignoresSafeArea()
+            .padding(.horizontal, 20)
+        }
+        .ignoresSafeArea()
     }
     
     var header: some View {
@@ -91,7 +81,6 @@ struct RemoteView_Previews: PreviewProvider {
                 RemoteView(distance: .constant(111))
             }
         }
-        
     }
 }
 

@@ -21,35 +21,36 @@ struct TetrisModel {
         startButton.name = "startButton"
         startButton.position = [0.3725, 0, 0.328]
         startButton.generateCollisionShapes(recursive: true)
-        
-        let startText = ModelEntity(mesh: .generateText("START", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .center, lineBreakMode: .byCharWrapping), materials: [whiteMaterial])
+        let startText = ModelEntity(
+            mesh: .generateText("START", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .center, lineBreakMode: .byCharWrapping),
+            materials: [whiteMaterial])
         startText.transform = Transform(pitch: -(.pi/2), yaw: 0, roll: 0)
         startText.position = [-0.038, 0.003, 0.01]
         startButton.addChild(startText)
-        
         return startButton
     }
     
     func getTextPressStart() -> ModelEntity {
-            let text = ModelEntity(mesh: .generateText("PRESS START \n ", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .left, lineBreakMode: .byCharWrapping), materials: [whiteMaterial])
-            text.transform = Transform(pitch: -(.pi/2), yaw: 0, roll: 0)
-            
-            return text
+        let text = ModelEntity(
+            mesh: .generateText("PRESS START \n ", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .left, lineBreakMode: .byCharWrapping),
+            materials: [whiteMaterial])
+        text.transform = Transform(pitch: -(.pi/2), yaw: 0, roll: 0)
+        return text
     }
     
     func getTextScore(score: Int) -> ModelEntity {
-        let text = ModelEntity(mesh: .generateText("SCORE: \(score) \n ", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .left, lineBreakMode: .byCharWrapping),
-                               materials: [UnlitMaterial(color: .white)])
+        let text = ModelEntity(
+            mesh: .generateText("SCORE: \(score) \n ", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .left, lineBreakMode: .byCharWrapping),
+            materials: [UnlitMaterial(color: .white)])
         text.transform = Transform(pitch: -(.pi/2), yaw: 0, roll: 0)
-        
         return text
     }
     
     func getTextGameOver(score: Int) -> ModelEntity {
-        let text = ModelEntity(mesh: .generateText("GAME OVER \nSCORE: \(score)", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .left, lineBreakMode: .byCharWrapping),
-                               materials: [whiteMaterial])
+        let text = ModelEntity(
+            mesh: .generateText("GAME OVER \nSCORE: \(score)", extrusionDepth: 0.001, font: .systemFont(ofSize: 0.02, weight: .bold), containerFrame: CGRect.zero, alignment: .left, lineBreakMode: .byCharWrapping),
+            materials: [whiteMaterial])
         text.transform = Transform(pitch: -(.pi/2), yaw: 0, roll: 0)
-
         return text
     }
     
