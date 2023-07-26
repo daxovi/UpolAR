@@ -18,13 +18,11 @@ class ContentViewModel: ObservableObject {
     
     var cancellables = Set<AnyCancellable>()
     let locationManager: LocationManager
-            
+    
     init() {
         locationManager = LocationManager.shared
-                
         // Rozhodne zda je potřeba požádat uživatele o polohové služby
         switch locationManager.getLocationStatus() {
-            
         // Pokud sou polohové služby povolené
         case .authorizedAlways, .authorizedWhenInUse:
             print("DEBUG: location is enabled")
@@ -37,12 +35,10 @@ class ContentViewModel: ObservableObject {
                 self.isUserInPlace = value
             }
             .store(in: &cancellables)
-            
         // Pokud nejsou polohové služby povolené
         case .notDetermined, .restricted, .denied:
             print("DEBUG: location is not enabled")
             self.isLocationSheetShown = true
-            
         @unknown default:
             self.isLocationSheetShown = true
         }

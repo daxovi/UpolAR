@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @ObservedObject var viewModel = ContentViewModel()
-    @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
         NavigationStack {
@@ -22,29 +20,20 @@ struct ContentView: View {
                         Spacer()
                     }
                     Spacer()
-                    
                 }
                 .ignoresSafeArea()
-            
                 // Zjistí jestli má aplikace přístup k poloze
-                if locationManager.distanceToDestination != nil
-                {
-                    
+                if viewModel.distanceToDestination != nil {
                     // Zjistí jestli je uživatel ve vzdálenosti od místa definovaném v LocationManager
-                    if locationManager.isUserInPlace {
-                        
+                    if viewModel.isUserInPlace {
                         // View pro zobrazení v místě
                         CloseView()
-                        
                     } else {
-                        
                         // View pro zobrazení ve větší vzdálenosti
-                        RemoteView(distance: $locationManager.distanceToDestination)
+                        RemoteView(distance: $viewModel.distanceToDestination)
                     }
                 }
-                
                 else {
-                    
                     // View pokud aplikace nemá data o poloze
                     NoLocationView()
                 }
