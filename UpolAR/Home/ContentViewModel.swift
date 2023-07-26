@@ -5,13 +5,18 @@
 //  Created by Dalibor Janeček on 04.06.2023.
 //
 
-import Foundation
+import Combine
 import SwiftUI
 
 class ContentViewModel: ObservableObject {
-    
+    // řídí zobrazení LocationSheet
     @Published var isLocationSheetShown: Bool
+    // vzdálenost od místa
+    @Published var distanceToDestination: Float?
+    // určí jestli je uživatel blíž místa z destination než je vzdálenost maximumDistance
+    @Published var isUserInPlace = false
     
+    var cancellables = Set<AnyCancellable>()
     let locationManager: LocationManager
             
     init() {
@@ -24,8 +29,16 @@ class ContentViewModel: ObservableObject {
         case .authorizedAlways, .authorizedWhenInUse:
             print("DEBUG: location is enabled")
             self.isLocationSheetShown = false
+            locationManager.$distanceToDestination.sink { value in
+                self.distanceToDestination = value
+            }
+            .store(in: &cancellables)
+            locationManager.$isUserInPlace.sink { value in
+                self.isUserInPlace = value
+            }
+            .store(in: &cancellables)
             
-        // Pokud jenou polohové služby povolené
+        // Pokud nejsou polohové služby povolené
         case .notDetermined, .restricted, .denied:
             print("DEBUG: location is not enabled")
             self.isLocationSheetShown = true

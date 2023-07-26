@@ -20,6 +20,7 @@ struct PortalView: View {
                     .ignoresSafeArea()
                     .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
                                         .onEnded({ value in
+                                            // TODO předat hodnotu do viewmodel
                                             if value.translation.width < 0 {
                                                 viewModel.nextRoom()
                                             }

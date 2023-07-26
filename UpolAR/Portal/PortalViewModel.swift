@@ -18,7 +18,7 @@ class PortalViewModel: ViewModel {
     
     override init() {
         self.roomNr = 0
-        self.images = ["christmas", "sunset", "oldcity", "beach"]
+        self.images = ["budova", "prizemi", "informatika", "bistro", "terasa", "park"]
         self.fileExtension = "jpg"
         
         self.roomFileName = self.images[self.roomNr]

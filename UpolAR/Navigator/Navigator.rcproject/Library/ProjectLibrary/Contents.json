@@ -3,5 +3,35 @@
     "libraryIdentifier" : "b42c07538aa971bec370f8e24e5eca23",
     "format" : "image",
     "displayName" : "turisticka-znacka-strom-1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "157a62e83d26b9189aa8add21db9f069",
+    "format" : "image",
+    "displayName" : "upol maze1 thumbnail.jpeg"
+  },
+  {
+    "libraryIdentifier" : "41bb78ee972d571c2ba99983a76ba65e",
+    "format" : "image",
+    "displayName" : "upol maze2 thumbnail.jpeg"
+  },
+  {
+    "libraryIdentifier" : "2a04ff3fbfa84604c8f5007d0c84a013",
+    "format" : "image",
+    "displayName" : "upol maze3 thumbnail.jpeg"
+  },
+  {
+    "libraryIdentifier" : "8cd262b4ec6c1af1812122769aa22f22",
+    "format" : "model",
+    "displayName" : "ar maze 1.usdz"
+  },
+  {
+    "libraryIdentifier" : "85d01366068c4978bf4d03e2d50c428f",
+    "format" : "model",
+    "displayName" : "ar maze 2.usdz"
+  },
+  {
+    "libraryIdentifier" : "28c250b6a4ce3e4f9eb47a386d1b5622",
+    "format" : "model",
+    "displayName" : "ar maze 3.usdz"
   }
 ]

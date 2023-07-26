@@ -33,8 +33,14 @@
 		CF86AB362A40D436005B1BCA /* TetrisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86AB352A40D436005B1BCA /* TetrisView.swift */; };
 		CF86AB382A40D448005B1BCA /* TetrisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */; };
 		CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91CE8F2A436B1C0020C662 /* BrickModel.swift */; };
+		CFA36CAB2A6BAB660012159A /* prizemi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA52A6BAB660012159A /* prizemi.jpg */; };
+		CFA36CAC2A6BAB660012159A /* park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA62A6BAB660012159A /* park.jpg */; };
+		CFA36CAD2A6BAB660012159A /* bistro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA72A6BAB660012159A /* bistro.jpg */; };
+		CFA36CAE2A6BAB660012159A /* terasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA82A6BAB660012159A /* terasa.jpg */; };
+		CFA36CAF2A6BAB660012159A /* budova.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA92A6BAB660012159A /* budova.jpg */; };
+		CFA36CB02A6BAB660012159A /* informatika.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CAA2A6BAB660012159A /* informatika.jpg */; };
+		CFA36CB42A6BCFDF0012159A /* TetrisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA36CB32A6BCFDF0012159A /* TetrisModel.swift */; };
 		CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFA888A72812B94F00FB5BC6 /* room.usdz */; };
-		CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFAF6F2F27D2A61800FD1590 /* christmas.jpg */; };
 		CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC130D02A44A29500EAF734 /* TetrisARView.swift */; };
 		CFCC04592A474FBD00EB5A4C /* ComputerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC04582A474FBD00EB5A4C /* ComputerView.swift */; };
 		CFCC045B2A474FC900EB5A4C /* ComputerARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */; };
@@ -48,11 +54,8 @@
 		CFE8E2912A474E5F00CA5532 /* Navigator.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFE8E2902A474E5800CA5532 /* Navigator.rcproject */; };
 		CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291A32A34814800268A49 /* NoLocationView.swift */; };
 		CFF291AF2A34ACD000268A49 /* PortalARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291AE2A34ACD000268A49 /* PortalARView.swift */; };
-		CFF291B32A3621F300268A49 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291B22A3621F300268A49 /* sunset.jpg */; };
 		CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291B62A38EE0C00268A49 /* ARView.swift */; };
 		CFF291BD2A3B8ECA00268A49 /* PortalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291BC2A3B8ECA00268A49 /* PortalViewModel.swift */; };
-		CFF291BF2A3B9E1800268A49 /* oldcity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291BE2A3B9E1800268A49 /* oldcity.jpg */; };
-		CFF291C12A3B9EF500268A49 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF291C02A3B9EF500268A49 /* beach.jpg */; };
 		CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */; };
 		CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF291FE2A3DFA3C00268A49 /* LensARView.swift */; };
 		CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CFF291C42A3DF95C00268A49 /* Lens.rcproject */; };
@@ -91,8 +94,14 @@
 		CF86AB352A40D436005B1BCA /* TetrisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisView.swift; sourceTree = "<group>"; };
 		CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisViewModel.swift; sourceTree = "<group>"; };
 		CF91CE8F2A436B1C0020C662 /* BrickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickModel.swift; sourceTree = "<group>"; };
+		CFA36CA52A6BAB660012159A /* prizemi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prizemi.jpg; sourceTree = "<group>"; };
+		CFA36CA62A6BAB660012159A /* park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = park.jpg; sourceTree = "<group>"; };
+		CFA36CA72A6BAB660012159A /* bistro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bistro.jpg; sourceTree = "<group>"; };
+		CFA36CA82A6BAB660012159A /* terasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = terasa.jpg; sourceTree = "<group>"; };
+		CFA36CA92A6BAB660012159A /* budova.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = budova.jpg; sourceTree = "<group>"; };
+		CFA36CAA2A6BAB660012159A /* informatika.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = informatika.jpg; sourceTree = "<group>"; };
+		CFA36CB32A6BCFDF0012159A /* TetrisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisModel.swift; sourceTree = "<group>"; };
 		CFA888A72812B94F00FB5BC6 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
-		CFAF6F2F27D2A61800FD1590 /* christmas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christmas.jpg; sourceTree = "<group>"; };
 		CFC130D02A44A29500EAF734 /* TetrisARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisARView.swift; sourceTree = "<group>"; };
 		CFCC04582A474FBD00EB5A4C /* ComputerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerView.swift; sourceTree = "<group>"; };
 		CFCC045A2A474FC900EB5A4C /* ComputerARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerARView.swift; sourceTree = "<group>"; };
@@ -106,11 +115,8 @@
 		CFE8E2902A474E5800CA5532 /* Navigator.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Navigator.rcproject; sourceTree = "<group>"; };
 		CFF291A32A34814800268A49 /* NoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLocationView.swift; sourceTree = "<group>"; };
 		CFF291AE2A34ACD000268A49 /* PortalARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalARView.swift; sourceTree = "<group>"; };
-		CFF291B22A3621F300268A49 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
 		CFF291B62A38EE0C00268A49 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		CFF291BC2A3B8ECA00268A49 /* PortalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalViewModel.swift; sourceTree = "<group>"; };
-		CFF291BE2A3B9E1800268A49 /* oldcity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oldcity.jpg; sourceTree = "<group>"; };
-		CFF291C02A3B9EF500268A49 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 		CFF291C22A3DF15E00268A49 /* HelpButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButtonView.swift; sourceTree = "<group>"; };
 		CFF291C42A3DF95C00268A49 /* Lens.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Lens.rcproject; sourceTree = "<group>"; };
 		CFF291FE2A3DFA3C00268A49 /* LensARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensARView.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 				CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */,
 				CF91CE8F2A436B1C0020C662 /* BrickModel.swift */,
 				CFC130D02A44A29500EAF734 /* TetrisARView.swift */,
+				CFA36CB32A6BCFDF0012159A /* TetrisModel.swift */,
 			);
 			path = Tetris;
 			sourceTree = "<group>";
@@ -256,10 +263,12 @@
 		CFF291A52A34906400268A49 /* Textures */ = {
 			isa = PBXGroup;
 			children = (
-				CFF291C02A3B9EF500268A49 /* beach.jpg */,
-				CFF291BE2A3B9E1800268A49 /* oldcity.jpg */,
-				CFF291B22A3621F300268A49 /* sunset.jpg */,
-				CFAF6F2F27D2A61800FD1590 /* christmas.jpg */,
+				CFA36CA72A6BAB660012159A /* bistro.jpg */,
+				CFA36CA92A6BAB660012159A /* budova.jpg */,
+				CFA36CAA2A6BAB660012159A /* informatika.jpg */,
+				CFA36CA62A6BAB660012159A /* park.jpg */,
+				CFA36CA52A6BAB660012159A /* prizemi.jpg */,
+				CFA36CA82A6BAB660012159A /* terasa.jpg */,
 			);
 			path = Textures;
 			sourceTree = "<group>";
@@ -371,21 +380,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF291C12A3B9EF500268A49 /* beach.jpg in Resources */,
+				CFA36CAB2A6BAB660012159A /* prizemi.jpg in Resources */,
+				CFA36CAC2A6BAB660012159A /* park.jpg in Resources */,
 				CF830350274597DD008A1063 /* about_department.md in Resources */,
 				CF6BCB642A484A8F0052118A /* systemos.mp4 in Resources */,
-				CFF291B32A3621F300268A49 /* sunset.jpg in Resources */,
 				CFA888A82812B94F00FB5BC6 /* room.usdz in Resources */,
 				CF830352274597DD008A1063 /* about_university.md in Resources */,
 				CFF4340327D5406A009D6FCC /* room_mask.usdz in Resources */,
-				CFF291BF2A3B9E1800268A49 /* oldcity.jpg in Resources */,
 				CF6BCB652A484A8F0052118A /* digital.mp4 in Resources */,
-				CFAF6F3027D2A61800FD1590 /* christmas.jpg in Resources */,
 				CF830351274597DD008A1063 /* about_faculty.md in Resources */,
 				CF830346274597A8008A1063 /* Preview Assets.xcassets in Resources */,
 				CF0B9BDF2A3F457100B2D1CC /* LaunchScreen.storyboard in Resources */,
+				CFA36CAE2A6BAB660012159A /* terasa.jpg in Resources */,
+				CFA36CAF2A6BAB660012159A /* budova.jpg in Resources */,
 				CF830343274597A8008A1063 /* Assets.xcassets in Resources */,
+				CFA36CAD2A6BAB660012159A /* bistro.jpg in Resources */,
 				CF6BCB632A484A8F0052118A /* ibook.mp4 in Resources */,
+				CFA36CB02A6BAB660012159A /* informatika.jpg in Resources */,
 				CFF4340727D54C08009D6FCC /* room_logo.usdz in Resources */,
 				CF6BCB662A484A8F0052118A /* satelite.mp4 in Resources */,
 			);
@@ -405,6 +416,7 @@
 				CF6BCB682A484F2E0052118A /* ComputerModel.swift in Sources */,
 				CF31DC7B2A32614D0070DB34 /* MenuButtonView.swift in Sources */,
 				CFF291B72A38EE0C00268A49 /* ARView.swift in Sources */,
+				CFA36CB42A6BCFDF0012159A /* TetrisModel.swift in Sources */,
 				CF31DC722A310ECF0070DB34 /* MenuView.swift in Sources */,
 				CF090F1D27479A4100F68DB9 /* AboutView.swift in Sources */,
 				CF6BCB6C2A48ABDE0052118A /* ViewModel.swift in Sources */,

@@ -18,6 +18,7 @@ struct TetrisView: View {
                     .ignoresSafeArea()
                     .gesture(DragGesture(minimumDistance: 20, coordinateSpace: .local)
                                         .onEnded({ value in
+                                            // TODO předat celé do viewModel
                                             if value.translation.width < -50 {
                                                 viewModel.horizontalMove(horizontalMove: .left)
                                             }
