@@ -10,7 +10,7 @@ import RealityKit
 
 struct TetrisARView: UIViewRepresentable {
     typealias UIViewType = ARView
-    /// Propojuje proměnnou board se SwiftUI. Při změně stupstí funkcí updateUIView a zobrazí požadovanou scénu podle předaného 2D pole čísel.
+    // Propojuje proměnnou board se SwiftUI. Při změně stupstí funkcí updateUIView a zobrazí požadovanou scénu podle předaného 2D pole čísel.
     @Binding var board: [[Int]]
     @Binding var score: Int
     @Binding var finalScore: Int
@@ -36,7 +36,7 @@ struct TetrisARView: UIViewRepresentable {
     // MARK: update
     // aktualizuje  ARView na základě změn @Binding ze SwiftUI
     func updateUIView(_ arView: ARView, context: Context) {
-        /// Kotva na kterou se připevní další modely.
+        // Kotva na kterou se připevní další modely.
         guard let anchor = arView.scene.findEntity(named: "boardAnchor") as? AnchorEntity else { return }
         anchor.children.removeAll()
         let textPosition: SIMD3<Float> = [0.295, 0, 0.1]

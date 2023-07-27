@@ -21,7 +21,7 @@ struct MenuView: View {
     var aboutUniversity: some View {
         VStack {
             HStack {
-                Text("O univerzitě")
+                Text("o.univerzite")
                 Spacer()
             }
             .padding(.top)
@@ -46,7 +46,7 @@ struct MenuView: View {
     var webLinks: some View {
         VStack {
             HStack {
-                Text("Internetové odkazy UPOL")
+                Text("internet.upol")
                 Spacer()
             }
             .padding(.top)

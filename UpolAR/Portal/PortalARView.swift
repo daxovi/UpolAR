@@ -12,7 +12,7 @@ import Combine
 
 struct PortalARView: UIViewRepresentable {
     typealias UIViewType = ARView
-    /// Propojuje proměnnou roomNr se SwiftUI. Při změně stupstí funkcí updateUIView a zobrazí požadovanou scénu podle předaného čísla.
+    // Propojuje proměnnou roomNr se SwiftUI. Při změně stupstí funkcí updateUIView a zobrazí požadovanou scénu podle předaného čísla.
     @Binding var roomFileName: String
     var fileExtension: String
     
@@ -21,7 +21,7 @@ struct PortalARView: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         let arView = ARView(frame: .zero)
         arView.addCoaching(plane: .tracking)
-        /// Konfigurace pro ARView.
+        // Konfigurace pro ARView.
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
         config.environmentTexturing = .automatic
@@ -29,7 +29,7 @@ struct PortalARView: UIViewRepresentable {
         config.frameSemantics.insert(.personSegmentationWithDepth)
         // spustí scénu s vytvořenou konfigurací
         arView.session.run(config)
-        /// Kotva na kterou se připevní další modely.
+        // Kotva na kterou se připevní další modely.
         let anchor = AnchorEntity()
         anchor.name = "rootAnchor"
         arView.scene.addAnchor(anchor)
@@ -44,7 +44,7 @@ struct PortalARView: UIViewRepresentable {
     // aktualizuje  ARView na základě změn @Binding ze SwiftUI
     func updateUIView(_ arView: ARView, context: Context) {
         removeRoom(arView: arView)
-        /// Kotva na kterou se připevní další modely.
+        // Kotva na kterou se připevní další modely.
         let anchor = AnchorEntity()
         anchor.name = "roomAnchor"
         // nahraje model s texturou první místnosti a přidá ho do kotvy anchor
@@ -53,8 +53,8 @@ struct PortalARView: UIViewRepresentable {
         arView.scene.addAnchor(anchor)
     }
     
-    /// Vyhledá v ARView model s názvem "roomAnchor" a vymaže ho ze scény
-    /// - parameter arView: ARView ve kterém metoda hledá model podle názvu
+    // Vyhledá v ARView model s názvem "roomAnchor" a vymaže ho ze scény
+    // arView: ARView ve kterém metoda hledá model podle názvu
     func removeRoom(arView: ARView) {
         for anchor in arView.scene.anchors {
             if anchor.name == "roomAnchor" {
@@ -63,8 +63,8 @@ struct PortalARView: UIViewRepresentable {
         }
     }
     
-    /// Nahraje USDZ model loga UPOL, přiřadí materiál s modrou barvou a připevní ho na kotvu anchor
-    /// - parameter anchor: kotva na kterou mám být model připevněný
+    // Nahraje USDZ model loga UPOL, přiřadí materiál s modrou barvou a připevní ho na kotvu anchor
+    // anchor: kotva na kterou mám být model připevněný
     func loadLogo(anchor: AnchorEntity) {
         var logoRequest: AnyCancellable? = nil
         logoRequest = ModelEntity.loadModelAsync(named: "room_logo.usdz")
@@ -80,8 +80,8 @@ struct PortalARView: UIViewRepresentable {
             })
     }
     
-    /// Nahraje USDZ model masky, přiřadí mu OcclusionMaterial, který zakrývá všechny ostatní modely v pozadí a připevní ho na kotvu anchor
-    /// - parameter anchor: kotva na kterou mám být model připevněný
+    // Nahraje USDZ model masky, přiřadí mu OcclusionMaterial, který zakrývá všechny ostatní modely v pozadí a připevní ho na kotvu anchor
+    // anchor: kotva na kterou mám být model připevněný
     func loadMask(anchor: AnchorEntity) {
         var maskRequest: AnyCancellable? = nil
         maskRequest = ModelEntity.loadModelAsync(named: "room_mask.usdz")
@@ -97,9 +97,9 @@ struct PortalARView: UIViewRepresentable {
             })
     }
     
-    /// Nahraje USDZ model místnosti s texturou podle názvu souboru a připevní ho na kotvu
-    /// - parameter anchor: kotva na kterou mám být model připevněný
-    /// - parameter textureFileName: jméno souboru textury ve formátu JPG (bez přípony)
+    // Nahraje USDZ model místnosti s texturou podle názvu souboru a připevní ho na kotvu
+    // anchor: kotva na kterou mám být model připevněný
+    // textureFileName: jméno souboru textury ve formátu JPG (bez přípony)
     func loadRoom(anchor: AnchorEntity, textureFileName: String) {
         if let url = Bundle.main.url(forResource: textureFileName, withExtension: fileExtension) {
             var textureRequest: AnyCancellable? = nil

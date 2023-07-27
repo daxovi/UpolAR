@@ -25,9 +25,9 @@ struct PortalView: View {
             trailing: HelpButtonView(action: { viewModel.showAlert() }))
         // zobrazení alert okna s informacemi k ovládání
         .alert(isPresented: $viewModel.showingAlert) {
-            Alert(title: Text("Portál"),
-                  message: Text("Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈"),
-                  dismissButton: .default(Text("OK")))
+            Alert(title: Text("portal.title"),
+                  message: Text("portal.desription"),
+                  dismissButton: .default(Text("ok")))
         }
         .onAppear(perform: viewModel.showAlert)
     }

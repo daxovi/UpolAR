@@ -25,9 +25,9 @@ struct TetrisView: View {
             trailing: HelpButtonView(action: { viewModel.showAlert() }))
         // zobrazení alert okna s informacemi k ovládání
         .alert(isPresented: $viewModel.showingAlert) {
-            Alert(title: Text("Tetris"),
-                  message: Text("Jestli jste narazili 💻 s rozehraným tetrisem, můžete ho dohrát 🕹️. Kostky ovládáte swajpováním po displeji doprava, doleva a nahoru pro otáčení."),
-                  dismissButton: .default(Text("OK")))
+            Alert(title: Text("tetris.title"),
+                  message: Text("tetris.description"),
+                  dismissButton: .default(Text("ok")))
         }
         .onAppear(perform: viewModel.showAlert)
         .onReceive(viewModel.player) { _ in

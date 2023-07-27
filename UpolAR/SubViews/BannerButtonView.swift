@@ -7,12 +7,11 @@
 
 import SwiftUI
 
+// View, které zobrazí velký banner na AR část.
 struct BannerButtonView: View {
-    
     var imageName: String
-    var text: String
+    var text: LocalizedStringKey
     var iconName: String = "arkit"
-    
     var body: some View {
         Image(imageName)
             .resizable()
@@ -29,10 +28,8 @@ struct BannerButtonView: View {
                         Image(systemName: iconName)
                     }
                     .font(.title2)
-                    
                     .foregroundColor(.white)
                     .padding()
-                    
                     Spacer()
                 }
             )

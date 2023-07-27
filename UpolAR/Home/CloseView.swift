@@ -13,9 +13,9 @@ struct CloseView: View {
             LogoView(showCompass: false)
             HStack {
                 VStack (alignment: .leading) {
-                    Text("Vítejte")
+                    Text("vitejte")
                         .fontWeight(.bold)
-                    Text("na Přírodovědecké fakultě UPOL, katedře Informatiky")
+                    Text("na.prf")
                 }
                 .font(.largeTitle)
                 .foregroundColor(.white)
@@ -24,15 +24,15 @@ struct CloseView: View {
             }
             Group {
                 NavigationLink { NavigatorView()
-                } label: { BannerButtonView(imageName: "BannerNavigator", text: "Navigátor") }
+                } label: { BannerButtonView(imageName: "BannerNavigator", text: "navigator.title") }
                 NavigationLink { ComputerView()
-                } label: { BannerButtonView(imageName: "BannerComputer", text: "Computer") }
+                } label: { BannerButtonView(imageName: "BannerComputer", text: "computer.title") }
                 NavigationLink { TetrisView()
-                } label: { BannerButtonView(imageName: "BannerTetris", text: "Tetris") }
+                } label: { BannerButtonView(imageName: "BannerTetris", text: "tetris.title") }
                 NavigationLink { PortalView()
-                } label: { BannerButtonView(imageName: "BannerPortal", text: "Portal") }
+                } label: { BannerButtonView(imageName: "BannerPortal", text: "portal.title") }
                 NavigationLink { LensView()
-                } label: { BannerButtonView(imageName: "BannerLens", text: "Lens") }
+                } label: { BannerButtonView(imageName: "BannerLens", text: "lens.title") }
                 MenuView()
             }
             .padding(.horizontal, 20)

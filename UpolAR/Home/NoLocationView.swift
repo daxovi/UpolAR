@@ -13,10 +13,10 @@ struct NoLocationView: View {
             LogoView(showCompass: false)
             HStack {
                 VStack (alignment: .leading) {
-                    Text("Vítejte")
+                    Text("vitejte")
                         .fontWeight(.bold)
                     
-                    Text("na Přírodovědecké fakultě UPOL, katedře Informatiky")
+                    Text("na.prf")
                 }
                 .font(.largeTitle)
                 .foregroundColor(.white)
@@ -25,9 +25,9 @@ struct NoLocationView: View {
             }
             Group {
                 NavigationLink { PortalView()
-                } label: { BannerButtonView(imageName: "BannerPortal", text: "Portal") }
+                } label: { BannerButtonView(imageName: "BannerPortal", text: "portal.title") }
                 NavigationLink { LensView()
-                } label: { BannerButtonView(imageName: "BannerLens", text: "Lens") }
+                } label: { BannerButtonView(imageName: "BannerLens", text: "lens.title") }
                 MenuView()
             }
             .padding(.horizontal, 20)

@@ -20,9 +20,9 @@ struct ComputerView: View {
                 trailing: HelpButtonView(action: { viewModel.showAlert() }))
             // zobrazení alert okna s informacemi k ovládání
             .alert(isPresented: $viewModel.showingAlert) {
-                Alert(title: Text("Computer"),
-                      message: Text("Najděte na katedře staré počítače a oživte jejich obrazovky. \n(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org"),
-                      dismissButton: .default(Text("OK")))
+                Alert(title: Text("computer.title"),
+                      message: Text("computer.description"),
+                      dismissButton: .default(Text("ok")))
             }
             .onAppear(perform: viewModel.showAlert)
     }

@@ -16,10 +16,10 @@ struct RemoteView: View {
             header
             Group {
                 NavigationLink { PortalView()
-                } label: { BannerButtonView(imageName: "BannerPortal", text: "Portal") }
+                } label: { BannerButtonView(imageName: "BannerPortal", text: "portal.title") }
                 NavigationLink { LensView()
                 } label: {
-                    BannerButtonView(imageName: "BannerLens", text: "Lens")
+                    BannerButtonView(imageName: "BannerLens", text: "lens.title")
                 }
                 MenuView()
             }
@@ -45,9 +45,9 @@ struct RemoteView: View {
     // Část View, která se zobrazí pokud je uživael blízko
     var close: some View {
         Group {
-            Text("Už jen")
+            Text("uz.jen")
                 .fontWeight(.bold)
-            Text("\(Int(distance ?? -1)) metrů a budete na Přírodovědecké fakultě UPOL")
+            Text("\(Int(distance ?? -1)) jeste.m")
         }
         .font(.largeTitle)
         .foregroundColor(.white)
@@ -56,9 +56,9 @@ struct RemoteView: View {
     // Část View, která se zobrazí pokud je uživatel daleko
     var far: some View {
         Group {
-            Text("Jste")
+            Text("jste")
                 .fontWeight(.bold)
-            Text("\(Int((distance ?? -1)) / 1000) km od Přírodovědecké fakulty UPOL. Pojďte blíž.")
+            Text("\(Int((distance ?? -1)) / 1000) pojdte.bliz")
         }
         .font(.largeTitle)
         .foregroundColor(.white)

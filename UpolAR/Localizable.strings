@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  UpolAR
+
+  Created by Dalibor Janeček on 27.07.2023.
+  
+*/
+
+/* RemoteView */
+"hello" = "Hello, world!";
+"uz.jen" = "Už jen";
+"%lld pojdte.bliz" = "%lld km od Přírodovědecké fakulty UPOL. Pojďte blíž.";
+"%lld jeste.m" = "%lld metrů a budete na Přírodovědecké fakultě UPOL";
+"jste" = "Jste";
+
+/* CloseView */
+"vitejte" = "Vítejte";
+"na.prf" = "na Přírodovědecké fakultě UPOL, katedře Informatiky";
+
+/* barding */
+"aplikace.pomuze" = "Aplikace vám pomůže se seznámením se s Univerzitou Palackého v Olomouc a Katedrou informatiky. \n\n Aplikace využívá fotoaparát telefonu pro zobrazení rozšířené reality.";
+"pokracovat" = "pokračovat";
+"pojdte.bliz" = "Pojďte blíž";
+"aplikace.prizpusobovat" = "Aplikace se bude přizpůsobovat na základě vaší vzdálenosti od Přírodovědecké fakulty UPOL. \n\n Nejlepší zážitek vám nabídne v budově Přírodovědecké fakulty UPOL. Stačí sledovat plakáty se symbolem AR";
+"povolit.polohove" = "povolit polohové služby";
+"zakazat.polohove" = "nepovolovat polohové služby";
+
+/* alert */
+"ok" = "OK";
+
+/* computer */
+"computer.title" = "Computer";
+"computer.description" = "Najděte na katedře staré počítače a oživte jejich obrazovky. \n(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org";
+
+/* navigator */
+"navigator.title" = "Navigator";
+"navigator.description" = "Ztratili jste se? 🫥 Najděte plakáty bludiště 🗺️ v budově fakulty a aplikace vám pomůže.";
+
+/* tetris */
+"tetris.title" = "Tetris";
+"tetris.description" = "Jestli jste narazili 💻 s rozehraným tetrisem, můžete ho dohrát 🕹️. Kostky ovládáte swajpováním po displeji doprava, doleva a nahoru pro otáčení.";
+
+/* portal */
+"portal.title" = "Portal";
+"portal.desription" = "Přepínejte mezi různými místnostmi gestem swipe doprava nebo doleva.\n👈";
+
+/* lens */
+"lens.title" = "Lens";
+
+/* MenuView */
+"o.univerzite" = "O univerzitě";
+"internet.upol" = "Internetové odkazy UPOL";
+
+"napoveda" = "Nápověda";

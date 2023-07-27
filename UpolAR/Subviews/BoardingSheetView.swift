@@ -37,14 +37,14 @@ struct BoardingSheetView: View {
             Spacer()
             Spacer()
             Spacer()
-            Text("Vítejte")
+            Text("vitejte")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            Text("Aplikace vám pomůže se seznámením se s Univerzitou Palackého v Olomouc a Katedrou informatiky. \n\n Aplikace využívá fotoaparát telefonu pro zobrazení rozšířené reality.")
+            Text("aplikace.pomuze")
             Spacer()
             
             VStack(spacing: 10) {
-                Button("pokračovat") {
+                Button("pokracovat") {
                     withAnimation {
                         boardingState = .location
                     }
@@ -70,14 +70,14 @@ struct BoardingSheetView: View {
             Spacer()
             Spacer()
             Spacer()
-            Text("Pojďte blíž")
+            Text("pojdte.bliz")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            Text("Aplikace se bude přizpůsobovat na základě vaší vzdálenosti od Přírodovědecké fakulty UPOL. \n\n Nejlepší zážitek vám nabídne v budově Přírodovědecké fakulty UPOL. Stačí sledovat plakáty se symbolem AR")
+            Text("aplikace.prizpusobovat")
             Image(systemName: "arkit")
                 .font(.title2)
             VStack(spacing: 10) {
-                Button("povolit polohové služby") {
+                Button("povolit.polohove") {
                     locationManager.requestLocation()
                     isLocationSheetShown = false
                 }
@@ -88,7 +88,7 @@ struct BoardingSheetView: View {
                         .cornerRadius(10)
                 )
                 .padding(.horizontal)
-                Button("nepovolovat polohové služby") {
+                Button("zakazat.polohove") {
                     isLocationSheetShown = false
                 }
                 .padding()

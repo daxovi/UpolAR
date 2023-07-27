@@ -13,7 +13,7 @@ struct HelpButtonView: View {
         Button {
             action()
         } label: {
-            Text("Nápověda")
+            Text("napoveda")
                 .padding(.top)
         }
     }
