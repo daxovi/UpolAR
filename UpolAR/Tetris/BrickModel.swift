@@ -5,8 +5,6 @@
 //  Created by Dalibor Janeček on 21.06.2023.
 //
 
-import SwiftUI
-
 class BrickModel {
     var mesh: [[Int]]
     var type: BrickType

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ARKit
 import RealityKit
 
 struct NavigatorARView: UIViewRepresentable {

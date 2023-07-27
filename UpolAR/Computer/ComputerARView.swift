@@ -8,7 +8,6 @@
 import SwiftUI
 import ARKit
 import RealityKit
-import AVFoundation
 
 struct ComputerARView: UIViewRepresentable {
     typealias UIViewType = ARView
