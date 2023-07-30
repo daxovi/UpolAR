@@ -29,6 +29,11 @@
 		CF86AB362A40D436005B1BCA /* TetrisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86AB352A40D436005B1BCA /* TetrisView.swift */; };
 		CF86AB382A40D448005B1BCA /* TetrisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */; };
 		CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF91CE8F2A436B1C0020C662 /* BrickModel.swift */; };
+		CF97BF8D2A753B590002D46E /* TetrisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97BF8C2A753B590002D46E /* TetrisGame.swift */; };
+		CF97BF8F2A754E990002D46E /* TetrisRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97BF8E2A754E990002D46E /* TetrisRules.swift */; };
+		CF97BF912A7662500002D46E /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97BF902A7662500002D46E /* Move.swift */; };
+		CF97BF932A76626D0002D46E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97BF922A76626D0002D46E /* GameState.swift */; };
+		CF97BF952A7662860002D46E /* BrickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97BF942A7662860002D46E /* BrickType.swift */; };
 		CF9B4FF72A71B29800B18792 /* computer_bigbuckbunny.mov in Resources */ = {isa = PBXBuildFile; fileRef = CF9B4FF62A71B29800B18792 /* computer_bigbuckbunny.mov */; };
 		CFA36CAB2A6BAB660012159A /* prizemi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA52A6BAB660012159A /* prizemi.jpg */; };
 		CFA36CAC2A6BAB660012159A /* park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFA36CA62A6BAB660012159A /* park.jpg */; };
@@ -87,6 +92,11 @@
 		CF86AB352A40D436005B1BCA /* TetrisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisView.swift; sourceTree = "<group>"; };
 		CF86AB372A40D448005B1BCA /* TetrisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisViewModel.swift; sourceTree = "<group>"; };
 		CF91CE8F2A436B1C0020C662 /* BrickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickModel.swift; sourceTree = "<group>"; };
+		CF97BF8C2A753B590002D46E /* TetrisGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisGame.swift; sourceTree = "<group>"; };
+		CF97BF8E2A754E990002D46E /* TetrisRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisRules.swift; sourceTree = "<group>"; };
+		CF97BF902A7662500002D46E /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		CF97BF922A76626D0002D46E /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		CF97BF942A7662860002D46E /* BrickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickType.swift; sourceTree = "<group>"; };
 		CF9B4FF62A71B29800B18792 /* computer_bigbuckbunny.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = computer_bigbuckbunny.mov; sourceTree = "<group>"; };
 		CFA36CA52A6BAB660012159A /* prizemi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prizemi.jpg; sourceTree = "<group>"; };
 		CFA36CA62A6BAB660012159A /* park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = park.jpg; sourceTree = "<group>"; };
@@ -218,6 +228,11 @@
 				CF91CE8F2A436B1C0020C662 /* BrickModel.swift */,
 				CFC130D02A44A29500EAF734 /* TetrisARView.swift */,
 				CFA36CB32A6BCFDF0012159A /* TetrisModel.swift */,
+				CF97BF8C2A753B590002D46E /* TetrisGame.swift */,
+				CF97BF8E2A754E990002D46E /* TetrisRules.swift */,
+				CF97BF902A7662500002D46E /* Move.swift */,
+				CF97BF922A76626D0002D46E /* GameState.swift */,
+				CF97BF942A7662860002D46E /* BrickType.swift */,
 			);
 			path = Tetris;
 			sourceTree = "<group>";
@@ -400,6 +415,7 @@
 			files = (
 				CFE7462D27D26F5D00069133 /* PortalView.swift in Sources */,
 				CFF292002A3DFB1600268A49 /* Lens.rcproject in Sources */,
+				CF97BF952A7662860002D46E /* BrickType.swift in Sources */,
 				CFF291C32A3DF15E00268A49 /* HelpButtonView.swift in Sources */,
 				CF91CE902A436B1C0020C662 /* BrickModel.swift in Sources */,
 				CF6BCB682A484F2E0052118A /* ComputerModel.swift in Sources */,
@@ -414,13 +430,16 @@
 				CFE39DD72A49F07500AE71D3 /* LogoViewModel.swift in Sources */,
 				CFC130D12A44A29500EAF734 /* TetrisARView.swift in Sources */,
 				CFF292042A3E042400268A49 /* LogoView.swift in Sources */,
+				CF97BF912A7662500002D46E /* Move.swift in Sources */,
 				CFF291FF2A3DFA3C00268A49 /* LensARView.swift in Sources */,
 				CF0B9BDB2A3F3D2A00B2D1CC /* BannerButtonView.swift in Sources */,
 				CFF292022A3DFB3600268A49 /* LensView.swift in Sources */,
 				CF6352922A2B592500FFB1DB /* LocationManager.swift in Sources */,
+				CF97BF8F2A754E990002D46E /* TetrisRules.swift in Sources */,
 				CF31DC782A3114E30070DB34 /* CloseView.swift in Sources */,
 				CFD2D9A62A2C904300764228 /* BoardingSheetView.swift in Sources */,
 				CFE8E28F2A474DFC00CA5532 /* NavigatorARView.swift in Sources */,
+				CF97BF8D2A753B590002D46E /* TetrisGame.swift in Sources */,
 				CF86AB362A40D436005B1BCA /* TetrisView.swift in Sources */,
 				CFE8E28D2A474DD800CA5532 /* NavigatorView.swift in Sources */,
 				CFF291A42A34814800268A49 /* NoLocationView.swift in Sources */,
@@ -432,6 +451,7 @@
 				CFE8E2712A4716C400CA5532 /* CompassView.swift in Sources */,
 				CFE8E2912A474E5F00CA5532 /* Navigator.rcproject in Sources */,
 				CF83033F274597A6008A1063 /* UpolARApp.swift in Sources */,
+				CF97BF932A76626D0002D46E /* GameState.swift in Sources */,
 				CFCC045B2A474FC900EB5A4C /* ComputerARView.swift in Sources */,
 				CF86AB382A40D448005B1BCA /* TetrisViewModel.swift in Sources */,
 			);

@@ -67,7 +67,3 @@ class BrickModel {
         mesh = newMesh
     }
 }
-
-enum BrickType {
-    case square, el, corner, line, tshirt, zet, jee
-}

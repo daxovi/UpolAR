@@ -33,9 +33,6 @@ struct TetrisView: View {
         .onReceive(viewModel.player) { _ in
             viewModel.renderGame()
         }
-        .onDisappear {
-            viewModel.restart()
-        }
     }
 }
 
