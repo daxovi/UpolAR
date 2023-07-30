@@ -8,33 +8,29 @@
 import SwiftUI
 
 struct BoardingSheetView: View {
-    enum BoardingState: Equatable {
-        case welcome, location
-    }
     let locationManager = LocationManager.shared
     @Binding var isLocationSheetShown: Bool
-    @State var boardingState: BoardingState = .welcome
+    @State var showWelcome = true
     @State var size: CGSize = .zero
-
+    
     
     var body: some View {
         ZStack {
             GeometryReader { proxy in
-                            HStack {}
-                                .onAppear {
-                                    size = proxy.size
-                                }
-                        }
+                HStack {}
+                    .onAppear {
+                        size = proxy.size
+                    }
+            }
             Image("Location")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: size.height)
-            if boardingState == .welcome {
+            if showWelcome {
                 welcome
-                    .transition(.move(edge: .leading))
             } else {
                 location
-                    .transition(.move(edge: .trailing))
+                    .transition(.opacity)
             }
         }
     }
@@ -50,21 +46,22 @@ struct BoardingSheetView: View {
                 .fontWeight(.bold)
             Text("aplikace.pomuze")
             Spacer()
-            
             VStack(spacing: 10) {
-                Button("pokracovat") {
+                Button {
                     withAnimation {
-                        boardingState = .location
+                        showWelcome = false
                     }
+                } label: {
+                    Text("pokracovat")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            Color("BlueColor")
+                                .cornerRadius(10)
+                        )
+                        .padding(.horizontal)
+                        .padding()
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(
-                    Color("BlueColor")
-                        .cornerRadius(10)
-                )
-                .padding(.horizontal)
-                .padding()
             }
         }
         .padding()
@@ -85,16 +82,18 @@ struct BoardingSheetView: View {
             Image(systemName: "arkit")
                 .font(.title2)
             VStack(spacing: 10) {
-                Button("povolit.polohove") {
+                Button {
                     locationManager.requestLocation()
                     isLocationSheetShown = false
+                } label: {
+                    Text("povolit.polohove")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            Color("BlueColor")
+                                .cornerRadius(10)
+                        )
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(
-                    Color("BlueColor")
-                        .cornerRadius(10)
-                )
                 .padding(.horizontal)
                 Button("zakazat.polohove") {
                     isLocationSheetShown = false
