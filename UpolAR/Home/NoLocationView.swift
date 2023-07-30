@@ -11,17 +11,17 @@ struct NoLocationView: View {
     var body: some View {
         ScrollView {
             LogoView(showCompass: false)
-            HStack {
-                VStack (alignment: .leading) {
-                    Text("vitejte")
-                        .fontWeight(.bold)
-                    
-                    Text("na.prf")
-                }
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .padding(.horizontal, 20)
-                .padding(.bottom)
+                HStack {
+                    VStack (alignment: .leading) {
+                        Text("vitejte")
+                            .fontWeight(.bold)
+                        Text("na.prf")
+                    }
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom)
+                Spacer()
             }
             Group {
                 NavigationLink { PortalView()

@@ -14,13 +14,21 @@ struct BoardingSheetView: View {
     let locationManager = LocationManager.shared
     @Binding var isLocationSheetShown: Bool
     @State var boardingState: BoardingState = .welcome
+    @State var size: CGSize = .zero
+
     
     var body: some View {
         ZStack {
+            GeometryReader { proxy in
+                            HStack {}
+                                .onAppear {
+                                    size = proxy.size
+                                }
+                        }
             Image("Location")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: UIScreen.main.bounds.height)
+                .frame(height: size.height)
             if boardingState == .welcome {
                 welcome
                     .transition(.move(edge: .leading))

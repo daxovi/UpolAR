@@ -21,6 +21,7 @@ struct CloseView: View {
                 .foregroundColor(.white)
                 .padding(.horizontal, 20)
                 .padding(.bottom)
+                Spacer()
             }
             Group {
                 NavigationLink { NavigatorView()
