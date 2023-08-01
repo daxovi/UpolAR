@@ -14,16 +14,18 @@ struct AboutView: View {
     
     var body: some View {
         ScrollView {
-            if photo != nil {
-                Image(photo!)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width, height: 300)
+            VStack {
+                if photo != nil {
+                    Image(photo!)
+                        .resizable()
+                        .scaledToFill()
+                }
+                Text(.init(TextLoad(textFile: self.file)))
+                    .padding()
             }
-            Text(.init(TextLoad(textFile: self.file)))
-                .padding()
         }
         .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

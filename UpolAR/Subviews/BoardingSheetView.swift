@@ -13,7 +13,6 @@ struct BoardingSheetView: View {
     @State var showWelcome = true
     @State var size: CGSize = .zero
     
-    
     var body: some View {
         ZStack {
             GeometryReader { proxy in
